@@ -1,0 +1,92 @@
+{
+  "name": "portfolio-v3",
+  "version": 1,
+  "created_at": "2026-10-29T05:27:35Z",
+  "supersedes": "artifacts/portfolio-v2/v1/artifact.json",
+  "status": "portfolio-audit",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "python3 scripts/audit_portfolio.py",
+    "python3 scripts/audit_portfolio.py --check",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make verify"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "work_packages": 8,
+    "unit_tests_expected": 157,
+    "portfolio_checks_expected": 71,
+    "disk_used_percent_limit": 90,
+    "disk_free_reserve_gib": 20,
+    "peak_memory_margin_multiplier": 1.5,
+    "scientific_result": false
+  },
+  "inputs": {
+    "source_sha256": {
+      "README.md": "c17e017696618505a4d5d4f62c2843519758252e6eb4e1a26e3318175ee9187e",
+      "PROGRAM.md": "e168812503fb86cf2b0b697f1717102b89cb84151fed0f02d00e9ea6cfdc205b",
+      "ORIGINAL-EIGHT.md": "fd69856af0bdf44cbd0e1894c5cce0ab8a5d7a2ccaaf31c6e11589f9ed501ac9",
+      "PORTFOLIO-STATUS.md": "b102a1a02a7af701a976d1a3f2e1bac967932c4436eb81f5d0d3ca90cc1f7c55",
+      "MODEL-GATE.md": "47f86751debd4e7a7ef027a40ce5b5933085a2e164a5dbf36fe5ee55968e5925",
+      "scripts/audit_portfolio.py": "56db35a8d7dff96654462da2f5e1b026bcc32636306e28ec12a70417bfc23854",
+      "tests/test_portfolio.py": "b4cfa0e0f14eb9902b42e7759838bea8e6687d3b1c86b05fd26216a3db9016d6",
+      "research-manifest.json": "7ef81d0a324d34ccc58fc91d7d53c8dc6cb07e401b8b94aa6821b84535ed4750",
+      "Makefile": "4576425d6847c375c9afd83047417dc3e996e6408e54e615bb09177615c6465e"
+    }
+  },
+  "outputs": {
+    "results/portfolio-audit.json": "6866fe905d960dbca6f6d02436098bbe9e1bb0beba1f7cebb713a237035970b5",
+    "results/environment-audit.json": "0a8965000e2007d6142043f1111956d0d4d0c15cf595621c3d5564897d48e912"
+  },
+  "checks": {
+    "unit_tests": "157 passed",
+    "compileall": "passed",
+    "portfolio_integrity": "71/71 checks passed",
+    "verified_outputs": 25,
+    "artifact_hash_check": "33/33 versions passed",
+    "model_gate": "hold",
+    "gpu_used": false,
+    "network_calls": 0
+  },
+  "key_observations": {
+    "cpu_substrates": "8/8",
+    "claim_schema_cases": 110,
+    "strict_schema_false_discoveries": 0,
+    "strict_schema_valid_discovery_rate": 0.5,
+    "non_evaluable_decisions": 20,
+    "invalid_schema_rejected": 10,
+    "model_evaluations": 0,
+    "external_benchmark_results": 0,
+    "scientific_results": 0,
+    "cloud_target": "ecs-hz",
+    "cloud_target_cpu_logical": 2,
+    "cloud_target_memory_bytes": 1687068672,
+    "cloud_target_disk_used_percent": 28.19,
+    "cloud_target_gpu_count": 0
+  },
+  "notes": [
+    "Portfolio v3 is a new artifact family; portfolio-v2 remains sealed history.",
+    "Latest portfolio discovery uses the numeric portfolio family version.",
+    "The strict claim-schema result preserves the difference between blocking and detecting confounding.",
+    "The portfolio artifact outputs are verified externally by scripts/verify_artifact.py."
+  ],
+  "not_completed": [
+    "No model-level evaluation.",
+    "No external benchmark or leaderboard result.",
+    "No novelty assessment or publication claim.",
+    "No passed model-capacity preflight for an exact cloud model target."
+  ]
+}

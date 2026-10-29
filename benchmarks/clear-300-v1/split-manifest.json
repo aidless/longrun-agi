@@ -1,0 +1,2730 @@
+{
+  "canonical_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+  "counts": {
+    "by_environment": {
+      "browser": 100,
+      "filesystem": 100,
+      "gridworld": 100
+    },
+    "by_variant": {
+      "0": 60,
+      "1": 60,
+      "2": 60,
+      "3": 60,
+      "4": 60
+    },
+    "total": 300
+  },
+  "frozen": true,
+  "generator": "longrun.benchmarks.clear_v1",
+  "name": "clear-300-v1",
+  "schema": 1,
+  "seed": 20261028,
+  "splits": {
+    "dev": 60,
+    "test": 60,
+    "train": 180
+  },
+  "tasks": [
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v0-i00",
+      "task_sha256": "63a778c5d32ca130e13b1ff2e4abff9f086e249bd21fc9af25c9c5ad1a83dc7c",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v0-i01",
+      "task_sha256": "36eb60831b72fcf9a36b715d2ce725e6529207df59fdd03ba0d1781ae4618cfc",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v0-i02",
+      "task_sha256": "31293eb964b41886004de4336ffad955b0cae2c3bbc7fbd677f4db2fec8de71e",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v0-i03",
+      "task_sha256": "63e664071ebaa2d84dba3826ec6324fcf775d7ae9bdc614148e2333cc6826449",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v1-i00",
+      "task_sha256": "10cf00690527522354e1911032539454876bf0fd662353fc9e1e987df54abc35",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v1-i01",
+      "task_sha256": "97ab55271eb9151eb9e1ad4b6f0465d0e0440e91dffdb42acf9da7cd64526822",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v1-i02",
+      "task_sha256": "6076272fecae0b7146348b438580df10fbb0b357cac2eff09467de08fd5d84d4",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v1-i03",
+      "task_sha256": "ee74bab5d2b4c41f7d4d2e8fc53595ec1ba7dc32e668e4d151c97b972d776f5c",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v2-i00",
+      "task_sha256": "03a602146f651dd50d1b38a929a4778f55e235a74cfd6ee2dfc4fcfb627ea55e",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v2-i01",
+      "task_sha256": "2d8ac995f1194549d35b8a4cd68cc54e37f50ef6f4c5305087032bbe204fcb8c",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v2-i02",
+      "task_sha256": "7052b9061b18ced33e9744d82d38b74434c6945757c5bab5bef7f340db2289c3",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_catalog-v2-i03",
+      "task_sha256": "493aeb33beb9b8db93ee35241919ff6246dd4be327d46029d9ec3a15d6e47803",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_catalog-v3-i00",
+      "task_sha256": "c296271ef10cde35060d33405d1cc57322e8a0316602caeca6b2ff2b98552702",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_catalog-v3-i01",
+      "task_sha256": "5db0ef2e8763a0e74dcde49ef173b87e9f1c925f0e3b410f47745779f0f9727d",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_catalog-v3-i02",
+      "task_sha256": "2b025f8fdd75bf75a1d5206478626e37d89732978be9223315f62d747c5723a4",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_catalog-v3-i03",
+      "task_sha256": "c19d0afd3662d9851e287b103d81df58af371486a9b03eccce4ad988a4773b40",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_catalog-v4-i00",
+      "task_sha256": "c29053780e229759667b53079eeea052668299a446aa28b25173e943fa8479c0",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_catalog-v4-i01",
+      "task_sha256": "6e204e435251e5844ccd913b7da07e0da75b6d8b8c01784b0dad80c7fb5eeb77",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_catalog-v4-i02",
+      "task_sha256": "b6ea62e8c631c08778b8e2041f79a73141b67472487f9a38e0740b6880dedf03",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_catalog",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_catalog-v4-i03",
+      "task_sha256": "85189c3c1e779dd718bee88b42f96b9efc3ebd2148dd9886b65bc6e24d8e7f1f",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v0-i00",
+      "task_sha256": "ba6237977ce4a458c7754b0e2de37e66719fc62ac760ba0284fd9831cd95af8e",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v0-i01",
+      "task_sha256": "aec807ae76c14054adc6c4753f7978b5168b0069ddfca60f3d8bacfe2be5a0be",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v0-i02",
+      "task_sha256": "e691f849174581435ccc41cc93ddcafca76d17f33a08d85e94314a0e399cb9c5",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v0-i03",
+      "task_sha256": "5426aabbe7faba94df8390bde9494a01a935d49d9c77aea6cb02c378b2ec3a88",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v1-i00",
+      "task_sha256": "7b9a269ad27f3f7f250011e141cce7b5fd44bb867e805fc63858fabe5738f362",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v1-i01",
+      "task_sha256": "a5bf3b4a07b5ea89d3075432e9a54346582f105e7916edc302efb8ee05b36f2b",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v1-i02",
+      "task_sha256": "cbd7174e53f860bc9fae69b69d2ca8280b4874b0f5f12d299870b9f897c839fb",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v1-i03",
+      "task_sha256": "3d53dea215f5c85d13c9a708574798428671f9cbbcb5111eb7fdac3eb22d35db",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v2-i00",
+      "task_sha256": "00879096bfc22d9de013f0aaceffe4527de1863e5ecfa57245f223b93a0dff38",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v2-i01",
+      "task_sha256": "30bd579e913e0aeb9cc227696c54adc8d4fa979179c68ac80083d9241e57564f",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v2-i02",
+      "task_sha256": "e06470db036fb982655185df920aac59a9cd02080a87a9f514f723097e2412df",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_dashboard-v2-i03",
+      "task_sha256": "85689fe19c88ad586f594e68d58a100ca74534ee344564d63e7ab8b48f4093a1",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_dashboard-v3-i00",
+      "task_sha256": "0decae4297f71cbbc2ae6db0910bd1fd3881d28d1faad56e4441eecd5f8f41cd",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_dashboard-v3-i01",
+      "task_sha256": "24ab3d773785e324ad274130000b4919d48f41a8dafa7820085b1142dd912562",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_dashboard-v3-i02",
+      "task_sha256": "ed046cb687ad57f75a866383580b836d76bdabfb9469b991c0558a8140ef95b5",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_dashboard-v3-i03",
+      "task_sha256": "49d9f892979ddabad934211b618f64270bc3c31f51a494d9a8ef4eb43cc91711",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_dashboard-v4-i00",
+      "task_sha256": "6a3da3aa13dbbe70d42c4df84bb044d3d66bd3faac46e96ee0ceb763a7b4350c",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_dashboard-v4-i01",
+      "task_sha256": "112415cadb280ba3e98e1300b7766f940a8550f408bba26be8775f8faf9eb462",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_dashboard-v4-i02",
+      "task_sha256": "68cabd9efaae8ad9088f13014f71b5965f4d598deade94f2839e9250a8423e9c",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_dashboard",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_dashboard-v4-i03",
+      "task_sha256": "8494dc6526f51faeb774589a5e592a9454cf7d4b3744a0f28c057d3688b74684",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v0-i00",
+      "task_sha256": "f33ad9c3b2d6921a0780c31ee357f612ea195b507ac96ac4459eca0190c7cb0d",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v0-i01",
+      "task_sha256": "2e91995e7904202498614e7a2c54051d7848b620fea0c75b44af1a76c70d2d41",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v0-i02",
+      "task_sha256": "03c850b2c910acab66d4bf01a61ca7ed9c9395b0ce705771472e62363628b77b",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v0-i03",
+      "task_sha256": "923a3aaf59a5ef28a9e2e103507677010e55ba5eb9cc5871188adebb93831f79",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v1-i00",
+      "task_sha256": "59c3792bf8fd23c7c0a08afa815a838ca27cc3bddf1323ed8cf00b153d56f8d8",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v1-i01",
+      "task_sha256": "1fc25a4691b6fc4776ab4b8275ab9dc95f6a2ab32ee99f159163bbd3d6871a84",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v1-i02",
+      "task_sha256": "e6de868e79a38b0079273575c9974e9c91e84dc63fc51b13ee7518adc442662a",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v1-i03",
+      "task_sha256": "f85fa4d1eb276001d2f4f7cd42b70253d02c5a800fefe8fbc8b2bf0bc998b501",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v2-i00",
+      "task_sha256": "9a542c8d6ccc1d534f3fd2cd3a9513a8f8bfafaf0c6bba43372387b3b69f6c6e",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v2-i01",
+      "task_sha256": "69dfec694727864809c96b147968c7ba2578244f787a584d344b646f9feea080",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v2-i02",
+      "task_sha256": "307a0f0ef712aa3145e5f7d41cd53ca1c4f0964f157faa0cfbfef32bdd4f1ae1",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_docs-v2-i03",
+      "task_sha256": "7258de11fb6bad30bdc8c3b349c887173cdf7015f5b8491d4b3533029255e413",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_docs-v3-i00",
+      "task_sha256": "c7b5f83fa2ed5acd61e9c5c8e8c535ff9c648e59edbd29949f8b5b82f7ca1fa8",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_docs-v3-i01",
+      "task_sha256": "12ca71486006dbdf1c7dde11ab70ba4b74e09ab78f56941c291a100daf3690c3",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_docs-v3-i02",
+      "task_sha256": "12ce20f7737f9eddcd0a8da0a732c1b7dd33911054567ca8ac6abfd6d9117247",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_docs-v3-i03",
+      "task_sha256": "23499a5805464d78afca4010ea3450f7c7238920a02f586a236bc5e9eb4c772b",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_docs-v4-i00",
+      "task_sha256": "a5f77a9d854db5bdf7da1626053a6b08683515ca4f5d6ff26b12c9ad0044a582",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_docs-v4-i01",
+      "task_sha256": "9ba34eff4daaf6f68f95b9f154ab0b596d4f20eb86be8e190191bfdae5f2c25a",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_docs-v4-i02",
+      "task_sha256": "5fae081b865666f54571a6a6aaca18547a19413f89e078a570309db7b1a19312",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_docs",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_docs-v4-i03",
+      "task_sha256": "3575e31dbf06a03050fb9e528b705c9fc6b110ebe230f8359c052505ee1d0481",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v0-i00",
+      "task_sha256": "ffa4edf7fd99403f8b463763c3fa7ab1d6a77c6632cc648a5719571875d2f987",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v0-i01",
+      "task_sha256": "94b0da15d33f8da775db6bb27947f2c5e78c42ea3845ccc77ff86826496b6b1a",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v0-i02",
+      "task_sha256": "d3e4b877002e7ddbb8e6074fd713124d13105ac3d1e470edc3cc775db51793d6",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v0-i03",
+      "task_sha256": "6fca160fd30dc9e079a340dd358c8b1106c40226cc944ab073d2957f9e85a926",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v1-i00",
+      "task_sha256": "0712d06e9ae6beb448f71ac2530cbad066e739d82b6f7783116b429c864ccad5",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v1-i01",
+      "task_sha256": "16ebee5c3a28370905fd7fe766318e0955d25bdf7122643fb41c6ca9273aa0f7",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v1-i02",
+      "task_sha256": "25c475703af7c001d5ca91e06babe668a648557980187a9a77122144953e4e0d",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v1-i03",
+      "task_sha256": "16abfe330b1483136260f152a264754e25a662561f1c2435d39296c9ef3c04c7",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v2-i00",
+      "task_sha256": "beaeadefedebd9788084155208a86f896f6d4e92548703d81d483ce8f1b75730",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v2-i01",
+      "task_sha256": "d6361e7d1be5fb1c752ed3675a8569c5a04c3b6beed39b8114e005a5ccb44483",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v2-i02",
+      "task_sha256": "f3cfe47c97683561cb7683e84ebdbf05e5c98caa50a692a1e0a8475cb071c283",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_form-v2-i03",
+      "task_sha256": "de2ce3626ac95310c7f3c4908fe93ea5f7934971c74d170c455f1194fc7bffac",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_form-v3-i00",
+      "task_sha256": "5b58b53e04d836956f4d3f37b8a95270144730b3611ab66766b22d5f9390b2e1",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_form-v3-i01",
+      "task_sha256": "8fd93d3f6b20d8a47c135a36869368439f3fa1fb3598e0e44f96d134cfeb7719",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_form-v3-i02",
+      "task_sha256": "7526826ae4fcc441337655c6da6b7955119d87bf83b43be38c9e63ddf3e6f2f4",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_form-v3-i03",
+      "task_sha256": "6d95afbcc6b7e137f7ad67feefa02062655d2a03e3562766c2a02638c7408df4",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_form-v4-i00",
+      "task_sha256": "bbac1be30dac029ae32ff7253d5ca25cb2360752949d9fe8f788127bd1f8217c",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_form-v4-i01",
+      "task_sha256": "9566ccb8f4cfe35fac363e9e54919b83795ff14a7a0df95f501b0033f46f829a",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_form-v4-i02",
+      "task_sha256": "118c0b8727b73b2ead065dc82102508fc9d332a910c87bcfd2b65972ce1312ee",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_form",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_form-v4-i03",
+      "task_sha256": "6999a854bd830ab0b0b9ab6c09b4920cc7b3181ab54a51d48e22f7a0978b75a9",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v0-i00",
+      "task_sha256": "130a228f66c391c65d6862635fc09f194a73dced191ee5a9867aa8ba3590df84",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v0-i01",
+      "task_sha256": "cd5f2e572f6aca6d967098784106c18cd11a9c156cbec2cd4b72789fe0ff9fc3",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v0-i02",
+      "task_sha256": "674d67b2840fe882f436aad14b9b3070ba40b995223cd9f15bce1673a8d56374",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v0-i03",
+      "task_sha256": "9e98f719dfc8668fdefd16b03371f7aaa9c87bb6efe118760bd648464fd16d08",
+      "variant": 0
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v1-i00",
+      "task_sha256": "7ba0bb41bc99b2fbb84548418690c2aa792504f3e611f787689a7dcb05e4de6c",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v1-i01",
+      "task_sha256": "8710660cac452164e30b5bf98b8d06154b747a5ea1033566184f28d44dc4f749",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v1-i02",
+      "task_sha256": "510dade49feb9888f7ff007d8ab2257ff8de60e4102fc8182f82b475457d46cf",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v1-i03",
+      "task_sha256": "6746d9fe624caab0280d407383bf73ac6e8d923bcb25ef7174811931b19ab1e1",
+      "variant": 1
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v2-i00",
+      "task_sha256": "6a880eaf1a252507a47c73a9b4a28d47c3a12febed602138dd3b494d6b67cb1e",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v2-i01",
+      "task_sha256": "f454f1862d83a5c1cc739ac11ebb6829447dcd94284831dead703f86a4853df9",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v2-i02",
+      "task_sha256": "d8902e36ad2272d82e6106d43228f20e8c2f715a535ff8beb43493affa0b920f",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-browser-browser_ticket-v2-i03",
+      "task_sha256": "dffc34067a4b34effb3c797481f97ef5767bcc9401b0fea120520321b35fa2a3",
+      "variant": 2
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_ticket-v3-i00",
+      "task_sha256": "bf9b55542ff543fb52e5f99258b6183b94e3497c3609213fce37c1515595ca49",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_ticket-v3-i01",
+      "task_sha256": "01a5f5171f5fb582ef0858c4fca9cbefd8dd92d3b3e6ee8c7714b78f06852db4",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_ticket-v3-i02",
+      "task_sha256": "4009fbe743be0e4e2ae07da1a623c4d51276a137b55bbfcef5eb7eedeb4e2c55",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-browser-browser_ticket-v3-i03",
+      "task_sha256": "e8f101fade7cdba4363e3a263c99990c855ed0b760987db024feb5b390fd9170",
+      "variant": 3
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_ticket-v4-i00",
+      "task_sha256": "c25791a8f0ee1e0bebf4c53915cd2255979e7936d24cdd6c952ba30e63d5b7af",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_ticket-v4-i01",
+      "task_sha256": "8b1932131e5ccf02b17067f381d3de74d1e48349f349f3df8c5ac50a6a096dd7",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_ticket-v4-i02",
+      "task_sha256": "48b6461fe3064dab6ee255970ce5554545d3654a652687cc67208e1df36e6658",
+      "variant": 4
+    },
+    {
+      "environment": "browser",
+      "family_id": "browser_ticket",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-browser-browser_ticket-v4-i03",
+      "task_sha256": "e89892c9494ffcd4330c2ce5f049a7447000bbec7098df57b455850737ef9d6c",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v0-i00",
+      "task_sha256": "00c5c0f6ed5537dd344cd999a71d67f05e014b4404831d03f7607266060e2aea",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v0-i01",
+      "task_sha256": "5045156227736b735a900e252421e49319c0d6792d49da27ba1be63e46a65cc7",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v0-i02",
+      "task_sha256": "f696de287618a18f093f84290bc89c341c44b0946b54a7928ad0e5b5064315cf",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v0-i03",
+      "task_sha256": "6bfcb4a64443b10eac2e1e3bfec793443c8a73ddef086e1fa29373f6dc0c22ae",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v1-i00",
+      "task_sha256": "3ef6d5ea233f0a5a43e9612d6e4622e9f2592559cbeac4e572c7dfbf5f78beb2",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v1-i01",
+      "task_sha256": "2430f72b064ee5e8b16e3fabab924d61b32bb25a019236aaf55fb0ba99712d8b",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v1-i02",
+      "task_sha256": "1eb11ffc002889be81e75c5b32106d44df2d7f6195f66765bfdda1f8be186c53",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v1-i03",
+      "task_sha256": "0850df1201a6266a5e354120be373b39eebc5cf9e0b45e7e258697c151dd044d",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v2-i00",
+      "task_sha256": "73ce9d1b336f97514ffaba65a1e8328b59e567f3080c84a971b16b4bb6833444",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v2-i01",
+      "task_sha256": "87e260bfa6cba935d5aa6b603d288738008fdc632d5ee497838654c95197c9ba",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v2-i02",
+      "task_sha256": "66dafe403ffb54ca99531c5cfb1fe31de9d113ef3ab98fab9d7c2e2fbb59a0a9",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_extension-v2-i03",
+      "task_sha256": "0a34be19e53cf4e76aa77087a9cf38da7b94fb28aedc1f01b30cdf78b15431d9",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_extension-v3-i00",
+      "task_sha256": "723e415c11a15c837487fbffd5c0b5f6b07c5faf43d059ea4d28cacd0730edee",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_extension-v3-i01",
+      "task_sha256": "ce7ec6cefe87d035c334d7c059c9c07f6be65e14765f1c1a74017e0befe03c3a",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_extension-v3-i02",
+      "task_sha256": "d2439b3386eefe4e789b6b238074a5e294c754de566543e5e1242ef516f65dfd",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_extension-v3-i03",
+      "task_sha256": "cf768037e96580e0885c9fc36af6e87d37a901c21b4d9b04dd2556a0f2bb3532",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_extension-v4-i00",
+      "task_sha256": "a145a6d426dae010e8ac9a13a16ade6e4dc634f46b59ae35a1aecf8e9e625e8b",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_extension-v4-i01",
+      "task_sha256": "a1ca52d5895b729c2aa960807f04bf49f609fe778a70be5a1f47277fd78e4350",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_extension-v4-i02",
+      "task_sha256": "4e2cb2251167929bb549ac637bed3399b655d61e5a2db82d57f043578ae8545a",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_extension",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_extension-v4-i03",
+      "task_sha256": "31b2e6bbcc84a112e52ee81d544f4ce2f4180a2a285b1d11902518e21a32309b",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v0-i00",
+      "task_sha256": "2b3ad628cfce15547f94020b54328a99af5f1fb2c6a695be3638623121d3c667",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v0-i01",
+      "task_sha256": "8b2210d20795ac9f46764c171b8e988bdf24fcd39dd2cb64df84bc5408546b6e",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v0-i02",
+      "task_sha256": "048ca87d345d2ee72a4dba67a3fbb29dca77130aafb319e400d52338f9930338",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v0-i03",
+      "task_sha256": "d23bec5ae6b9d9e4a01dd8669e9a38ce754698200ab850719a9eabeca5a9deaf",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v1-i00",
+      "task_sha256": "062d7bf4b4c1f520481ff5966b6abca24e8587180b9ef41b421e6dfddb13b2bb",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v1-i01",
+      "task_sha256": "6aaa460e0ad835b0192b5668eff4c8a44ad4dca27440ed7ba441598855a68327",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v1-i02",
+      "task_sha256": "48b36d7f290b366fe49b02e55878b69122f95ee0c211dbb473a64c83d330e3a9",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v1-i03",
+      "task_sha256": "ed3e49f3325da3b477cf41d9afa3e103129874e4f270f60f9e93310cdb767a81",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v2-i00",
+      "task_sha256": "220a153a29662a96328da524a90fc91b52d5c3df5662fbddcbf2f48e5a3b2a5c",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v2-i01",
+      "task_sha256": "cbceb912e567c08c672d5021b0684f5a2439860efd7bba1b8d7cc732e7cef55b",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v2-i02",
+      "task_sha256": "ff5cd1ffc5ca964f4b7aab29dd9566e7fb5597616f063ea69292e3ecc19c27a0",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_prefix-v2-i03",
+      "task_sha256": "f8dc59c590702db139c6207da90dcd273f5363247b56898449081c0c1d0df25c",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_prefix-v3-i00",
+      "task_sha256": "5086089ed9d753123f6fe232ef3cf442cf51bc96857899c708bd2110611a43e0",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_prefix-v3-i01",
+      "task_sha256": "767e30e219a7c98e21f2e6cb52f4de226b49aea41b74bf92cf43fc04d6099da5",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_prefix-v3-i02",
+      "task_sha256": "d1df134acdb186f1be2f784478d2203380d90114e92ae055e449639ff45cf8ac",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_prefix-v3-i03",
+      "task_sha256": "ba9c0872d04b6fffbd0123d50ad64f71be84ff391e3c899df160916a5450a1bc",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_prefix-v4-i00",
+      "task_sha256": "f3965c71fdb47fdf19cafd944a4f9ad77ff8489c46c381c71e526ad283527c35",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_prefix-v4-i01",
+      "task_sha256": "d5df6517b27455239786fecb9e478b712be995b536e5ba1650af1d1ebc06cc3f",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_prefix-v4-i02",
+      "task_sha256": "9f91004ed4d47c4ecd6e16d2893501786e3ec105df07d2ccc07ca4a165cace45",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_prefix",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_prefix-v4-i03",
+      "task_sha256": "94e5ab73744287c5a036644615f7c1313ae0cdc4267266932f37941916ca080a",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v0-i00",
+      "task_sha256": "c26fca2eaaa1dbbace44c5c19863b1527688650f7f85c913b8da20ea13b4dd1e",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v0-i01",
+      "task_sha256": "438478e53f5dd4c14509f602d612b167b89ecc1e271ad5c71bd46195f7b65109",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v0-i02",
+      "task_sha256": "32a4fbba62f4e385a721b5c1b6df08aa547f8fa25fff4da41136d593d2bdb9e0",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v0-i03",
+      "task_sha256": "345cc2023381c5336e8570ff8aa6e534df018713383bbaec3945ddd4f55f298f",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v1-i00",
+      "task_sha256": "f4a522ec991bc66cd35e98b425bc0d9e5c9c821b8346de9004273201b104c179",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v1-i01",
+      "task_sha256": "c549b668c95ed0c945f4934ec927ea02e933cdf7d51dcf27d693a162a636a321",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v1-i02",
+      "task_sha256": "6caec1c4757aad9415a466c6b62347a20ffd951bdef58c88bdc82e87f32b1b1f",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v1-i03",
+      "task_sha256": "517599a99a4bdeddcf6bcd63dbba3ec7d8f9e0401d3633648fa13c845a6bba26",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v2-i00",
+      "task_sha256": "2f94804cef30a34df2a71d11651477b8f5f0c8451f880d49a37ea97ab9661a4d",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v2-i01",
+      "task_sha256": "1755d2a61dfbc9eb1673f89bf9db37b5338b410fd5e2c7e22a329258d318514a",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v2-i02",
+      "task_sha256": "f55ee6749e309676798e10e3b1313e2ce41c65e8f3731a97aa4356530916fa04",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_reversed-v2-i03",
+      "task_sha256": "3a1e0d97169118cc7b4010c353e22a1931dd476439a2df7f04b127bce3ff3510",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_reversed-v3-i00",
+      "task_sha256": "6e0921677ddf2be7982376331d68e119bb93bab2a55f8d355d053cb3eeda447e",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_reversed-v3-i01",
+      "task_sha256": "df25811280556233b6d4a8986ca7c548763c1b0f0728f1474fc17f47480a6de6",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_reversed-v3-i02",
+      "task_sha256": "768c8f66b5899996b6e0ca856a5aac5acd620780b9fa0e4731e3cbee4fda9956",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_reversed-v3-i03",
+      "task_sha256": "037753ce809cf0ea5094829ea3df01b7c891d04158e628ee63e70e3c4336b9a3",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_reversed-v4-i00",
+      "task_sha256": "0586aff5de0067e1e57f8acd497ad360d626ac2463ff0e3bceeb3ecabf19125a",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_reversed-v4-i01",
+      "task_sha256": "287748c4f4c8fde2ea101d2295196f3f32f05a337385786d3a5600c8b1610dc9",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_reversed-v4-i02",
+      "task_sha256": "ff04e2348ba6fba6bdc085ecf25794f712741f2da88305c15bd1c5fe18cabb67",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_reversed",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_reversed-v4-i03",
+      "task_sha256": "70cf941882ac6dd0b2da93756d9a8fe9a9734c82ae1ca04516a3b3fefc174900",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v0-i00",
+      "task_sha256": "6fad506d77aca4f624630e34efdd791d3437477c1e1f0b664a319d7889eb3790",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v0-i01",
+      "task_sha256": "a156db9e5dbb47e314c4df66d479f21e3288ec0b91a4429f1350a4ebadb32cef",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v0-i02",
+      "task_sha256": "2170dabd529c744a71a3eaa44530abdcb431cc19731f306b15d6fb7c1bdbd369",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v0-i03",
+      "task_sha256": "9e7d6b3a31cb40cd3d4b6e35410825a7615c9c642d0fc003a7472c9728c6bda7",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v1-i00",
+      "task_sha256": "3fdcbcbc02355aa147ca2d582bc0eff84687653f8bc8a7ba01be956626601494",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v1-i01",
+      "task_sha256": "bf9a1621b2fbfc2fd3ddd73fdca284d4623fd8379dea0a3513984dbacdf397d9",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v1-i02",
+      "task_sha256": "2dce852dae51c051ad19e2c3564468236c05238b4bd1b4003eb08a606459d8c2",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v1-i03",
+      "task_sha256": "dbf49940d8b9157a4cc7c9a904b4328d35ca724fefe163cf7e86d516337bce94",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v2-i00",
+      "task_sha256": "3709d1dcc3671746129326417b2ab996f567b322a177a95310d384485ec749c8",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v2-i01",
+      "task_sha256": "a80790845f7814e202e95217de7436132dafe3b6b1a55bab58cd96bf8020490e",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v2-i02",
+      "task_sha256": "a5f385f35db52a562dc8b55ce531dd08d4a3167b4211011a3483b72207d26086",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_suffix-v2-i03",
+      "task_sha256": "6024de2a6f6af3b8c3a524807ac07983f6aa59edecc6c7e7556b8045d9757e8e",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_suffix-v3-i00",
+      "task_sha256": "cb1bb2b8c1f447719c031c124cc194e8e1628a5d945007b7e89728d84e25ad05",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_suffix-v3-i01",
+      "task_sha256": "6b2fc2e2c2d493be94ca07ae785c2fe17f414ccb17e2498853c09fd4444a1fe0",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_suffix-v3-i02",
+      "task_sha256": "b526fd1b8a015502a8cb9167d11806c2a776b0812f44c13aa93af6bf9dc9d0d7",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_suffix-v3-i03",
+      "task_sha256": "53f47ade15bce38ff31b2c05f2d49ffd3da35d11883fd2a67127f938452c6e73",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_suffix-v4-i00",
+      "task_sha256": "56a7c5f8fdb0d02be885bea31f75514e78634493b461dca3a246572cfd2f49bb",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_suffix-v4-i01",
+      "task_sha256": "9ceb0ffae942f0100ef2b83dad43afb1de3c14c94ba5abbe718b70c6e66d4158",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_suffix-v4-i02",
+      "task_sha256": "048967d9db270170e4ce98d7507e126fb62a458172a4e68582cf86e0b9eebd9a",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_suffix",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_suffix-v4-i03",
+      "task_sha256": "7ec700e1cb8e618422482b9dc42302de4d3898497c2f8b61fdf8d46411f06c81",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v0-i00",
+      "task_sha256": "9efa4736b74c247cd2418df1887890bef10431987e9a4d6af153d999514a4de9",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v0-i01",
+      "task_sha256": "7d2a6bb5927f86edf65126a8501f2f8ef604927e7870836a42ac3f1e79413f45",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v0-i02",
+      "task_sha256": "9a5f199c532600c1a3614f733fbf0d43554968be0292e5ade8b01a7c31d54915",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v0-i03",
+      "task_sha256": "626195897b3d467b98e6248d760ff6b04b594103a951b3d5c8c2a2143f549dd7",
+      "variant": 0
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v1-i00",
+      "task_sha256": "36edd032abc943246249b5549f95463448eb02a97fa7613ea05af7ff8b01e712",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v1-i01",
+      "task_sha256": "e761aceb6fbeb06f49b188bb44a3062b6fa24f517f88399e7a19223f576c5a10",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v1-i02",
+      "task_sha256": "ed24de769a920e92b1fbbc1544d110bbfc4158efa010fb03e13996fc8375a9b9",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v1-i03",
+      "task_sha256": "69160b722192793b3f608f7ef6248aa0e9b23b244147a8f33baa0eddcebb4bf0",
+      "variant": 1
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v2-i00",
+      "task_sha256": "47a172fc7fb253c7800d9b8e9d89b7ddb50d4f3dc6001f9f50c70a02dcc7770f",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v2-i01",
+      "task_sha256": "6f753490d49c18a8f6ef6395c4168aaca44f554d1afd5073c3818705e70898fb",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v2-i02",
+      "task_sha256": "fc77395db3faff6bc1a62377f33669c041940f02805ee402ec98fde6f50db294",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v2-i03",
+      "task_sha256": "e3c8249aebeff429e3c7950decb98025af12fa40ea3837e612c9bbebd9a62c4d",
+      "variant": 2
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v3-i00",
+      "task_sha256": "7cd33ab1ac1121caa99e78b58599c6117466fd3cb490b1909a389f0469ee0fff",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v3-i01",
+      "task_sha256": "a6491848705feb2e5a48ff586f3749c64a1010a4c9d2c1b74edb11134dad4179",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v3-i02",
+      "task_sha256": "e4dceedec9d2d777bb149f350381bb5d0e824be2d35aace96d86cd61b17b4455",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v3-i03",
+      "task_sha256": "d8bf10f2e4494a053fe535c2925992c78b7ed141865de8ba2a70ebb14d8c8d50",
+      "variant": 3
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v4-i00",
+      "task_sha256": "6181904ae46bce566df86b52bcc65f00e01ce2e2600140b5b43c927dd82feb49",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v4-i01",
+      "task_sha256": "32cf89d5ae643b99191c669d89ade08f9f67c0b0bc16e5ffebac43038eb9470b",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v4-i02",
+      "task_sha256": "a0d8748e13850d5698ce93aa20044bc8f6eb3f0ab90849f6653ec62301751c5f",
+      "variant": 4
+    },
+    {
+      "environment": "filesystem",
+      "family_id": "file_tool_rename",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-filesystem-file_tool_rename-v4-i03",
+      "task_sha256": "3b507cd7940fd9d418a0f044b5244748bdaa94ac09d6b8d4a877c42185cd85a5",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v0-i00",
+      "task_sha256": "145f649e7d9757e1cf6572bf9a30602ee614624da2994e70eeb09bd303a54617",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v0-i01",
+      "task_sha256": "ff37733989759041aa4b3f6c83acf43d6b039f5491cdd97c2a1dfef9a55449a4",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v0-i02",
+      "task_sha256": "ebeddcfde368401dd185b613455ddd4c60164b3a463481719549e3018c4f71ae",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v0-i03",
+      "task_sha256": "705408939a86cdc808548ef765f47a4df27c7ad22794ee6eefe09ec2bf53d384",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v1-i00",
+      "task_sha256": "c28ebe042cdc5f0f5035e2582f22f3529e75568dd59bc067d092dbba1003134c",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v1-i01",
+      "task_sha256": "146c19d03ec7a02e6d8e77e9cfb2752639e103bccec46bc5b03f3670ed1db93b",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v1-i02",
+      "task_sha256": "4614bc8025dfac516e9b0ab6777620d84cfbae601474f0569c8bb28a969c824b",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v1-i03",
+      "task_sha256": "4b74addbf1de60edbf716aea4039fc264a82809d6641f497bebdb601127ed386",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v2-i00",
+      "task_sha256": "a2b5926f59f9bf972f90c36e533ed7950eff6202d8869c92cd493b252976c811",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v2-i01",
+      "task_sha256": "4a2f1b7aef131c8fbdf96a6c71f59be9b138099c4454072e8e0807cd917e3ae8",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v2-i02",
+      "task_sha256": "bbc85758b1d25b7baf48d6936810b7c31aa319c036aa5f3834619dfb28565c66",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_corridor-v2-i03",
+      "task_sha256": "b43ae103737ad2544bb7ec9dad9524a4949baf3ad169501ae3b98328d560767e",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_corridor-v3-i00",
+      "task_sha256": "1d9711bc8806b696ff019626d635eed835cad95d238a78403719b5f70a7f2dfb",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_corridor-v3-i01",
+      "task_sha256": "c85bef2bbdba6ae607b43de1d98345349aa2d2484d41d0858e243cfe633453a0",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_corridor-v3-i02",
+      "task_sha256": "897fcb24219d9f170060b7ba7a3ea05d4f022a439de8e4d77a88cfa989895a07",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_corridor-v3-i03",
+      "task_sha256": "cf0c4052633af2d26d83b35e32052a46bd83b78fdb8bf225729b2b4d5215e350",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_corridor-v4-i00",
+      "task_sha256": "a6ccd6d0d4c9e19e735e6f1d123842e53b9f2c747dea6d45d74600df9c580853",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_corridor-v4-i01",
+      "task_sha256": "cadc776f3752335511b380480bda8d3a3f8b111f22dc9ae2f696255f446efd7f",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_corridor-v4-i02",
+      "task_sha256": "6830dc087d546c1cba4adec9b298097b891f08ec1a5245b6ae5cbfcf53d7230b",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_corridor",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_corridor-v4-i03",
+      "task_sha256": "4e8120487288994ffab4e6b58bab45688dd390347a8892bcf8dadade21d8211c",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v0-i00",
+      "task_sha256": "d7b6b710c40804844d91febd2af415699d489a39f951b8b9b8d75546e7b8e407",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v0-i01",
+      "task_sha256": "01856b9bf62fdeb018b411fd05f022c4b86fa7fd7299628897c9a2e35fb07cb2",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v0-i02",
+      "task_sha256": "794d8114efb73baa0378dfc4dace45185e90d61843e760ee58a62ae46678a127",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v0-i03",
+      "task_sha256": "a543292757d93b77e42306308c3e81598769712ae3080f292ee0d167181c0c04",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v1-i00",
+      "task_sha256": "753b30a5a3b10f02c4b5fe224dab4faa29116b3b4b60a3ac2bc756a152e0c56b",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v1-i01",
+      "task_sha256": "db977259d307b595f60d363dfb7c6f50cf86d8a48c4c61cf3acc059d691c9a72",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v1-i02",
+      "task_sha256": "c6c5a21e01754efb80f084e76145b1bd106d0b61588d19108820899794aa3264",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v1-i03",
+      "task_sha256": "fb16fb35ae4767a512fd51e766eeaceb5329051aa018e34ac485d79d14011684",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v2-i00",
+      "task_sha256": "83948463db89a3dbb6041444bbf66b8e319f4051c443ba299bd8ce271330232c",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v2-i01",
+      "task_sha256": "12909d69275329c9ef645c60feaaaba6b380066b8152eb3572116f1a51752c93",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v2-i02",
+      "task_sha256": "352983a3b7f8ed6c0ea6daaeb84c6bc0d5c2d0f6815b1fcb5fc8108ae0fb16d3",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_delay-v2-i03",
+      "task_sha256": "4220efb020c428f6097a360d25d741c10632e7fcb01c5d71cab1b01fcf82c520",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_delay-v3-i00",
+      "task_sha256": "cc689b2b5e972123795e4b07d9aaa4c6e2a268273be50396ccab5e2d4d1ce972",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_delay-v3-i01",
+      "task_sha256": "2956e87195ca1a51d6a091b0ebccbca5c9dbcfc22f7b3e03f5ac67e280ca2044",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_delay-v3-i02",
+      "task_sha256": "6abaaa727a4480ddf01d0c232cc75c2502014f89cccd7ee77975b39607e62a16",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_delay-v3-i03",
+      "task_sha256": "60593d134a3ac49853e5f09a8293c56c2418ecb5e882b057b56bddc494b29ef4",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_delay-v4-i00",
+      "task_sha256": "c8bae8dba8a2e1e670932f1f1cd26052c2eba8c01a9f767d6d51508ec08b56d3",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_delay-v4-i01",
+      "task_sha256": "3145d16b1ec53f124af5b62e0132aa60edb9ebbdade544019a78310a20ff8202",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_delay-v4-i02",
+      "task_sha256": "bbc1ce8fba86d3f8ef71086ef3eb28332ac4ccd02c6181264d613e447a7e5b1c",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_delay",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_delay-v4-i03",
+      "task_sha256": "85c5ecee91061cc2a6a5df3fd8fb5225b31bc91ecdc0914a5d200c8b7c3bb7d7",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v0-i00",
+      "task_sha256": "cb38833139d61345901a335cd9f4654799d94c42990ae1267d5c58ba5a2e9607",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v0-i01",
+      "task_sha256": "037221d5b7a29bbe306bd4f14afa1a9320423337ce8b0c1691afe9fb20667365",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v0-i02",
+      "task_sha256": "42ace1bbdf6d2f0f8028c19792e1c8f1e0bf68a479c593c6987308d0209e3dec",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v0-i03",
+      "task_sha256": "79116e45daca0d5a42ed11fc7e2aa6a04f74339d6879203b1ad65c688b486fe4",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v1-i00",
+      "task_sha256": "ef874a4a5159d8bda27eb929c74324e1c796da4573b5167a70baf3c289d300f0",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v1-i01",
+      "task_sha256": "17ecbe6fa98a27105e1176b713a459975f55b09c883e49f6180d6dbf35e7e00a",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v1-i02",
+      "task_sha256": "5348cea2c10ad60d8f2792eaa7b871d3e5987e9dbd64e13d53ce39ef39f5b8c0",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v1-i03",
+      "task_sha256": "669219a5ab8f3c0c820ca0ccacea4b7425d9d5525d5da9d6d1bd9b26193ece93",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v2-i00",
+      "task_sha256": "a02ab6cdcefa4cb8f30a14c63b6a28e3f5ea517bc5ed3c0e436dc6452f973b04",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v2-i01",
+      "task_sha256": "bff774db35401a2f49f5658b8d0f8c096113c3891c1a9066f470c39a3ff06694",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v2-i02",
+      "task_sha256": "57225457e562ce4160491ccf13dfa77a778c4e17b1feaf2563cab88a974cfb06",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_hazard-v2-i03",
+      "task_sha256": "e3dfe5e06f653d53c2e71cc41256a412171ffbeed48df9512b811a8e00c27048",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_hazard-v3-i00",
+      "task_sha256": "085c47d596f8f1ed6db502a300238b2329f98b213f6c61271fc76d198a209fb4",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_hazard-v3-i01",
+      "task_sha256": "280b2c266b6e36d535802d737da730f253525f76d385ed7a57408dc875f55eec",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_hazard-v3-i02",
+      "task_sha256": "4591cbf1e1e133f14f85ac5d89ad06549ef2b0fd2506e85d87f93ef87c203cbc",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_hazard-v3-i03",
+      "task_sha256": "106f1448f1cd8c9f4d8706cbd0bf9ed0a9cec8240ff3de40e66e6f88ddbf23d8",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_hazard-v4-i00",
+      "task_sha256": "2a2aae8cde49fcc666ac6c7aea271c55a5081c7a1e086212e8f6a817a258a568",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_hazard-v4-i01",
+      "task_sha256": "729e700985429e752b50ca6daf0f017711a9aab74eabdc4a92056bc9d12095f6",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_hazard-v4-i02",
+      "task_sha256": "3043caef73e3c49f046cedd3619f64574404c20f587a2c51e69b86c1abb147b0",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_hazard",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_hazard-v4-i03",
+      "task_sha256": "b3c56e95eabda1b05a0664fb64d713a88a06af43e92b71a0a036f29ef7a8e7a0",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v0-i00",
+      "task_sha256": "7d4553d3cb26efa6509214126682e947483fb116db876b3ba7588a1a2d432512",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v0-i01",
+      "task_sha256": "251e74c4093c59c36a2ce1a8d91fcd9d00bfa5ab403202040020c75802bb75dd",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v0-i02",
+      "task_sha256": "5191d8a00ba9ceed547d16ecab1c81c4635e9a984c6d2fbbcf71e8ce6b46569c",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v0-i03",
+      "task_sha256": "8bc42ce710b3dcf2b1763c6ea1eb146e40e9ea90cdabe9c5b40b1f35f954983a",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v1-i00",
+      "task_sha256": "46f2e9c8b125ba0f98947a798a5f6eb0d336a417f0a7baab4a7f64d2f7248b15",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v1-i01",
+      "task_sha256": "dd16e923d05e37ca4298e65c5444abafe85a2bde5a053c4e65ca04a8c68ecf34",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v1-i02",
+      "task_sha256": "091ad5deda20afac95282841555740523c2f286785f52cbb3bc7d7ef041fb8a5",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v1-i03",
+      "task_sha256": "8af8eea390b9b62cb5536244ee19a591804a252a166d8d6ef8b05d26e553eb76",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v2-i00",
+      "task_sha256": "3e2433d02ddc4ff31a85f4635f646f3d46410c5a1b0bde9c3d975ecbc14cabf3",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v2-i01",
+      "task_sha256": "daeeb09df32c7e14c9533503e45a43ad513ec221096062dd7d78b9d72ff59636",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v2-i02",
+      "task_sha256": "96a92eff9a4291e7504a6a7c979b5d84c61be1559fa59bcb3b19725562117f66",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_key-v2-i03",
+      "task_sha256": "2262ec98c9fbedbb003dcadf4999f228e15f6cf71dfeec49cd930593cb1f5a15",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_key-v3-i00",
+      "task_sha256": "d56b1fd115aba0c1f0d53134ac6c47af336edd4e64a7c4991044cfc8f80af067",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_key-v3-i01",
+      "task_sha256": "b825455b6d0c528241440d3834f27f21f959437102eebb5c8814835cd39be306",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_key-v3-i02",
+      "task_sha256": "512178d1926687527357ea460c39458a0c42d622993da74a85cd0deb0a8c1768",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_key-v3-i03",
+      "task_sha256": "359c03114c08f203dbeffecd04a9695e197f27af36e33239acde5466a00e22be",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_key-v4-i00",
+      "task_sha256": "5b8e3a7b005fcc765d3ef027d4ac4db2a861a522d504edd9bae4f98f3b2bb632",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_key-v4-i01",
+      "task_sha256": "7adb12916ae2cb3d3f1a1ee20ff1fcc8bc74cac836a61abac926c4c067531612",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_key-v4-i02",
+      "task_sha256": "63b5ae167dcec94b3aca31f349228f3009e705389dd0e4a1d5843cce692fc0ca",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_key",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_key-v4-i03",
+      "task_sha256": "e966ff648bd3cedd0185a680e5683479d5acc1296a71c706dc35b36c1a571ac9",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v0-i00",
+      "task_sha256": "dd7ae7da5a458d5ad2de33a66e4333931512dbcd04ae0b3f32996655867a7442",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v0-i01",
+      "task_sha256": "e1c682f1d5b9086fcb00c33b788fb4e0e19fdc22e9285972ce92917e228fdbcb",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v0-i02",
+      "task_sha256": "a691baa3f7e0b669faad69ba6a8e274858d2d70904ceed5e24fafb576132cd73",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v0-i03",
+      "task_sha256": "056fa96c20160e21c92522cf64de0095aa50d936bca1235825deecd40f4f6228",
+      "variant": 0
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v1-i00",
+      "task_sha256": "dc6e40fe033aa9ea18a93b07ea46196ab3ed0fc5d77a3dab8a8facc23ce45cfa",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v1-i01",
+      "task_sha256": "91f3ec49e0361106e5587274e925f8048bfc2be2d5dce29dba9ed87c950c302d",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v1-i02",
+      "task_sha256": "c9372be73de04f635ba353ddfd627b8dad4e5e05b9c1752c9f07eba25775bd2b",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v1-i03",
+      "task_sha256": "2d957fc3f85662f22b0c5864001ca6d2839938502a2763ee783217895d8e97a3",
+      "variant": 1
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 0,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v2-i00",
+      "task_sha256": "313fc461f4335dd3e19ef41e01265bf3f9d5358a2f1522564eb9403253d135ef",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 1,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v2-i01",
+      "task_sha256": "e307874ed32ea120d99509f35b7b0ab377b7851a8acae59315238ee5ae20de48",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 2,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v2-i02",
+      "task_sha256": "97ba6650e6c8953926805458589817802da54e4180635f5073d44de7803b5b64",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 3,
+      "split": "train",
+      "task_id": "clear-v1-gridworld-grid_open-v2-i03",
+      "task_sha256": "47aa0a12d5d3cbd5d06ef4134922d8da4e7c5b1cdf04714a80d46c92e96335ff",
+      "variant": 2
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 0,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_open-v3-i00",
+      "task_sha256": "9bef7525d250acab97d160ac67e81e19b115d96c88935520ab6b4d4a67c035da",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 1,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_open-v3-i01",
+      "task_sha256": "63368406cff2d4d2fd70ad7fe2eb60a7cc49f649a920db099d3c4afe56397b97",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 2,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_open-v3-i02",
+      "task_sha256": "30fa35ed6c0a252783a2ccf16ae5c2d4a5edeef066304fa8e7dd349df842b8a4",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 3,
+      "split": "dev",
+      "task_id": "clear-v1-gridworld-grid_open-v3-i03",
+      "task_sha256": "8a6b2967e548aad799c4316186070bf10eb51e66ac9e08af80a0fe7663e888f7",
+      "variant": 3
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 0,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_open-v4-i00",
+      "task_sha256": "f593bbd6039d0df71e9efc6daf57f9dca07e3014d2febf2b5e376ffd6f91a8ba",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 1,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_open-v4-i01",
+      "task_sha256": "6063a5f7a658ff75767a6110063797e4182885dccff302f558fa5c09ffc7509c",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 2,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_open-v4-i02",
+      "task_sha256": "3ef56f7f0882f5fe2360180f9543ed4d5f8a76d1ea80faacc8c51172e6ced09f",
+      "variant": 4
+    },
+    {
+      "environment": "gridworld",
+      "family_id": "grid_open",
+      "instance": 3,
+      "split": "test",
+      "task_id": "clear-v1-gridworld-grid_open-v4-i03",
+      "task_sha256": "e8126e8a3d99923096ba0038e818b6c70ae29b69d9ac797efd10b91cc3e90ee5",
+      "variant": 4
+    }
+  ]
+}

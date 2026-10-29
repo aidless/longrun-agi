@@ -1,0 +1,119 @@
+{
+  "config": {
+    "dry_run_tasks": 240,
+    "model_downloaded": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "paid_api_calls": 0,
+    "protocol_id": "clear-v1-model-eval-v1",
+    "protocol_version": 1,
+    "test_tasks": 60
+  },
+  "generated_at": "2026-10-29T08:40:10.691842+00:00",
+  "mixed_response_hashes": "b17555575f52baaf8d2c5e0e25adb5cd4df4b882e1c4fc0335a05a236d3510f3",
+  "notes": [
+    "Both policies are deterministic fixtures, not model outputs.",
+    "The dry run uses only the 240 train/dev tasks.",
+    "The frozen test split is not accessed or scored."
+  ],
+  "novelty_status": "not-established",
+  "policies": {
+    "mixed-failure-fixture": {
+      "failure_counts": {
+        "invalid-json": 14,
+        "timeout": 13,
+        "wrong-output": 10
+      },
+      "latency_ms": 8880,
+      "schema_valid_rate": 0.8875,
+      "success_rate": 0.8458333333333333,
+      "successes": 203,
+      "tasks": 240,
+      "tokens_in": 5440,
+      "tokens_out": 3408,
+      "valid_json_rate": 0.9416666666666667
+    },
+    "valid-fixture": {
+      "failure_counts": {},
+      "latency_ms": 2400,
+      "schema_valid_rate": 1.0,
+      "success_rate": 1.0,
+      "successes": 240,
+      "tasks": 240,
+      "tokens_in": 5440,
+      "tokens_out": 3840,
+      "valid_json_rate": 1.0
+    }
+  },
+  "protocol": {
+    "benchmark": "CLEAR-300-v1",
+    "benchmark_task_manifest_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+    "execution_contract": {
+      "model_downloaded": false,
+      "model_loaded": false,
+      "network_calls": 0,
+      "paid_api_calls": 0,
+      "test_split_accessed": false
+    },
+    "failure_taxonomy": [
+      "timeout",
+      "transport-error",
+      "invalid-json",
+      "schema-invalid",
+      "wrong-output",
+      "abstained"
+    ],
+    "prompt_template": "You are evaluating a long-horizon agent environment task.\nRead the task instruction and initial state, apply the current authoritative rule, and return only JSON matching the response schema. Do not use cached rules when the current specification differs.\n\n<TASK>\n{task_json}\n</TASK>\n",
+    "protocol_id": "clear-v1-model-eval-v1",
+    "protocol_sha256": "1916f54b2d1a870c850bb2be7f7badae1f1e4193849635497c5f83297cd76655",
+    "response_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "abstain": {
+          "type": "boolean"
+        },
+        "output": {
+          "type": "object"
+        },
+        "reasoning_summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "output"
+      ],
+      "type": "object"
+    },
+    "schema_version": 1,
+    "scoring": {
+      "abstention_is_success": false,
+      "malformed_response_is_success": false,
+      "metrics": [
+        "success_rate",
+        "valid_json_rate",
+        "schema_valid_rate",
+        "timeout_rate",
+        "error_rate",
+        "tokens_in",
+        "tokens_out",
+        "latency_ms"
+      ],
+      "retry_policy": "record every attempt and score the final attempt",
+      "success": "response.output equals task.expected",
+      "timeout_is_success": false
+    },
+    "splits": {
+      "dev": 60,
+      "dry_run_allowed": [
+        "train",
+        "dev"
+      ],
+      "test": 60,
+      "test_status": "sealed-not-accessed",
+      "train": 180
+    }
+  },
+  "scientific_result": false,
+  "status": "harness-validation",
+  "test_split_status": "sealed-not-accessed"
+}

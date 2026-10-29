@@ -1,0 +1,247 @@
+{
+  "alpha": 0.05,
+  "bootstrap_replicates": 299,
+  "checks": {
+    "all_runs_completed": true,
+    "design_balanced": true,
+    "note": "The grid validates estimator execution and reports finite-sample behavior; it does not by itself validate any agent or claim novelty.",
+    "scientific_thresholds_applied": false
+  },
+  "confidence_level": 0.95,
+  "config": {
+    "alternative_effects": {
+      "A": 0.25,
+      "A_x_B": 0.1,
+      "A_x_B_x_C": 0.08,
+      "A_x_C": 0.0,
+      "B": -0.2,
+      "B_x_C": 0.0,
+      "C": 0.15
+    },
+    "episodes_per_family_cell": 20,
+    "factors": [
+      "A",
+      "B",
+      "C"
+    ],
+    "families": 24,
+    "family_noise_half_width": 0.02,
+    "intercept": 0.5,
+    "null_effects": {
+      "A": 0.0,
+      "A_x_B": 0.0,
+      "A_x_B_x_C": 0.0,
+      "A_x_C": 0.0,
+      "B": 0.0,
+      "B_x_C": 0.0,
+      "C": 0.0
+    },
+    "outcome": "Bernoulli(success probability)",
+    "planted_cell_probabilities": {
+      "000": 0.6900000000000001,
+      "001": 0.46,
+      "010": 0.7099999999999999,
+      "011": 0.64,
+      "100": 0.26000000000000006,
+      "101": 0.19000000000000003,
+      "110": 0.64,
+      "111": 0.41
+    },
+    "planting_status": "probability-clipping-disabled"
+  },
+  "generated_at": "2026-10-28T10:34:16.698275+00:00",
+  "metrics": {
+    "cell_balance": {
+      "alternative": {
+        "balanced": true,
+        "example": {
+          "balanced": true,
+          "cell_counts": {
+            "000": 480,
+            "001": 480,
+            "010": 480,
+            "011": 480,
+            "100": 480,
+            "101": 480,
+            "110": 480,
+            "111": 480
+          },
+          "cells": 8,
+          "episodes_per_cell": 480,
+          "families": 24,
+          "total_episodes": 3840
+        }
+      },
+      "null": {
+        "balanced": true,
+        "example": {
+          "balanced": true,
+          "cell_counts": {
+            "000": 480,
+            "001": 480,
+            "010": 480,
+            "011": 480,
+            "100": 480,
+            "101": 480,
+            "110": 480,
+            "111": 480
+          },
+          "cells": 8,
+          "episodes_per_cell": 480,
+          "families": 24,
+          "total_episodes": 3840
+        }
+      }
+    },
+    "estimation": {
+      "bias": {
+        "A": -6.510416666669072e-05,
+        "A_x_B": 0.0007682291666666619,
+        "A_x_B_x_C": -0.0007005208333333429,
+        "A_x_C": 0.0016953125000000004,
+        "B": -0.0003307291666666823,
+        "B_x_C": 0.002627604166666665,
+        "C": -7.812499999981792e-06
+      },
+      "ci_coverage": {
+        "A": 0.995,
+        "A_x_B": 1.0,
+        "A_x_B_x_C": 0.995,
+        "A_x_C": 0.99,
+        "B": 0.99,
+        "B_x_C": 1.0,
+        "C": 0.98
+      },
+      "mean_ci_width": {
+        "A": 0.08020572916666667,
+        "A_x_B": 0.07908203125,
+        "A_x_B_x_C": 0.07942513020833335,
+        "A_x_C": 0.08069674479166668,
+        "B": 0.07994127604166666,
+        "B_x_C": 0.080380078125,
+        "C": 0.07878372395833334
+      },
+      "overall_ci_coverage": 0.9928571428571429,
+      "overall_mean_ci_width": 0.0797878162202381,
+      "recovery": {
+        "A": 0.2499348958333333,
+        "A_x_B": 0.10076822916666667,
+        "A_x_B_x_C": 0.07929947916666666,
+        "A_x_C": 0.0016953125000000004,
+        "B": -0.2003307291666667,
+        "B_x_C": 0.002627604166666665,
+        "C": 0.1499921875
+      },
+      "rmse": {
+        "A": 0.015115880874123563,
+        "A_x_B": 0.014346524105380022,
+        "A_x_B_x_C": 0.014972205513351324,
+        "A_x_C": 0.01464519061237909,
+        "B": 0.014206487004304486,
+        "B_x_C": 0.01561080083994999,
+        "C": 0.015590282611048497
+      }
+    },
+    "multiplicity": {
+      "alternative": {
+        "discoveries": 1001,
+        "false_discoveries": 2,
+        "fdr": 0.0016666666666666666,
+        "fdr_method": "benjamini-hochberg",
+        "mean_discoveries": 5.005,
+        "mean_false_discoveries": 0.01,
+        "null_terms": [
+          "A_x_C",
+          "B_x_C"
+        ],
+        "pooled_false_discovery_fraction": 0.001998001998001998,
+        "power_any_true_effect": 1.0,
+        "power_by_term": {
+          "A": 1.0,
+          "A_x_B": 1.0,
+          "A_x_B_x_C": 0.97,
+          "B": 1.0,
+          "C": 1.0
+        },
+        "repetitions": 200,
+        "true_positive_terms": [
+          "A",
+          "B",
+          "C",
+          "A_x_B",
+          "A_x_B_x_C"
+        ]
+      },
+      "null": {
+        "fwer": 0.005,
+        "fwer_method": "holm-bonferroni",
+        "mean_rejections": 0.005,
+        "per_term_false_rejection_rate": {
+          "A": 0.0,
+          "A_x_B": 0.0,
+          "A_x_B_x_C": 0.005,
+          "A_x_C": 0.0,
+          "B": 0.0,
+          "B_x_C": 0.0,
+          "C": 0.0
+        },
+        "repetitions": 200
+      }
+    },
+    "null_diagnostics": {
+      "bias": {
+        "A": -0.0006770833333333357,
+        "A_x_B": -0.0004322916666666678,
+        "A_x_B_x_C": -0.0012135416666666662,
+        "A_x_C": 0.0012708333333333328,
+        "B": -0.0011822916666666674,
+        "B_x_C": 0.001307291666666667,
+        "C": -0.00012500000000000176
+      },
+      "ci_coverage": {
+        "A": 0.985,
+        "A_x_B": 0.99,
+        "A_x_B_x_C": 0.99,
+        "A_x_C": 0.995,
+        "B": 0.975,
+        "B_x_C": 0.99,
+        "C": 0.99
+      },
+      "mean_ci_width": {
+        "A": 0.08499869791666667,
+        "A_x_B": 0.08721861979166669,
+        "A_x_B_x_C": 0.08581822916666666,
+        "A_x_C": 0.085751953125,
+        "B": 0.086098828125,
+        "B_x_C": 0.08578606770833334,
+        "C": 0.08552864583333333
+      },
+      "overall_ci_coverage": 0.9878571428571429,
+      "overall_mean_ci_width": 0.08588586309523809,
+      "recovery": {
+        "A": -0.0006770833333333357,
+        "A_x_B": -0.0004322916666666678,
+        "A_x_B_x_C": -0.0012135416666666662,
+        "A_x_C": 0.0012708333333333328,
+        "B": -0.0011822916666666674,
+        "B_x_C": 0.001307291666666667,
+        "C": -0.00012500000000000176
+      },
+      "rmse": {
+        "A": 0.016055695975693146,
+        "A_x_B": 0.016192137902732644,
+        "A_x_B_x_C": 0.016699674346043063,
+        "A_x_C": 0.015148999554426027,
+        "B": 0.01625700970607243,
+        "B_x_C": 0.01623780926272931,
+        "C": 0.015156518468412634
+      }
+    }
+  },
+  "repetitions": 200,
+  "schema_version": 1,
+  "scientific_result": false,
+  "seed": 20261027,
+  "status": "harness-validation",
+  "suite": "factorial estimator validity v0"
+}

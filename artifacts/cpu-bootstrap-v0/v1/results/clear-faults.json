@@ -1,0 +1,66 @@
+{
+  "config": {
+    "tasks": 2
+  },
+  "generated_at": "2026-10-27T16:21:16.457262+00:00",
+  "result": {
+    "families": {
+      "fault_recovery": {
+        "base_success_rate": 1.0,
+        "faulted_recoveries": 2,
+        "faulted_recovery_rate": 1.0,
+        "faulted_runs": 2,
+        "mean_steps": 9.0,
+        "runs": 2,
+        "shift_success_rate": 1.0,
+        "success_rate": 1.0,
+        "successes": 2
+      }
+    },
+    "overall": {
+      "base_success_rate": 1.0,
+      "faulted_recoveries": 2,
+      "faulted_recovery_rate": 1.0,
+      "faulted_runs": 2,
+      "mean_steps": 9.0,
+      "runs": 2,
+      "shift_success_rate": 1.0,
+      "success_rate": 1.0,
+      "successes": 2
+    },
+    "policy": "reactive-spec",
+    "results": [
+      {
+        "error": null,
+        "family_id": "fault_recovery",
+        "faults_injected": [
+          "transient_error: injected transient tool failure"
+        ],
+        "final_digest": "f71ff7d54639b856da1cb2d9266565d800eb5a4ae9217ffc9a561d45fc480b1e",
+        "final_file_count": 6,
+        "policy": "reactive-spec",
+        "steps": 9,
+        "success": true,
+        "task_id": "fault_recovery-v0-i100",
+        "tool_failures": 1,
+        "variant": 0
+      },
+      {
+        "error": null,
+        "family_id": "fault_recovery",
+        "faults_injected": [
+          "transient_error: injected transient tool failure"
+        ],
+        "final_digest": "e474966184c7fab6b2d9e433bb925598cee920d702b940da59dff10f81a072ba",
+        "final_file_count": 6,
+        "policy": "reactive-spec",
+        "steps": 9,
+        "success": true,
+        "task_id": "fault_recovery-v1-i101",
+        "tool_failures": 1,
+        "variant": 1
+      }
+    ]
+  },
+  "suite": "CLEAR-Bench fault recovery v0"
+}

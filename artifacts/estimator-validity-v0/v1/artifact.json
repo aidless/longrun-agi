@@ -1,0 +1,107 @@
+{
+  "name": "estimator-validity-v0",
+  "version": 1,
+  "created_at": "2026-10-28T10:35:11Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest",
+    "python3 -m compileall src tests",
+    "make estimator-validity",
+    "python3 scripts/verify_artifact.py artifacts/estimator-validity-v0/v1"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0,
+    "third_party_runtime_dependencies": "none; Python standard library and pytest"
+  },
+  "config": {
+    "experiment": "experiments/003-estimator-validity-v0/design.md",
+    "seed": 20261027,
+    "repetitions": 200,
+    "bootstrap_replicates": 299,
+    "confidence_level": 0.95,
+    "alpha": 0.05,
+    "factor_names": [
+      "A",
+      "B",
+      "C"
+    ],
+    "families_per_repetition": 24,
+    "episodes_per_family_cell": 20,
+    "episodes_per_repetition_per_condition": 3840,
+    "conditions": [
+      "global-null",
+      "alternative-with-two-zero-interactions"
+    ],
+    "contrast_scale": "standard orthogonal contrast, level 0 minus level 1",
+    "interval": "95% percentile nested family/episode cluster bootstrap",
+    "fwer_adjustment": "Holm-Bonferroni",
+    "fdr_adjustment": "Benjamini-Hochberg"
+  },
+  "inputs": {
+    "design": "experiments/003-estimator-validity-v0/design.md",
+    "source_sha256": {
+      "src/longrun/analysis/__init__.py": "c76a5a26a856c25e5ffd151a74d472dc9bad18512870010392cb98943e0d93be",
+      "src/longrun/analysis/factorial.py": "927c8c72d73b3a7df641bbdcf6b6e56d53d2e732ac6c286ed005c14fc673a296",
+      "src/longrun/cli.py": "0dc3691834eea9e7ff9d1b7b0a1ed82f016914fdfdae3872f481f4f04ce058db",
+      "tests/test_factorial_validity.py": "b9307462329bd92bd8e41faa75ef9e83aa162d5771a1a34e8e16b1dcf2a4bea8",
+      "tests/test_clear_policies.py": "8d519278cd5fb44144549373d81d1b45278784f2ce9783ce05da03cd010c96fe",
+      "experiments/003-estimator-validity-v0/design.md": "109e4f64498add338345c5d0c5d99d3521722826f91aee5563582895428882dd"
+    }
+  },
+  "outputs": {
+    "results/estimator-grid.json": "62fc42429131fe9c01eec2ce80cff80c93238b83d95cb1332b94ee5ae56b6e75"
+  },
+  "canonical_output_sha256": "88fca75c04b552439bf6628993e30fb5b717ec8f536df443b21c6ffe595bc1cc",
+  "canonicalization": "Remove only generated_at, then JSON encode with sorted keys, compact separators, ASCII escaping, and disallow NaN.",
+  "key_observations": {
+    "alternative_overall_ci_coverage": 0.9928571428571429,
+    "alternative_coverage_range": [
+      0.98,
+      1.0
+    ],
+    "null_overall_ci_coverage": 0.9878571428571429,
+    "alternative_max_absolute_bias": 0.002627604166666665,
+    "alternative_max_rmse": 0.01561080083994999,
+    "fwer_holm": 0.005,
+    "power_any_true_effect_holm": 1.0,
+    "power_three_way_holm": 0.97,
+    "fdr_benjamini_hochberg": 0.0016666666666666666,
+    "bh_false_discoveries": 2,
+    "bh_discoveries": 1001,
+    "all_cells_balanced": true
+  },
+  "checks": {
+    "unit_tests": "45 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_repetitions_completed": true,
+    "all_designs_balanced": true
+  },
+  "negative_evidence": [
+    "A preserved earlier run with large planted effects and clipping to [0.05, 0.95] had alternative coverage 0.804. It is documented in the experiment log and was not used as the final artifact.",
+    "The change from the clipped to the unclipped design is consistent with the coverage shortfall but is not an isolated clipping-only ablation."
+  ],
+  "notes": [
+    "This artifact validates an estimator on a declared synthetic balanced design.",
+    "It is not an LLM experiment, an AGI capability result, or evidence of benchmark novelty.",
+    "No GPU, model download, external dataset, network call, paid API, account change, or submission was used.",
+    "The finite-sample FWER, power, FDR, bias, RMSE, and coverage values do not guarantee behavior under arbitrary dependence or on real agent outcomes.",
+    "The original eight AGI research-point list from the user has not yet been supplied, so no eight-point mapping is claimed here."
+  ],
+  "not_completed": [
+    "No LLM-agent evaluation was run.",
+    "No arbitrary-factor-count estimator was implemented; this version supports at least two factors with a complete two-level design.",
+    "No unequal-cell weighting or non-Bernoulli outcome model was evaluated.",
+    "No confirmatory test on real agent data or external benchmark was performed.",
+    "No literature-backed novelty assessment was performed for this estimator."
+  ]
+}

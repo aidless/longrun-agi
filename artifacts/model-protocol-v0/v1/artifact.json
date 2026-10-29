@@ -1,0 +1,96 @@
+{
+  "name": "model-protocol-v0",
+  "version": 1,
+  "created_at": "2026-10-29T08:40:10Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make model-protocol",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "python3 scripts/verify_artifact.py artifacts/model-protocol-v0/v1"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_downloaded": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "protocol_id": "clear-v1-model-eval-v1",
+    "protocol_version": 1,
+    "dry_run_tasks": 240,
+    "sealed_test_tasks": 60,
+    "fixture_policies": [
+      "valid-fixture",
+      "mixed-failure-fixture"
+    ]
+  },
+  "inputs": {
+    "design": "experiments/020-model-protocol-v0/design.md",
+    "source_sha256": {
+      "src/longrun/evaluation/protocol.py": "c271320abfb9c5efb94bc782b799d6ccd0f90e2a04aa291da579698c7347cb91",
+      "tests/test_model_protocol.py": "f30bd4f4abbca62100e65015b0d6b1823d567e85e0bb53212ac5802acb80c23d",
+      "experiments/020-model-protocol-v0/design.md": "ece2c4f05f7271f54d25935d4a7ba7bf0faa7949bdd454230a56da60c788accc"
+      ,
+      "experiments/020-model-protocol-v0/log.md": "1f89f0ee9a18840982e32f408aa5f2ed6939a86a8505799244c71a377bacd043"
+    }
+  },
+  "outputs": {
+    "results/model-protocol.json": "94220f8c4f073e32e0d65ee6338da6eb66df91e70f357391fc5d3a877dfdba66"
+  },
+  "canonical_output_sha256": "bed43ac805ec30f43589c9e5f7a0fcb5f032a08f84fbc6303a887a09743b93dd",
+  "checks": {
+    "unit_tests": "174 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "valid_fixture_success_rate": 1.0,
+    "mixed_fixture_success_rate": 0.8458333333333333,
+    "test_split_accessed": false,
+    "model_downloaded": false,
+    "model_loaded": false,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+    ,
+    "artifact_hash_check": "passed"
+  },
+  "key_observations": {
+    "valid_fixture": {
+      "tasks": 240,
+      "successes": 240,
+      "success_rate": 1.0,
+      "valid_json_rate": 1.0,
+      "schema_valid_rate": 1.0
+    },
+    "mixed_failure_fixture": {
+      "tasks": 240,
+      "successes": 203,
+      "success_rate": 0.8458333333333333,
+      "failure_counts": {
+        "timeout": 13,
+        "invalid-json": 14,
+        "wrong-output": 10
+      }
+    }
+  },
+  "notes": [
+    "The protocol is a frozen model-facing contract, not a model result.",
+    "The dry run uses only train/dev fixtures.",
+    "The 60-task test split remains sealed and is not accessed.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No model capability evaluation.",
+    "No external benchmark or leaderboard result.",
+    "No prompt tuning or model selection.",
+    "No novelty or publication claim."
+  ]
+}

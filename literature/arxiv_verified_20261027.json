@@ -1,0 +1,788 @@
+{
+  "entries": [
+    {
+      "authors": [
+        "Jaineet Shah"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "id": "2606.08275",
+      "pdf_url": "https://arxiv.org/pdf/2606.08275",
+      "primary_category": "",
+      "published": "2026-06-06T17:44:23Z",
+      "summary": "When an LLM agent fails -- issues a refund it should not have, calls the wrong tool, leaks data -- existing tooling answers what happened (observability) or whether it passed (evaluation), but not which step caused the failure. The obvious heuristics are wrong: the step that executes the harmful action is usually not the step that decided on it, and LLM-judge attribution is correlational and unreliable (state-of-the-art step-level accuracy on the Who&When benchmark is about 14%). We present Causal Agent Replay (CAR), which answers the question by intervention: it models an agent run as a structural causal model, applies a do-operation to a step, and re-executes the trajectory forward under the same stochastic policy, measuring the shift in the outcome distribution. We define an intervention algebra over agent steps, a single-step contrastive estimator whose point-of-commitment rule resolves a confound specific to stochastic run-forward, and a budget-bounded Monte-Carlo Shapley estimator that splits credit across interacting steps. Every effect is reported with confidence intervals. We validate against synthetic structural causal models with planted ground truth: the contrastive estimator recovers the pivotal step, and Shapley recovers a two-step interaction (0.44, 0.45, ~0; efficiency sum 0.909 versus the analytic 0.91). CAR is open source and runs on hosted or free local models.",
+      "title": "Causal Agent Replay: Counterfactual Attribution for LLM-Agent Failures",
+      "updated": "2026-06-06T17:44:23Z",
+      "url": "https://arxiv.org/abs/2606.08275",
+      "versioned_id": "2606.08275v1"
+    },
+    {
+      "authors": [
+        "Akash Bonagiri",
+        "Devang Borkar",
+        "Gerard Janno Anderias",
+        "Setareh Rafatirad",
+        "Houman Homayoun"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "id": "2605.25338",
+      "pdf_url": "https://arxiv.org/pdf/2605.25338",
+      "primary_category": "",
+      "published": "2026-05-25T01:47:01Z",
+      "summary": "Large language model (LLM) agents frequently fail on multi-step tasks involving reasoning, tool use, and environment interaction. While such failures are typically logged or retried heuristically, they contain structured signals about where execution broke down. We introduce CausalFlow, an interventional framework that converts failed agent traces into minimal counterfactual repairs and reusable supervision. CausalFlow models execution traces as sequential chains of dependent steps and computes Causal Responsibility Scores(CRS) via step-level counterfactual intervention to identify failure-inducing steps. For these steps, we generate minimally edited repairs that flip the final outcome to success, producing validated contrastive pairs of the form (wrong step, corrected step). CausalFlow supports two complementary uses: targeted test-time repair that recovers from failures with minimal behavioral drift, and training-time supervision suitable for offline preference optimization or reward modeling. Across four benchmarks spanning mathematical reasoning, code generation, question answering, and medical browsing, CausalFlow converts failed executions into validated minimal repairs with high minimality and causal-consensus scores, and demonstrates that causal attribution is necessary for reliable improvement across diverse agent tasks, outperforming heuristic refinement in complex retrieval settings while producing more localized repairs throughout. These results demonstrate that interventional analysis over structured execution traces provides a principled and scalable mechanism for transforming agent failures into reliability gains and learning-ready supervision.",
+      "title": "CausalFlow: Causal Attribution and Counterfactual Repair for LLM Agent Failures",
+      "updated": "2026-05-25T01:47:01Z",
+      "url": "https://arxiv.org/abs/2605.25338",
+      "versioned_id": "2605.25338v1"
+    },
+    {
+      "authors": [
+        "Yawen Wang",
+        "Wenjie Wu",
+        "Junjie Wang",
+        "Qing Wang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "id": "2602.23701",
+      "pdf_url": "https://arxiv.org/pdf/2602.23701",
+      "primary_category": "",
+      "published": "2026-02-27T06:08:42Z",
+      "summary": "LLM-powered Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex domains but suffer from inherent fragility and opaque failure mechanisms. Existing failure attribution methods, whether relying on direct prompting, costly replays, or supervised fine-tuning, typically treat execution logs as flat sequences. This linear perspective fails to disentangle the intricate causal links inherent to MAS, leading to weak observability and ambiguous responsibility boundaries. To address these challenges, we propose CHIEF, a novel framework that transforms chaotic trajectories into a structured hierarchical causal graph. It then employs hierarchical oracle-guided backtracking to efficiently prune the search space via sybthesized virtual oracles. Finally, it implements counterfactual attribution via a progressive causal screening strategy to rigorously distinguish true root causes from propagated symptoms. Experiments on Who&When benchmark show that CHIEF outperforms eight strong and state-of-the-art baselines on both agent- and step-level accuracy. Ablation studies further confirm the critical role of each proposed module.",
+      "title": "From Flat Logs to Causal Graphs: Hierarchical Failure Attribution for LLM-based Multi-Agent Systems",
+      "updated": "2026-02-27T06:08:42Z",
+      "url": "https://arxiv.org/abs/2602.23701",
+      "versioned_id": "2602.23701v1"
+    },
+    {
+      "authors": [
+        "Bo Deng",
+        "Xinlei Zheng",
+        "Yi Wei",
+        "Kang Zhou",
+        "Chongyang Tao",
+        "Renzhao Liang",
+        "Xuanren Chen",
+        "Lifan Guo",
+        "Chi Zhang"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2610.01256",
+      "pdf_url": "https://arxiv.org/pdf/2610.01256",
+      "primary_category": "",
+      "published": "2026-10-01T07:50:22Z",
+      "summary": "Errors in LLM agent executions and their visible consequences can be separated by many steps, making decisive-error localization a matter of understanding both step content and step dependencies. We introduce DeFA, a dependency-guided framework for agent failure attribution. DeFA first combines protocol relations and semantic dependencies into an event dependency graph spanning the trajectory. It then identifies events that may violate task requirements and traces their sources and subsequent effects to construct a failure propagation graph. Finally, DeFA uses step evidence and the steps' roles in failure propagation to identify the decisive error, responsible agent, and error category. To support long trajectories, DeFA partitions executions into segments and combines the current segment's detailed content with summaries of the other segments, giving local diagnosis access to global execution context. Across Who and When and the Who and When Pro text subset, DeFA achieves the highest responsible-agent and exact step accuracy with all evaluated backbones, and the highest failure-mode accuracy among taxonomy-aligned methods on Pro. Further experiments on image and video trajectories demonstrate its applicability to multimodal failure attribution. Ablations support the contributions of segmentation, the event dependency graph, and the failure propagation graph. Using DeFA's diagnostic feedback for skill evolution in Trace2Skill improves downstream task accuracy by 6-15 percentage points over the native pipeline, showing that the diagnoses can also support agent improvement on subsequent tasks.",
+      "title": "DeFA: Dependency-Guided Failure Attribution for LLM Agents",
+      "updated": "2026-10-01T07:50:22Z",
+      "url": "https://arxiv.org/abs/2610.01256",
+      "versioned_id": "2610.01256v1"
+    },
+    {
+      "authors": [
+        "Yunfei Zhang",
+        "Boyu Feng",
+        "Changhua Pei",
+        "Zexin Wang",
+        "Zhihuang Peng",
+        "Xinlong Liu",
+        "Hengyue Jiang",
+        "Difeng Ma",
+        "Jiayi Zhang",
+        "Yongzhou Yao",
+        "Yanan Zhao",
+        "Fei Sun",
+        "Yintong Huo",
+        "Zhaoyang Liu",
+        "Jingjing Li",
+        "Gaogang Xie",
+        "Dan Pei"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "id": "2608.15242",
+      "pdf_url": "https://arxiv.org/pdf/2608.15242",
+      "primary_category": "",
+      "published": "2026-08-15T14:06:02Z",
+      "summary": "In long agent executions, an early error can persist through later actions and checks, while evidence needed to trace its origin is dispersed across the history. Short histories offer limited tests of recovering error origins across substantial subsequent execution. We introduce LongRCA Bench: 1,140 complete failed trajectories from five sources, all human-annotated for responsible roles and earliest decisive root-cause steps. Reference roots precede completion by a median of 48 recorded steps; 28.4% of trajectories contain over 100 subsequent steps. With DeepSeek-V4-Flash on the full benchmark, the strongest of five evaluated baselines achieves 13.2% exact root-step accuracy. We propose Root-Cause Trajectory Attribution (RCTA), a training-free method that organizes original candidate records and explicit handoff instructions for attribution. Segment summaries and a trajectory outline guide candidate retrieval; available handoff records supply upstream instruction context for the final instruction-execution comparison. With the same backbone and scoring protocol, RCTA reaches 24.1% exact root-step accuracy and 51.1% responsible-role accuracy. LongRCA-Mini provides 200 fixed trajectories for lower-cost comparative screening. Even with RCTA, fewer than one quarter of reference roots are recovered exactly.",
+      "title": "LongRCA Bench: Root-Cause Localization in Long-Horizon Agent Trajectories",
+      "updated": "2026-09-21T07:33:58Z",
+      "url": "https://arxiv.org/abs/2608.15242",
+      "versioned_id": "2608.15242v4"
+    },
+    {
+      "authors": [
+        "Jiale Liu",
+        "Huajun Xi",
+        "Shaokun Zhang",
+        "Yifan Zeng",
+        "Tianwei Yue",
+        "Chi Wang",
+        "Jian Kang",
+        "Qingyun Wu",
+        "Huazheng Wang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "id": "2607.09996",
+      "pdf_url": "https://arxiv.org/pdf/2607.09996",
+      "primary_category": "",
+      "published": "2026-07-10T21:45:16Z",
+      "summary": "Automated failure attribution uses LLMs to identify where and why agentic systems fail. As agents become more capable, their failures become subtler, making automated attribution increasingly important. We introduce Who&When Pro, a large-scale benchmark for automated failure attribution in agentic systems. Using a strictly controlled pipeline that injects a failure only after exactly replaying a successful prefix, we construct 12,326 failed trajectories with golden labels across 3 modalities and 26 benchmarks covering various scenarios. Beyond benchmarking, we conduct extensive experiments and analyses, revealing systematic patterns in how models attribute failures across modalities, protocols, and model families, and providing empirical guidance for future automated failure attribution systems.",
+      "title": "Who&When Pro: Can LLMs Really Attribute Failures in AI Agents?",
+      "updated": "2026-10-09T04:04:24Z",
+      "url": "https://arxiv.org/abs/2607.09996",
+      "versioned_id": "2607.09996v2"
+    },
+    {
+      "authors": [
+        "Shraddha Barke",
+        "Arnav Goyal",
+        "Alind Khare",
+        "Avaljot Singh",
+        "Suman Nath",
+        "Chetan Bansal"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2602.02475",
+      "pdf_url": "https://arxiv.org/pdf/2602.02475",
+      "primary_category": "",
+      "published": "2026-02-02T18:54:07Z",
+      "summary": "AI agents often fail in ways that are difficult to localize because executions are probabilistic, long-horizon, multi-agent, and mediated by noisy tool outputs. We address this gap by manually annotating failed agent runs and release a novel benchmark of 170 trajectories across 11 diverse task settings, including structured API workflows, incident management, and open-ended web/file tasks. Each trajectory is annotated with a critical failure step and a category from a grounded-theory derived, cross-domain failure taxonomy. To mitigate the human cost of failure attribution, we present AgentRx, an $\\textit{automated diagnostic framework}$ that pinpoints the critical failure step in a failed agent trajectory. It synthesizes constraints, evaluates them step-by-step, and produces an auditable validation log of constraint violations with associated evidence; an LLM-based judge uses this log to localize the critical step and category. AgentRx improves step localization by 75% on average over prior work, while providing failure category attribution.",
+      "title": "AgentRx: Diagnosing AI Agent Failures from Execution Trajectories",
+      "updated": "2026-08-31T04:47:53Z",
+      "url": "https://arxiv.org/abs/2602.02475",
+      "versioned_id": "2602.02475v2"
+    },
+    {
+      "authors": [
+        "Jing Chen",
+        "Yang Sun",
+        "Li Zhang",
+        "Lin Xu",
+        "Jie Shi"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2608.06909",
+      "pdf_url": "https://arxiv.org/pdf/2608.06909",
+      "primary_category": "",
+      "published": "2026-08-07T07:43:12Z",
+      "summary": "Large language model (LLM) agents increasingly operate through long-horizon trajectories involving user instructions, tool use, external observations, and memory. Existing benchmarks primarily evaluate behavioral outcomes but provide limited support for fine-grained attribution analysis. We introduce trajectory attribution and develop a benchmark and annotation framework for this task. The benchmark organizes heterogeneous trajectories under a unified component schema and provides annotations of the primary attribution component, together with attack and execution chains where applicable. Instantiating the benchmark with trajectories from AgentDojo and the Stage and Canary settings of Agent3Sigma yields more than 1,300 annotated trajectories covering task-aligned actions, unsafe actions, and safety refusals. The benchmark defines two evaluation tasks, primary attribution localization and attribution-chain recovery, and provides reference baselines based on incremental trajectory contribution and component-level leave-one-out perturbation. It captures diverse attribution settings, including local and long-range attribution as well as structured attribution chains. Reference baseline results exhibit substantial performance differences across these settings, providing an initial characterization of the benchmark's attribution challenges. Beyond this initial instantiation, we release a reusable annotation skill that enables trajectories generated by new agent models to be standardized, annotated, and evaluated under the same framework. Project resources and future releases are available at https://github.com/chenjing-2024/agent-trajectory-attribution.",
+      "title": "Long-Horizon Agent Trajectory Attribution: A Unified Benchmark and Fine-Grained Annotation Framework",
+      "updated": "2026-08-07T07:43:12Z",
+      "url": "https://arxiv.org/abs/2608.06909",
+      "versioned_id": "2608.06909v1"
+    },
+    {
+      "authors": [
+        "Xinyu Jessica Wang",
+        "Haoyue Bai",
+        "Yiyou Sun",
+        "Haorui Wang",
+        "Shuibai Zhang",
+        "Wenjie Hu",
+        "Mya Schroder",
+        "Bilge Mutlu",
+        "Dawn Song",
+        "Robert D Nowak"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2604.11978",
+      "pdf_url": "https://arxiv.org/pdf/2604.11978",
+      "primary_category": "",
+      "published": "2026-04-13T19:11:42Z",
+      "summary": "Large language model (LLM) agents perform strongly on short- and mid-horizon tasks, but often break down on long-horizon tasks that require extended, interdependent action sequences. Despite rapid progress in agentic systems, these long-horizon failures remain poorly characterized, hindering principled diagnosis and comparison across domains. To address this gap, we introduce HORIZON, an initial cross-domain diagnostic benchmark for systematically constructing tasks and analyzing long-horizon failure behaviors in LLM-based agents. Using HORIZON, we evaluate state-of-the-art (SOTA) agents from multiple model families (GPT-5 variants and Claude models), collecting 3100+ trajectories across four representative agentic domains to study horizon-dependent degradation patterns. We further propose a trajectory-grounded LLM-as-a-Judge pipeline for scalable and reproducible failure attribution, and validate it with human annotation on trajectories, achieving strong agreement (inter-annotator \u03ba=0.61; human-judge \u03ba=0.84). Our findings offer an initial methodological step toward systematic, cross-domain analysis of long-horizon agent failures and offer practical guidance for building more reliable long-horizon agents. We release our project website at \\href{https://xwang2775.github.io/horizon-leaderboard/}{HORIZON Leaderboard} and welcome contributions from the community.",
+      "title": "The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break",
+      "updated": "2026-04-13T19:11:42Z",
+      "url": "https://arxiv.org/abs/2604.11978",
+      "versioned_id": "2604.11978v1"
+    },
+    {
+      "authors": [
+        "Rui Wang",
+        "Zishen Lai",
+        "Jiayu Liu",
+        "Cheng Qian",
+        "Jeonghwan Kim",
+        "Heng Wang",
+        "Xuejun Zhang",
+        "Jiateng Liu",
+        "Bingxuan Li",
+        "Shujin Wu",
+        "Qing Zong",
+        "Tianshi Zheng",
+        "Chunyang Li",
+        "Qihan Lin",
+        "Chen Li",
+        "Dadi Guo",
+        "Xiusi Chen",
+        "Yangqiu Song"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "id": "2610.25950",
+      "pdf_url": "https://arxiv.org/pdf/2610.25950",
+      "primary_category": "",
+      "published": "2026-10-19T07:41:50Z",
+      "summary": "Large Language Model (LLM) agents are increasingly deployed in unfamiliar and evolving environments, requiring them to proactively explore, understand, and adapt to environmental dynamics. However, existing benchmarks rarely test whether agents can proactively discover how an environment works and adapt as it evolves. To address this gap, we introduce AdaExploreBench, a benchmark for proactive exploration and test-time adaptation in evolving environments. By instantiating environmental dynamics as hidden rules, AdaExploreBench requires agents to actively acquire evidence and infer the rules. Under implicit rule drift, the latent rule changes without announcement, requiring agents to detect from degraded performance that prior knowledge is stale and re-explore. Experiments on eight leading LLMs show that proactive and adaptive exploration remain challenging: GPT-6 Sol achieves only 61.9% calibrated accuracy, while providing sufficient evidence or removing rule drift improves average performance significantly by close to 10%. These results reveal a critical bottleneck in current LLM agents: they can often reason effectively from informative evidence once it is available, but struggle to actively acquire the right evidence and recognize when previously acquired evidence is no longer valid.",
+      "title": "AdaExploreBench: Benchmarking LLM Agents for Proactive Exploration and Test-time Adaptation in Evolving Environments",
+      "updated": "2026-10-19T07:41:50Z",
+      "url": "https://arxiv.org/abs/2610.25950",
+      "versioned_id": "2610.25950v1"
+    },
+    {
+      "authors": [
+        "Dongsheng Zhu",
+        "Xuchen Ma",
+        "Yucheng Shen",
+        "Xiang Li",
+        "Yukun Zhao",
+        "Shuaiqiang Wang",
+        "Lingyong Yan",
+        "Dawei Yin"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2606.05806",
+      "pdf_url": "https://arxiv.org/pdf/2606.05806",
+      "primary_category": "",
+      "published": "2026-06-04T07:38:46Z",
+      "summary": "Existing benchmarks evaluate Tool-Integrated Reasoning (TIR) in LLMs on idealized ''happy paths'', largely overlooking real-world tool failures. We introduce ToolMaze, a benchmark for dynamic path discovery and error recovery in TIR agents. To separate systematic replanning from blind trial-and-error, ToolMaze adopts a two-dimensional design: DAG-based topological complexity and a $2 \\times 2$ taxonomy of tool perturbations (explicit/implicit, transient/permanent). Evaluations show that perturbations degrade performance across nearly all models, with the sharpest drops under implicit semantic failures. Driven by systemic over-trust in corrupted outputs, Perturbation Recovery Rate (PRR) plummets by around 37\\% in these scenarios, while complex topologies trap agents in futile trial-and-error loops. Crucially, agentic fault-tolerance improves with model scale $3.66\\times$ slower than basic task execution, highlighting dynamic replanning as a distinct bottleneck unaddressed by model scaling or prompting. Data and code are available at https://github.com/Zhudongsheng75/ToolMaze.",
+      "title": "When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents",
+      "updated": "2026-06-04T07:38:46Z",
+      "url": "https://arxiv.org/abs/2606.05806",
+      "versioned_id": "2606.05806v1"
+    },
+    {
+      "authors": [
+        "Yingying Liu",
+        "Junzhou Fang",
+        "Chenxiong Qian"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.OS"
+      ],
+      "id": "2610.05281",
+      "pdf_url": "https://arxiv.org/pdf/2610.05281",
+      "primary_category": "",
+      "published": "2026-10-04T15:01:14Z",
+      "summary": "Modern agents increasingly ground their reasoning in observations returned by tools, such as file contents read from a workspace. However, the data sources underlying these observations may later be modified by users, other agents, or external tools, while the model retains only the stale content in its context window. Existing agent runtimes provide little support for notifying the model that a previously observed fact has become stale, causing agents to reuse outdated observations and make incorrect claims about the current workspace state. We propose Concord, a context coherence framework that maintains the consistency between tool observation in agent context and the mutable sources from which they were derived. Concord links each observation to its source, detects source changes, and uses configurable handling policies to update, annotate, or suppress stale context before reuse. Concord is applicable across different agent runtimes and external resources, and can be easily extended to new runtime-resource settings. We implement Concord as a general framework, and instantiate a concrete use case to assess its effectiveness. We construct ConcordBench, where previously observed file contents become stale after subsequent edits. Across three evaluated frontier models, Concord produces answers consistent with the restored workspace state in all evaluated cases under these constructed conditions, matching the oracle on recover count for this benchmark, while using 46.4% fewer tokens than the strongest non-oracle baseline.",
+      "title": "When Agent Context Goes Stale: Incoherence in Volatile Agent Context",
+      "updated": "2026-10-06T12:55:09Z",
+      "url": "https://arxiv.org/abs/2610.05281",
+      "versioned_id": "2610.05281v2"
+    },
+    {
+      "authors": [
+        "Strick Sheng",
+        "Ziyue Wang",
+        "Liyi Zhou"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2605.08828",
+      "pdf_url": "https://arxiv.org/pdf/2605.08828",
+      "primary_category": "",
+      "published": "2026-05-09T09:32:27Z",
+      "summary": "Large language model agents increasingly operate through environment-facing scaffolds that expose files, web pages, APIs, and logs. These observations influence tool use, state tracking, and action sequencing, yet their reliability and authority are often uncertain. Environmental grounding is therefore a systems-level problem involving context admission, evidence provenance, freshness checking, verification policy, action gating, and model reasoning. Existing agent benchmarks mainly evaluate task capability or specific attacks such as prompt injection and memory poisoning, but they under-specify a fundamental reliability question: whether agents remain grounded in the true environment state when observations are stale, incorrect, or malicious. We introduce EnvTrustBench, an agentic framework for benchmarking this failure mode. We define an evidence-grounding defect (EGD) as a behavioral failure in which an agent treats an environment-facing claim as sufficient evidence for action without resolving it against available current evidence, leading to a task-incorrect false path under the true environment state. Given a task scenario, EnvTrustBench generates the workspace, environment, agent-facing objective, and validation oracle, executes the evaluated agent, records its action-observation trajectory and final state, and applies the oracle to produce a verdict. Using 6 LLM backbones and 5 widely used scaffolds, we evaluate 55 generated cases across 11 task scenarios, with each scenario expanded through five feedback-guided generation iterations. Results show that EGDs consistently emerge across operational workflows, highlighting environmental grounding as a core agent reliability problem with important security implications.",
+      "title": "When Agents Overtrust Environmental Evidence: An Extensible Agentic Framework for Benchmarking Evidence-Grounding Defects in LLM Agents",
+      "updated": "2026-05-12T08:22:21Z",
+      "url": "https://arxiv.org/abs/2605.08828",
+      "versioned_id": "2605.08828v2"
+    },
+    {
+      "authors": [
+        "Weiwei Xie",
+        "Shaoxiong Guo",
+        "Fan Zhang",
+        "Tian Xia",
+        "Xue Yang",
+        "Lizhuang Ma",
+        "Junchi Yan",
+        "Qibing Ren"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "id": "2604.15774",
+      "pdf_url": "https://arxiv.org/pdf/2604.15774",
+      "primary_category": "",
+      "published": "2026-04-17T07:29:52Z",
+      "summary": "Equipping Large Language Models (LLMs) with persistent memory enhances interaction continuity and personalization but introduces new safety risks. Specifically, contaminated or biased memory accumulation can trigger abnormal agent behaviors. Existing evaluation methods have not yet established a standardized framework for measuring memory misevolution. This phenomenon refers to the gradual behavioral drift resulting from repeated exposure to misleading information. To address this gap, we introduce MemEvoBench, the first benchmark evaluating long-horizon memory safety in LLM agents against adversarial memory injection, noisy tool outputs, and biased feedback. The framework consists of QA-style tasks across 7 domains and 36 risk types, complemented by workflow-style tasks adapted from 20 Agent-SafetyBench environments with noisy tool returns. Both settings employ mixed benign and misleading memory pools within multi-round interactions to simulate memory evolution. Experiments on representative models reveal substantial safety degradation under biased memory updates. Our analysis suggests that memory evolution is a significant contributor to these failures. Furthermore, static prompt-based defenses prove insufficient, underscoring the urgency of securing memory evolution in LLM agents.",
+      "title": "MemEvoBench: Benchmarking Safety Risks from Memory Misevolution in LLM Agents",
+      "updated": "2026-05-21T09:29:59Z",
+      "url": "https://arxiv.org/abs/2604.15774",
+      "versioned_id": "2604.15774v2"
+    },
+    {
+      "authors": [
+        "Haowen Pan",
+        "Pengyang Shao",
+        "Yunshan Ma",
+        "Yanzheng Jin",
+        "Naixin Zhai",
+        "Xiang Wang",
+        "Xun Yang"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "id": "2610.14431",
+      "pdf_url": "https://arxiv.org/pdf/2610.14431",
+      "primary_category": "",
+      "published": "2026-10-10T00:52:32Z",
+      "summary": "Long-term memory enables LLM agents to learn from past interactions but exposes memory formation to adversarial influence. Existing studies primarily organize memory poisoning by attack channels, corruption patterns, or lifecycle stages, leaving formation interfaces insufficiently characterized. We formulate Memory Formation Poisoning as adversarial manipulation of the interfaces through which persistent agent memory is produced and committed, and introduce MemForm, a controlled diagnostic benchmark covering five interfaces: Content, Evidence, Scope, Selection, and Path Poisoning. We introduce Selection and Path Poisoning as controlled intervention categories that isolate retention and consolidation order effects, respectively. Each category pairs clean and poisoned conditions with interface-specific controls. Evaluations across six LLMs and two response formats reveal broad susceptibility at all five interfaces under the evaluated memory protocols and implementations. Crucially, authentic experiences with successful outcomes do not guarantee reliable behavior after memory formation: changes to contextual support, retention, or consolidation order can induce undesirable downstream behavior. In particular, consolidation order can alter behavior even with identical retained experiences, depending on the memory formation procedure. Additional analyses show that interface applicability depends on memory architecture and that Path Poisoning susceptibility depends on the updater. The evaluated defenses provide incomplete mitigation that varies by interface. These findings motivate protecting both what is committed to persistent memory and how memory is formed from experiences. Code and data are available at https://github.com/opanhw/memform-code.",
+      "title": "MemForm: Benchmarking Memory Formation Poisoning in LLM Agents",
+      "updated": "2026-10-10T00:52:32Z",
+      "url": "https://arxiv.org/abs/2610.14431",
+      "versioned_id": "2610.14431v1"
+    },
+    {
+      "authors": [
+        "Yian Wang",
+        "Agam Goyal",
+        "Yuen Chen",
+        "Hari Sundaram"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "id": "2605.16746",
+      "pdf_url": "https://arxiv.org/pdf/2605.16746",
+      "primary_category": "",
+      "published": "2026-05-16T01:55:06Z",
+      "summary": "LLM agents increasingly rely on persistent state, including transcripts, summaries, retrieved context, and memory buffers, to support long-horizon interaction. This makes safety depend not only on individual model outputs, but also on what an agent stores and later reuses. We study a failure mode we call memory laundering: toxic or adversarial context can be compressed into memory summaries that no longer appear toxic under standard detectors, while still preserving hostile framing or conflict structure that influences future generations. Using paired counterfactual multi-agent rollouts, we show that toxic-origin memory summaries can remain below common toxicity thresholds while nevertheless increasing downstream toxicity relative to matched neutral baselines. To measure this hidden influence, we introduce the sub-threshold propagation gap (SPG), which quantifies downstream behavioral differences conditioned on memory states that a deployed monitor would classify as safe. Our experiments show that toxicity propagates through distinct state channels: raw transcript reuse drives overt downstream toxicity, while compressed memory carries hidden sub-threshold influence. We further find that mitigation depends critically on intervention placement. Sanitizing toxic state before summarization substantially reduces the hidden propagation gap, whereas cleaning only the completed summary can leave laundered influence intact. These results suggest that safety in memory-augmented agents should be treated as a state-control problem over evolving context, with sanitization applied before unsafe information is compressed into persistent memory.",
+      "title": "State Contamination in Memory-Augmented LLM Agents",
+      "updated": "2026-05-16T01:55:06Z",
+      "url": "https://arxiv.org/abs/2605.16746",
+      "versioned_id": "2605.16746v1"
+    },
+    {
+      "authors": [
+        "Chenkai Wu",
+        "Xing Chang",
+        "Jun Yan"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "id": "2610.15537",
+      "pdf_url": "https://arxiv.org/pdf/2610.15537",
+      "primary_category": "",
+      "published": "2026-10-11T11:19:01Z",
+      "summary": "Typed decision interfaces restrict models to predefined actions, yet schema-valid choices can still trigger policy-violating state changes. Evaluating context poisoning thus requires connecting model decisions to execution outcomes while accounting for legitimate automation retained by defenses. We introduce an execution-aware protocol tracing poisoned evidence through retrieval, model choice, automated action, and persisted state. We evaluate it with 1,659 fresh calls to Jev-1.13.0 across 20 development tasks in two synthetic workflows, using three repetitions per condition. Under natural retrieval, a standalone payload reaches all 60 trials and produces five security-violating executions, while a carrier-payload pair exposes the payload in 57 trials and produces one violation. An initial source-exclusion gate blocks the pair's observed violation but also withholds ten otherwise correct attacked decisions and sixteen correct clean decisions. Correcting its empty-scope behavior restores twelve clean decisions without additional model calls. Factorial controls show that adding correct evidence reduces wrong executions from 119/120 to 55/120 in the semantic arm and from 60/120 to zero in the neutral arm, suggesting that much of the improvement reflects general evidence value rather than attack-specific protection. Three prespecified contrasts are not statistically supported after Holm correction, so the findings remain exploratory. The protocol provides an auditable framework for studying which poisoning-induced errors reach execution and how much correct automation defenses preserve. Code is available at https://github.com/WuXixiong/jev-poisoning-bench.",
+      "title": "Poisoned into Action: Context Attacks on Typed Decision Workflows",
+      "updated": "2026-10-11T11:19:01Z",
+      "url": "https://arxiv.org/abs/2610.15537",
+      "versioned_id": "2610.15537v1"
+    },
+    {
+      "authors": [
+        "Zhibo Yang",
+        "Chen Zhang",
+        "Yuewei Zhang",
+        "Hao Wang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "id": "2609.05079",
+      "pdf_url": "https://arxiv.org/pdf/2609.05079",
+      "primary_category": "",
+      "published": "2026-09-04T12:37:20Z",
+      "summary": "Autonomous coding agents are increasingly proposed as AI-scientist systems that conduct analyses and write research reports, but executing a prescribed analysis is not the same as making a discovery. Existing benchmarks are configured for reproduction: tasks, data, and rubrics are built around a hidden target study, and recovery of its result is rewarded. We present TruthInsightBench, a benchmark configured for discovery. Its 40 blind tasks, drawn from 40 peer-reviewed studies across 10 scientific domains, expose only a neutral scientific objective and frozen data; source conclusions, expected values, and analysis paths are withheld, leaving the agent to determine what claim the data support. A fixed LLM-based judge scores the evidentiary maturity of an agent's own claims along six dimensions, operationalized as 29 artifact-grounded items, with automated, deterministic aggregation and no per-instance human grading, so evaluation can be repeated automatically as agents evolve. On one frozen base model, four coding agents form a narrow plateau (58.4-60.3 of 100) with no statistically reliable pairwise separation: they execute and document analyses competently, with comparatively strong evidence auditability and novelty, but largely lack the discriminating acts that establish a trustworthy claim (controls, robustness, falsifiability, and cross-dataset generalization). The bottleneck is scientific judgment rather than coding, and genuine discovery remains out of reach. TruthInsightBench makes this gap a measurable target; data and scoring code are at https://github.com/TruthInsight-stack/TruthInsightBench.",
+      "title": "TruthInsightBench: An Evidence-Grounded Benchmark for Automated Evaluation of Open-Ended Scientific Discovery Agents",
+      "updated": "2026-09-08T03:39:25Z",
+      "url": "https://arxiv.org/abs/2609.05079",
+      "versioned_id": "2609.05079v2"
+    },
+    {
+      "authors": [
+        "Lezhi Yu",
+        "Xiaogang Xu",
+        "Yuhua Zhou",
+        "Shuibing He",
+        "Aimin Pan"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "id": "2608.26753",
+      "pdf_url": "https://arxiv.org/pdf/2608.26753",
+      "primary_category": "",
+      "published": "2026-08-27T07:49:29Z",
+      "summary": "LLM agents used for scientific experimentation must do more than generate executable code: they must implement the reference method faithfully, design experiments that test the paper's claims, and provide evidence supporting those claims. We show that agents often produce methodological hallucinations: silently reducing datasets or training budgets, replacing failed learning or generative components with lookup or oracle functions, or drawing conclusions from resource-limited settings where a method's claimed advantage disappears. To detect these failures, we introduce ABE-Ralph, a reference-anchored auditing framework that represents claims, protocols, required components, baselines, and metrics as structured experimental constraints, guides implementation through an 8-step workflow, and performs quantitative, qualitative, and code-level verification. Across 30 long-horizon reproduction runs covering 12 machine learning domains, ABE-Ralph achieves a 93% robust execution rate and identifies five scientific failure modes. In 23 NatureBench discovery tasks, ABE-Ralph matches or exceeds state-of-the-art performance on 5 tasks. These results show that reliable evaluation of AI scientists must assess whether the experimental design faithfully tests the intended claim and whether the resulting evidence supports it, rather than treating code execution or plausible metrics as evidence of scientific success.",
+      "title": "Beyond Execution: Auditing Experimental Fidelity in LLM-Driven Scientific Research",
+      "updated": "2026-08-27T07:49:29Z",
+      "url": "https://arxiv.org/abs/2608.26753",
+      "versioned_id": "2608.26753v1"
+    },
+    {
+      "authors": [
+        "Ke Zhang",
+        "Patricio Gallardo",
+        "Maziar Raissi",
+        "Sudhir Murthy"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG",
+        "cs.PL"
+      ],
+      "id": "2604.16538",
+      "pdf_url": "https://arxiv.org/pdf/2604.16538",
+      "primary_category": "",
+      "published": "2026-04-16T21:15:46Z",
+      "summary": "Automatic translation of natural language mathematics into faithful Lean 4 code is hindered by the fundamental dissonance between informal set-theoretic intuition and strict formal type theory. This gap often causes LLMs to hallucinate non-existent library definitions, resulting in code that fails to compile or lacks semantic fidelity. In this work, we investigate the effectiveness of tool-augmented agents for this task through a systematic factorial analysis of three distinct tool categories: Fine-tuned Model Querying (accessing expert drafts), Knowledge Search (retrieving symbol definitions), and Compiler Feedback (verifying code via a Lean REPL). We first benchmark the agent against one-shot baselines, demonstrating large gains in both compilation success and semantic equivalence. We then use the factorial decomposition to quantify the impact of each category, isolating the marginal contribution of each tool type to overall performance.",
+      "title": "Understanding Tool-Augmented Agents for Lean Formalization: A Factorial Analysis",
+      "updated": "2026-04-16T21:15:46Z",
+      "url": "https://arxiv.org/abs/2604.16538",
+      "versioned_id": "2604.16538v1"
+    },
+    {
+      "authors": [
+        "Yang Yang"
+      ],
+      "categories": [
+        "cs.SE"
+      ],
+      "id": "2607.21674",
+      "pdf_url": "https://arxiv.org/pdf/2607.21674",
+      "primary_category": "",
+      "published": "2026-07-23T10:18:42Z",
+      "summary": "Output format is not a neutral implementation detail -- it can reorder model rankings, amplify or suppress individual model differences, and determine whether a coding agent succeeds or fails. We conducted a controlled single-round experiment with 3 models (DeepSeek V4, Doubao 2.0 Pro, Qwen 3.7 Max) x 3 output formats (full file, JSON Patch, unified diff) x 6 tasks x 20 repetitions, totaling 4,013 runs across 4 open-source projects. Only one project (tqdm) yielded non-zero success rates: dotenv, requests, and jsoup yielded zero successes in 2,551 runs. Our central finding is a format x model interaction with no universally optimal format. Doubao achieves 94% success with JSON Patch (Cohen's h = 1.57, p < 0.001), DeepSeek excels at unified diff (66%, h = 0.63), and Qwen shows a small but significant full-file preference (50%, h = 0.29, p < 0.05). Beyond these headline results, we identify a distinct failure mechanism -- format misuse -- where agents correctly diagnose a problem but execute it with excessive scope, most vividly when a one-line fix is applied as a full-file replacement. We propose a model-specific output strategy, a tool-design principle that constrains format semantics to the agent's own localization step, and release all data and templates for reproducibility. All experimental data are available at https://doi.org/10.5281/zenodo.21505157.",
+      "title": "Output Format x Model Identity: Interaction Effects in Single-Round Coding Agent Performance",
+      "updated": "2026-07-23T10:18:42Z",
+      "url": "https://arxiv.org/abs/2607.21674",
+      "versioned_id": "2607.21674v1"
+    },
+    {
+      "authors": [
+        "Aryan Brar",
+        "Justin Du",
+        "Avery Lor",
+        "Kylie Seto",
+        "Eric Taylor"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2608.23908",
+      "pdf_url": "https://arxiv.org/pdf/2608.23908",
+      "primary_category": "",
+      "published": "2026-08-24T23:23:02Z",
+      "summary": "Tax-loss harvesting demonstrates consistent benefits to long-term portfolio growth; yet implementing it efficiently often involves complex considerations that are specific to the holdings within that portfolio and the individual who owns it. We introduce a custom capital gains calculation engine and a RAG-retrieved vector store of market advisory reports to provide context for a multi-agent trade recommendation system. We investigate the effects of each context provider on the quality of recommendations, measured by relative capital gains incurred during portfolio liquidation. A 2x2 repeated-measures ANOVA revealed a significant main effect of the tax optimization engine ($F(1,29) = 9.17$, $p = .005$, $\u03b7^2_p = .240$): enabling the engine reduced tax savings by approximately 55 percentage points relative to the no-engine conditions. The RAG main effect was not significant ($p = .841$), nor was the interaction ($p = .553$). The RAG-only condition achieved the highest descriptive mean tax savings (47.7%), and the baseline condition performed second-best (30.6%), suggesting that the pre-trained language model's internalized financial knowledge may be sufficient for competent tax-loss harvesting recommendations without explicit tooling. These results indicate that augmenting LLM agents with domain-specific computation engines does not guarantee improved performance and may introduce conflicting optimization signals.",
+      "title": "Retrieval-augmented generation vs. deterministic tax computation in multi-agent financial advisory: A 2x2 factorial experiment",
+      "updated": "2026-08-24T23:23:02Z",
+      "url": "https://arxiv.org/abs/2608.23908",
+      "versioned_id": "2608.23908v1"
+    },
+    {
+      "authors": [
+        "Sarthak Sattigeri"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "id": "2609.13308",
+      "pdf_url": "https://arxiv.org/pdf/2609.13308",
+      "primary_category": "",
+      "published": "2026-09-10T14:52:26Z",
+      "summary": "A companion evaluation found that naming the target part in a manipulation prompt increased action accuracy by 0.32-0.63 across eight vision-language models, with no model outperforming a constant baseline until the part was named. However, naming the part supplies information that a real system must infer, confounding visual grounding, mechanical reasoning, and category-to-action association. We introduce GroundBench, a diagnostic benchmark that separates these explanations through six branch-and-merge conditions, each adding a controlled information bundle, and a counterfactual re-ask targeting a real alternate part visible in the same image. Across three OpenAI models and 1,068 predictions, supplying the target region without its identity leaves action accuracy at or below the 0.53 majority baseline (0.26, 0.26, and 0.53), although the models largely reproduce the supplied region. Supplying identity without location instead yields 0.74, 0.68, and 0.68. Every above-baseline gain in this curated set occurs where the supplied part category itself determines the action. A no-vision control leaves GPT-5's scores unchanged or improved, providing evidence consistent with substantial category-to-action association. GPT-4o mini declines on one condition, so this interpretation is not universal. Adding joint type and motion axis does not improve accuracy across six model-stratum comparisons. On 74 counterfactual pairs from 32 objects, GPT-5 achieves 0.86 pair-weighted compliance with a 0.07 shortcut rate but fails all observed push-to-lift-vertical cases. GroundBench identifies which supplied information changes affordance behavior and tests whether apparently grounded performance can be reproduced through textual shortcuts.",
+      "title": "GroundBench: A Factorized, Counterfactual Benchmark for Locating VLM Affordance Failures",
+      "updated": "2026-09-10T14:52:26Z",
+      "url": "https://arxiv.org/abs/2609.13308",
+      "versioned_id": "2609.13308v1"
+    },
+    {
+      "authors": [
+        "Andrew Zhang",
+        "Chengzhan Li"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2607.04419",
+      "pdf_url": "https://arxiv.org/pdf/2607.04419",
+      "primary_category": "",
+      "published": "2026-07-05T17:27:56Z",
+      "summary": "Reusing evaluator-derived step rewards across evaluation channels raises a measurement question: does the assigned direction remain stable? We define Agent Step Value (ASV) as a channel-indexed before/after target-margin gain and identify the state-by-channel interaction from a matched 2x2 design. Across frozen PubMed question-answering transitions, cross-channel gain signs disagree on 48.3% of comparisons, compared with 0.3% for same-channel retries. Transition interactions are nearly balanced in sign (median +0.014; 10% trimmed mean -0.033), but asymmetric negative magnitudes produce a positive direct mean and a negative generated-view mean under the empirical target mixture. Equal-target weighting preserves a negative mean interaction but not this strict mean reversal. Matched retrieval designs localize the negative component to the generated-view coordinate and retain its direction across three sign checks that vary readout and evaluator stack. In a matched 512-token source-contract follow-up, source-only generation restores the positive mean direction on artifact-bearing retrievals and removes parser-detected support claims from artifact-free before-state views. These results support an explanation in which generated support inflates the pre-retrieval baseline. The resulting audit can localize channel sensitivity and test an intervention before step rewards are reused.",
+      "title": "Agent Step Value: Auditing Evaluation-Channel Sensitivity in Black-Box Agent Traces",
+      "updated": "2026-10-09T12:43:19Z",
+      "url": "https://arxiv.org/abs/2607.04419",
+      "versioned_id": "2607.04419v5"
+    },
+    {
+      "authors": [
+        "Guibin Zhang",
+        "Junhao Wang",
+        "Junjie Chen",
+        "Wangchunshu Zhou",
+        "Kun Wang",
+        "Shuicheng Yan"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.MA"
+      ],
+      "id": "2509.03312",
+      "pdf_url": "https://arxiv.org/pdf/2509.03312",
+      "primary_category": "",
+      "published": "2025-09-03T13:42:14Z",
+      "summary": "Large Language Model (LLM)-based agentic systems, often comprising multiple models, complex tool invocations, and orchestration protocols, substantially outperform monolithic agents. Yet this very sophistication amplifies their fragility, making them more prone to system failure. Pinpointing the specific agent or step responsible for an error within long execution traces defines the task of agentic system failure attribution. Current state-of-the-art reasoning LLMs, however, remain strikingly inadequate for this challenge, with accuracy generally below 10%. To address this gap, we propose AgenTracer, the first automated framework for annotating failed multi-agent trajectories via counterfactual replay and programmed fault injection, producing the curated dataset TracerTraj. Leveraging this resource, we develop AgenTracer-8B, a lightweight failure tracer trained with multi-granular reinforcement learning, capable of efficiently diagnosing errors in verbose multi-agent interactions. On the Who&When benchmark, AgenTracer-8B outperforms giant proprietary LLMs like Gemini-2.5-Pro and Claude-4-Sonnet by up to 18.18%, setting a new standard in LLM agentic failure attribution. More importantly, AgenTracer-8B delivers actionable feedback to off-the-shelf multi-agent systems like MetaGPT and MaAS with 4.8-14.2% performance gains, empowering self-correcting and self-evolving agentic AI.",
+      "title": "AgenTracer: Who Is Inducing Failure in the LLM Agentic Systems?",
+      "updated": "2025-09-04T17:49:20Z",
+      "url": "https://arxiv.org/abs/2509.03312",
+      "versioned_id": "2509.03312v2"
+    },
+    {
+      "authors": [
+        "Shaokun Zhang",
+        "Ming Yin",
+        "Jieyu Zhang",
+        "Jiale Liu",
+        "Zhiguang Han",
+        "Jingyang Zhang",
+        "Beibin Li",
+        "Chi Wang",
+        "Huazheng Wang",
+        "Yiran Chen",
+        "Qingyun Wu"
+      ],
+      "categories": [
+        "cs.MA",
+        "cs.CL"
+      ],
+      "id": "2505.00212",
+      "pdf_url": "https://arxiv.org/pdf/2505.00212",
+      "primary_category": "",
+      "published": "2025-04-30T23:09:44Z",
+      "summary": "Failure attribution in LLM multi-agent systems-identifying the agent and step responsible for task failures-provides crucial clues for systems debugging but remains underexplored and labor-intensive. In this paper, we propose and formulate a new research area: automated failure attribution for LLM multi-agent systems. To support this initiative, we introduce the Who&When dataset, comprising extensive failure logs from 127 LLM multi-agent systems with fine-grained annotations linking failures to specific agents and decisive error steps. Using the Who&When, we develop and evaluate three automated failure attribution methods, summarizing their corresponding pros and cons. The best method achieves 53.5% accuracy in identifying failure-responsible agents but only 14.2% in pinpointing failure steps, with some methods performing below random. Even SOTA reasoning models, such as OpenAI o1 and DeepSeek R1, fail to achieve practical usability. These results highlight the task's complexity and the need for further research in this area. Code and dataset are available at https://github.com/mingyin1/Agents_Failure_Attribution",
+      "title": "Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems",
+      "updated": "2025-06-02T03:25:55Z",
+      "url": "https://arxiv.org/abs/2505.00212",
+      "versioned_id": "2505.00212v3"
+    },
+    {
+      "authors": [
+        "Mengzhuo Chen",
+        "Junjie Wang",
+        "Fangwen Mu",
+        "Yawen Wang",
+        "Zhe Liu",
+        "Huanxiang Feng",
+        "Qing Wang"
+      ],
+      "categories": [
+        "cs.MA"
+      ],
+      "id": "2604.22708",
+      "pdf_url": "https://arxiv.org/pdf/2604.22708",
+      "primary_category": "",
+      "published": "2026-04-24T16:40:44Z",
+      "summary": "Failure attribution, i.e., identifying the responsible agent and decisive step of a failure, is particularly challenging in LLM-based multi-agent systems (MAS) due to their natural-language reasoning, nondeterministic outputs, and intricate interaction dynamics. A reliable benchmark is therefore essential to guide and evaluate attribution techniques. Yet existing benchmarks rely on partially observable traces that capture only agent outputs, omitting the inputs and context that developers actually use when debugging. We argue that failure attribution should be studied under full execution observability, aligning with real-world developer-facing scenarios where complete traces, rather than only outputs, are accessible for diagnosis. To this end, we introduce TraceElephant, a benchmark designed for failure attribution with full execution traces and reproducible environments. We then systematically evaluate failure attribution techniques across various configurations. Specifically, full traces improve attribution accuracy by up to 76\\% over a partial-observation counterpart, confirming that missing inputs obscure many failure causes. TraceElephant provides a foundation for follow-up failure attribution research, promoting evaluation practices that reflect real-world debugging and supporting the development of more transparent MASs.",
+      "title": "Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems",
+      "updated": "2026-04-24T16:40:44Z",
+      "url": "https://arxiv.org/abs/2604.22708",
+      "versioned_id": "2604.22708v1"
+    },
+    {
+      "authors": [
+        "Hanrong Zhang",
+        "Jingyuan Huang",
+        "Kai Mei",
+        "Yifei Yao",
+        "Zhenting Wang",
+        "Chenlu Zhan",
+        "Hongwei Wang",
+        "Yongfeng Zhang"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "id": "2410.02644",
+      "pdf_url": "https://arxiv.org/pdf/2410.02644",
+      "primary_category": "",
+      "published": "2024-10-03T16:30:47Z",
+      "summary": "Although LLM-based agents, powered by Large Language Models (LLMs), can use external tools and memory mechanisms to solve complex real-world tasks, they may also introduce critical security vulnerabilities. However, the existing literature does not comprehensively evaluate attacks and defenses against LLM-based agents. To address this, we introduce Agent Security Bench (ASB), a comprehensive framework designed to formalize, benchmark, and evaluate the attacks and defenses of LLM-based agents, including 10 scenarios (e.g., e-commerce, autonomous driving, finance), 10 agents targeting the scenarios, over 400 tools, 27 different types of attack/defense methods, and 7 evaluation metrics. Based on ASB, we benchmark 10 prompt injection attacks, a memory poisoning attack, a novel Plan-of-Thought backdoor attack, 4 mixed attacks, and 11 corresponding defenses across 13 LLM backbones. Our benchmark results reveal critical vulnerabilities in different stages of agent operation, including system prompt, user prompt handling, tool usage, and memory retrieval, with the highest average attack success rate of 84.30\\%, but limited effectiveness shown in current defenses, unveiling important works to be done in terms of agent security for the community. We also introduce a new metric to evaluate the agents' capability to balance utility and security. Our code can be found at https://github.com/agiresearch/ASB.",
+      "title": "Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents",
+      "updated": "2025-05-30T03:50:33Z",
+      "url": "https://arxiv.org/abs/2410.02644",
+      "versioned_id": "2410.02644v4"
+    },
+    {
+      "authors": [
+        "Aayush Gupta"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "id": "2601.06112",
+      "pdf_url": "https://arxiv.org/pdf/2601.06112",
+      "primary_category": "",
+      "published": "2026-01-03T13:41:33Z",
+      "summary": "Existing benchmarks for tool-using LLM agents primarily report single-run success rates and miss reliability properties required in production. We introduce \\textbf{ReliabilityBench}, a benchmark for evaluating agent reliability across three dimensions: (i) consistency under repeated execution using $\\mathrm{pass}^k$, (ii) robustness to semantically equivalent task perturbations at intensity $\u03b5$, and (iii) fault tolerance under controlled tool/API failures at intensity $\u03bb$. ReliabilityBench contributes a unified reliability surface $R(k,\u03b5,\u03bb)$, \\textit{action metamorphic relations} that define correctness via end-state equivalence rather than text similarity, and a chaos-engineering-style fault injection framework (timeouts, rate limits, partial responses, schema drift). We evaluate two models (Gemini 2.0 Flash, GPT-4o) and two agent architectures (ReAct, Reflexion) across four domains (scheduling, travel, customer support, e-commerce) over 1,280 episodes. Perturbations alone reduce success from 96.9% at $\u03b5=0$ to 88.1% at $\u03b5=0.2$. Rate limiting is the most damaging fault in ablations. ReAct is more robust than Reflexion under combined stress, and Gemini 2.0 Flash achieves comparable reliability to GPT-4o at much lower cost. ReliabilityBench provides a systematic framework for assessing production readiness of LLM agents.",
+      "title": "ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions",
+      "updated": "2026-01-03T13:41:33Z",
+      "url": "https://arxiv.org/abs/2601.06112",
+      "versioned_id": "2601.06112v1"
+    },
+    {
+      "authors": [
+        "Xuanze Chen",
+        "Xukang Xie",
+        "Wentao Fu",
+        "Jiajun Zhou",
+        "Shanqing Yu",
+        "Qi Xuan"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "id": "2607.27080",
+      "pdf_url": "https://arxiv.org/pdf/2607.27080",
+      "primary_category": "",
+      "published": "2026-07-29T16:06:54Z",
+      "summary": "Memory systems allow agents to retain and reuse information from past interactions, but they can also let malicious content persist. A malicious instruction crafted by an attacker may be stored in long-term memory, recalled much later, and quietly shape a real action. Recent benchmarks increasingly examine agent memory security, yet few trace the same malicious semantics across persistence, downstream consequences, and selective repair under diverse memory-backend comparisons. To address this gap, we introduce MemSecBench, a task-grounded benchmark for the lifecycle security of agent memory systems. It contains 310 cases drawn from 48 realistic contexts across code and science, daily life, and office work. Each case follows a controlled Write--Execute--Forget protocol in an isolated runtime under an exact agent configuration, defined by an agent harness, a memory backend, and an LLM backend. Evidence-based adjudication combines a deterministic write check, checkpoint-specific judge-model evaluations, and programmatic gates across seven lifecycle checkpoints. The experimental design spans a 24-configuration matrix of two agent harnesses, four memory backends, and three LLM backends. Across all 24 configurations, malicious memory persists in 84.2% of all cases, and the full Write--Execute chain succeeds in 50.3%. Among successfully poisoned cases, 59.6% complete the full Execute chain, while 56.1% achieve selective repair.Compared with matched Native configurations, the largest absolute differences are 16.1 percentage points for end-to-end attack success and 41.3 percentage points for selective repair. These descriptive contrasts indicate that the evaluated memory system stacks differ in lifecycle security, both in the propagation of malicious memory and in selective repair after successful memory poisoning.",
+      "title": "MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair",
+      "updated": "2026-07-29T16:06:54Z",
+      "url": "https://arxiv.org/abs/2607.27080",
+      "versioned_id": "2607.27080v1"
+    },
+    {
+      "authors": [
+        "Chao Peng",
+        "Zhiheng Lyu",
+        "Peijie Dong",
+        "Hande Dong",
+        "Qiang Lin"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "id": "2607.27283",
+      "pdf_url": "https://arxiv.org/pdf/2607.27283",
+      "primary_category": "",
+      "published": "2026-07-29T13:57:32Z",
+      "summary": "Long-horizon benchmarks often show that agents fail more as tasks become longer. This observation is useful for deployment, but it does not by itself explain why failure occurs. More stages create more opportunities for ordinary errors to compound; longer tasks may also contain harder individual decisions or become harder as conversation history, tool outputs, and environment changes accumulate. We use trajectory-induced degradation to mean this last possibility: earlier execution makes later work harder. When the harmful accumulation is specifically the text visible to the model, it is often called context rot. In this position paper, we argue that to claim a \"long-horizon failure\", benchmarks must compare actual full-task success against a baseline prediction built from short, individual stages. We call the log-ratio between this prediction and actual success the horizon residual. The comparison must use the same agent configuration and specify in advance how stages, checkpoints, information, and budgets will be chosen. The residual shows that the full rollout differs from the chosen baseline; targeted experiments are still needed to explain why.",
+      "title": "Benchmarking the Residual: What Long-Horizon Evaluations Add Beyond Matched Short-Task Performance",
+      "updated": "2026-07-29T13:57:32Z",
+      "url": "https://arxiv.org/abs/2607.27283",
+      "versioned_id": "2607.27283v1"
+    },
+    {
+      "authors": [
+        "Enze Pan"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "id": "2601.04695",
+      "pdf_url": "https://arxiv.org/pdf/2601.04695",
+      "primary_category": "",
+      "published": "2026-01-08T08:05:42Z",
+      "summary": "Out-of-distribution generalization in reinforcement learning is hard to diagnose when benchmark shifts mix dynamics, observations, goals, and rewards. We address this with Tape, a controlled benchmark that isolates latent rule-shift in dynamics while keeping the observation-action interface fixed. The protocol combines deterministic splits, 20-seed replication, bootstrap uncertainty reporting, and continuous metrics for sparse-success regimes. Across baseline families, we find a consistent ID-to-OOD drop and strong heterogeneity across stable/periodic/chaotic rules. Importantly, this fragility appears even in an intentionally simple 1D deterministic setting, suggesting that many current RL algorithms remain brittle to latent-law changes under minimal confounds. To calibrate strict success, we report a protocol-matched true-dynamics random-shooting reference (p_oracle is almost 0.187) and oracle-normalized scores ON(p) = 100 p / p_oracle; this is a budgeted operational reference, not a global-optimality bound. A smaller feasibility regime (L = H = 16) with 100% rule-wise solvability helps separate reachability limits from policy failure. These results position Tape as a mechanism-oriented diagnostic for robust adaptation and latent-mechanism inference, and as a controlled benchmark relevant to broader AGI-oriented evaluation without making strong AGI sufficiency claims.",
+      "title": "Tape: A Cellular Automata Benchmark for Evaluating Rule-Shift Generalization in Reinforcement Learning",
+      "updated": "2026-04-20T09:26:00Z",
+      "url": "https://arxiv.org/abs/2601.04695",
+      "versioned_id": "2601.04695v2"
+    },
+    {
+      "authors": [
+        "Shan Peng",
+        "Shuaiqi Cheng",
+        "Miao Peng",
+        "Chenyi Zi",
+        "Jia Li"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "id": "2610.32305",
+      "pdf_url": "https://arxiv.org/pdf/2610.32305",
+      "primary_category": "",
+      "published": "2026-10-23T08:04:10Z",
+      "summary": "Multi-stage analytical tasks require LLM agents to use intermediate evidence to decide whether to continue, redirect or stop. Self-reflection, in which an agent critiques its output, is widely studied, yet a critique does not show whether evidence changed the next action. We call that capability self-restraint. Existing agent benchmarks largely measure task completion or output quality and leave it untested. DMAIC-Bench evaluates it with 97 seeded tasks across 15 industrial cases in four sectors, built around Lean Six Sigma's explicit statistical prerequisites. Paired counterfactual variants require opposite actions at the same workflow position, distinguishing warranted restraint from indiscriminate stopping. We assess execution traces with a private scorer and final claims through independent expert review. Across 13 models from six providers, execution-level routing accuracy averages 92% on matched GO decisions and 19% on NO-GO decisions, counting any forbidden downstream computation as a route error. Execution traces show agents reporting correct diagnostics before performing analyses that those results disallow. Separately, blinded expert review of the 11 audited agents estimates that reports act on invalid evidence at 47% of reached NO-GO decisions, with an interval from 31% to 61%. Explicit stopping permission helps some models without consistently restoring correct decisions at both GO and NO-GO forks. Sixteen life-sciences tasks in bulk ribonucleic acid sequencing (RNA-seq) and case-control genome-wide association studies (GWAS) show that the same framework can evaluate evidence-dependent decisions beyond industrial workflows. Project code and data are available at: https://github.com/psptpx/DMAIC-Bench-public.",
+      "title": "DMAIC-Bench: From Self-Reflection to Self-Restraint for Agents in Multi-Stage Analytical Tasks",
+      "updated": "2026-10-23T08:04:10Z",
+      "url": "https://arxiv.org/abs/2610.32305",
+      "versioned_id": "2610.32305v1"
+    }
+  ],
+  "limitations": "Metadata verification only; full texts were not manually audited in this pass.",
+  "query_ids": [
+    "2606.08275",
+    "2605.25338",
+    "2602.23701",
+    "2610.01256",
+    "2608.15242",
+    "2607.09996",
+    "2602.02475",
+    "2608.06909",
+    "2604.11978",
+    "2610.25950",
+    "2606.05806",
+    "2610.05281",
+    "2605.08828",
+    "2604.15774",
+    "2610.14431",
+    "2605.16746",
+    "2610.15537",
+    "2609.05079",
+    "2608.26753",
+    "2604.16538",
+    "2607.21674",
+    "2608.23908",
+    "2609.13308",
+    "2607.04419",
+    "2509.03312",
+    "2505.00212",
+    "2604.22708",
+    "2410.02644",
+    "2601.06112",
+    "2607.27080",
+    "2607.27283",
+    "2601.04695",
+    "2610.32305"
+  ],
+  "retrieved_at": "2026-10-27T16:55:02.005064+00:00",
+  "source": "arXiv export API"
+}

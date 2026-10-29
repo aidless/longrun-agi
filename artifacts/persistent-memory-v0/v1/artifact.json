@@ -1,0 +1,82 @@
+{
+  "name": "persistent-memory-v0",
+  "version": 1,
+  "created_at": "2026-10-29T08:40:10Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make persistent-memory",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "python3 scripts/verify_artifact.py artifacts/persistent-memory-v0/v1"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "episodes": 32,
+    "layers": 3,
+    "storage_engine": "sqlite3",
+    "journal_mode": "wal",
+    "foreign_keys": true
+  },
+  "inputs": {
+    "design": "experiments/019-persistent-memory-v0/design.md",
+    "source_sha256": {
+      "src/longrun/memory/sqlite_store.py": "695a1d8dd013f08eca9602123a0df442bc348a2f7cf386ae4650e4d956f3396b",
+      "tests/test_sqlite_store.py": "80fe703a9b3ea7ae42a9f48169db9b904be2dc6cfa99383d0825065a9a42a586",
+      "experiments/019-persistent-memory-v0/design.md": "3031f026dd2fc317f9b51aaff1550593a4770605f6360293690ba7aaf84bb71c"
+      ,
+      "experiments/019-persistent-memory-v0/log.md": "2e47d379b16f8f4b31b892398e20bfc38ed82c664f7d2c58ad044abefab24548"
+    }
+  },
+  "outputs": {
+    "results/persistent-memory.json": "281e99021360450192d956ac959fcb8978c8095798652a2ee51b72e51caf7707"
+  },
+  "canonical_output_sha256": "e68070ec95ce87c597d37b4ec8f4ec935e0fa7fe02b8814d21777da955233890",
+  "checks": {
+    "unit_tests": "174 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "reopened_retrieval_correct_rate": 1.0,
+    "poison_or_stale_selection_rate": 0.0,
+    "rollback_atomic": true,
+    "import_export_records_equal": true,
+    "integrity_check": "ok",
+    "artifact_hash_check": "passed",
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "records_before_forget": 160,
+    "conflict_detection_rate": 1.0,
+    "reopened_retrieval_correct_rate": 1.0,
+    "exported_records": 160,
+    "imported_records": 160,
+    "forgotten_records": 64,
+    "active_records_after_forget": 96,
+    "integrity_check": "ok"
+  },
+  "notes": [
+    "The store uses standard-library SQLite only.",
+    "Invalidation is explicit and physical deletion is not used.",
+    "Restart, rollback, conflict, expiry, import/export, and integrity are synthetic engineering controls.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No LongMemEval, LoCoMo, or external memory benchmark.",
+    "No concurrent multi-process load test.",
+    "No semantic or vector retrieval.",
+    "No model-backed memory policy."
+  ]
+}

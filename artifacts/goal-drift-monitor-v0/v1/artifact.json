@@ -1,0 +1,65 @@
+{
+  "name": "goal-drift-monitor-v0",
+  "version": 1,
+  "created_at": "2026-10-28T13:11:13Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make goal-drift-monitor",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 scripts/verify_artifact.py artifacts/goal-drift-monitor-v0/v1"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "episodes": 60,
+    "steps": 40,
+    "policies": [
+      "pinned",
+      "recency",
+      "decay"
+    ],
+    "train_fraction": 0.8,
+    "monitor_threshold": 0.5
+  },
+  "inputs": {
+    "design": "experiments/013-goal-drift-monitor-v0/design.md",
+    "source_sha256": {
+      "src/longrun/probes/goal_drift_monitor.py": "3b823f9090fe39ac4274966dde1b10e25d18a829864132882660ef618683ad7e",
+      "src/longrun/cli.py": "9a63fe5984af29a3947b05d3535f345848c2ab43723d6b246c7feac6ceeb2152",
+      "tests/test_goal_drift_monitor.py": "e0d0a9e6daf69c0d26f7f205df085359d1cd81dd3bac53a1276db1caa5ad65ff",
+      "experiments/013-goal-drift-monitor-v0/design.md": "f096a5fe61a7461b9bb8f688b838e6e3d1c85b382d2b34d0550312ef22194a3e"
+    }
+  },
+  "outputs": {
+    "results/monitor.json": "b3fc68e4ae7980241d26260f106a456652651b50926f3106c970d7bc4c1b283d"
+  },
+  "canonical_output_sha256": "43fbf0424f78bd0e392835bab769c48d646c7745bf5aefc58a19f83426afdaa2",
+  "key_observations": {
+    "auroc": 0.8295472877596289,
+    "mean_warning_lead": 0.0,
+    "early_warning_rate": 0.0,
+    "false_alarm_rate": 0.08333333333333333,
+    "intervention_recovery_rate": 0.36,
+    "baseline_final_correct_rate": 0.5555555555555556,
+    "monitored_final_correct_rate": 0.5555555555555556
+  },
+  "notes": [
+    "The monitor sees synthetic state features, not model activations.",
+    "The weak/negative pre-drift warning result is preserved.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No open-weight model activation access.",
+    "No linear probe on hidden states or SAE features.",
+    "No claim that synthetic monitor performance transfers to an LLM."
+  ]
+}

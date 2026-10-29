@@ -1,0 +1,117 @@
+{
+  "name": "cpu-program-v0",
+  "version": 6,
+  "created_at": "2026-10-28T13:20:29Z",
+  "supersedes": "artifacts/cpu-program-v0/v5/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make goal-drift-monitor",
+    "make research-agent",
+    "make recovery-matrix",
+    "make layered-memory",
+    "make program",
+    "make clear-v1-verify",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100,
+    "recovery_episodes_per_controller": 40,
+    "negative_control_cases": 80,
+    "goal_monitor_episodes": 60,
+    "goal_monitor_steps": 40
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "7d1030e2e72c610ef2833e1f8436caf6cd8ae239eb0e3c8ba22c7659cc270952",
+      "src/longrun/probes/goal_drift_monitor.py": "3b823f9090fe39ac4274966dde1b10e25d18a829864132882660ef618683ad7e",
+      "src/longrun/cli.py": "9a63fe5984af29a3947b05d3535f345848c2ab43723d6b246c7feac6ceeb2152",
+      "tests/test_goal_drift_monitor.py": "e0d0a9e6daf69c0d26f7f205df085359d1cd81dd3bac53a1276db1caa5ad65ff",
+      "experiments/013-goal-drift-monitor-v0/design.md": "f096a5fe61a7461b9bb8f688b838e6e3d1c85b382d2b34d0550312ef22194a3e"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "f71f693f4a0bdb206a51c5138801cf32893e2e60d5c2baf3b80e336aa19534ad"
+  },
+  "canonical_output_sha256": "b2fb2500d2646aa963aba1914cbd264d78e76e11f1e35bc121fee019f5ff7dcf",
+  "checks": {
+    "unit_tests": "112 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P6": {
+      "auroc": 0.8295472877596289,
+      "early_warning_rate": 0.0,
+      "false_alarm_rate": 0.08333333333333333,
+      "intervention_recovery_rate": 0.36,
+      "baseline_final_correct_rate": 0.5555555555555556,
+      "monitored_final_correct_rate": 0.5555555555555556
+    },
+    "P5": {
+      "negative_control_cases": 80,
+      "naive_false_discoveries": 60,
+      "gated_false_discoveries": 10,
+      "confounding_blind_spot_cases": 10
+    },
+    "P3": {
+      "flat_rag_poison_rate": 1.0,
+      "layered_provenance_poison_rate": 0.0
+    },
+    "P7": {
+      "clear_v1_tasks": 300,
+      "clear_v1_splits": {
+        "train": 180,
+        "dev": 60,
+        "test": 60
+      }
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v1-cpu-substrate",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-symbolic-probe",
+    "P5": "implemented-v1-cpu-substrate",
+    "P6": "cpu-weak-monitor-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-symbolic-probe"
+  },
+  "notes": [
+    "v6 adds the synthetic goal-drift monitor to P6.",
+    "The monitor has no pre-drift warnings and no final-correctness improvement in this construction.",
+    "No model activation, LLM, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No open-weight model activation access.",
+    "No linear probe or SAE feature extraction on hidden states.",
+    "No claim that synthetic monitor behavior transfers to a model.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

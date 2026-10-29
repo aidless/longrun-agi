@@ -1,0 +1,110 @@
+{
+  "name": "cpu-program-v0",
+  "version": 8,
+  "created_at": "2026-10-28T13:53:05Z",
+  "supersedes": "artifacts/cpu-program-v0/v7/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make verifier-rewards",
+    "make world-model-calibration",
+    "make goal-drift-monitor",
+    "make program",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100,
+    "recovery_episodes_per_controller": 40,
+    "negative_control_cases": 80,
+    "goal_monitor_episodes": 60,
+    "world_model_samples_per_pair": 20,
+    "verifier_train_episodes": 600
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "c05074d265f49d6818a4ab38789d5cf0da8874c25c658033bf723bb34b977563",
+      "src/longrun/probes/verifier_rewards.py": "f1079529e1763e2da3346074bdbd82c293f88f9cf6aba165a58b92ecc2b7b008",
+      "src/longrun/cli.py": "14554cbfa33e196261237bcc391354ed35609f8bed975de2a72e5e6c0bece96a",
+      "tests/test_verifier_rewards.py": "fa50c9e64f181652645d44e62c2a567c65469a0aba3647df05ec9b7d1342f37c",
+      "experiments/015-verifier-rewards-v0/design.md": "ad1c762aba48fb9969514043f646b27596bfde95303f35542e56d492094b8ca8"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "7f56f5d0ef455699fc076ec6d026a7640974bb63a7b52f8762ca955ddbe1bd45"
+  },
+  "canonical_output_sha256": "94fa7ac595e63c6f467485f04db32c09b51e2a5be889e58925152ac3ade4da90",
+  "checks": {
+    "unit_tests": "120 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P1": {
+      "answer_ood_success": 0.43333333333333335,
+      "ensemble_ood_success": 0.5233333333333333,
+      "answer_transfer_drop": 0.30333333333333334,
+      "ensemble_transfer_drop": 0.19333333333333336,
+      "answer_mean_cost": 1.37,
+      "ensemble_mean_cost": 1.38,
+      "answer_hacking": 0.17307692307692307,
+      "ensemble_hacking": 0.11413043478260869
+    },
+    "P4": {
+      "id_accuracy": 1.0,
+      "ood_accuracy": 0.25,
+      "ood_error_auroc": 0.5,
+      "planning_argmax": 0.5,
+      "planning_uncertainty_penalized": 0.5
+    },
+    "P6": {
+      "auroc": 0.8295472877596289,
+      "early_warning_rate": 0.0
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v1-cpu-substrate",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-weak-calibration-probe",
+    "P5": "implemented-v1-cpu-substrate",
+    "P6": "cpu-weak-monitor-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-symbolic-probe"
+  },
+  "notes": [
+    "v8 adds four reward modes to the P1 CPU protocol.",
+    "Ensemble-disagreement improves OOD transfer over answer reward but no reward mode dominates all metrics.",
+    "No language-model training, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No Qwen/Llama or other open-weight model training.",
+    "No real math/code/planning benchmark.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

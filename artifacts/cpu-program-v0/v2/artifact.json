@@ -1,0 +1,141 @@
+{
+  "name": "cpu-program-v0",
+  "version": 2,
+  "created_at": "2026-10-28T12:19:30Z",
+  "supersedes": "artifacts/cpu-program-v0/v1/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make program",
+    "make clear-v1-verify",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_seed": 20261028,
+    "clear_v1_tasks": 300,
+    "clear_v1_splits": {
+      "train": 180,
+      "dev": 60,
+      "test": 60
+    }
+  },
+  "inputs": {
+    "design": "experiments/008-cpu-program-v0/design.md",
+    "clear_v1_design": "experiments/009-clear-300-v1/design.md",
+    "source_sha256": {
+      "src/longrun/program.py": "6767e882923ca4601fb4a500cdfad94b7405f7f71c2dbf9d7ab56cedbf2d45a2",
+      "src/longrun/benchmarks/clear_v1.py": "1fb927c1fb17940cec56f874ac160560f6b3011f6383234bd7345d0578dfc651",
+      "tests/test_clear_v1.py": "bb53b055f4e17e14530d8fb4acd28dc9281d299c525309bc4cb9cde216f6b6c8",
+      "tests/test_frozen_clear_v1.py": "0bd2067718993711553eb25636bde52d9f6ff46cc6bc4cd2f3ab4d73e8c3fb2d",
+      "experiments/008-cpu-program-v0/design.md": "e614fb925e9c1f0707c92317ec429187d40943c9ca575af3a07b3c3d2a28eeaf",
+      "experiments/009-clear-300-v1/design.md": "3e35f78c44af561980db9608d2a79bf29a6e19d2bd74689c55e1bc6120b74e2e"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517",
+      "benchmarks/clear-300-v1/scripted-baselines.json": "592fb4500d0dab5386f848bfb0817f458b6be147e9e145ac6cb35b8a71f594fb"
+    }
+  },
+  "outputs": {
+    "results/program.json": "3b3307cc01ed9067ec61c8491b915d5abce7939742306d75b9c1c6a2ca356881"
+  },
+  "canonical_output_sha256": "79f8ffe7f8155158e675549493e2bb900623aa0017f642f367033b5a3d078319",
+  "canonicalization": "Remove only generated_at, then JSON encode with sorted keys, compact separators, ASCII escaping, and disallow NaN.",
+  "checks": {
+    "unit_tests": "91 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P7": {
+      "clear_v1_tasks": 300,
+      "clear_v1_splits": {
+        "train": 180,
+        "dev": 60,
+        "test": 60
+      },
+      "clear_v1_canonical_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+      "clear_v1_current_rule_success": 1.0,
+      "clear_v1_sticky_first_rule_success": 0.31333333333333335,
+      "second_generator_tasks": 24,
+      "second_generator_success": 1.0,
+      "estimator_coverage": 0.9928571428571429,
+      "estimator_fwer": 0.005,
+      "loop_resume_success": true
+    },
+    "P1": {
+      "proxy_q_learning_final_true_reward": -3.0,
+      "true_reward_q_learning_final_true_reward": 4.0
+    },
+    "P2": {
+      "recoverable_transient_faults": 3,
+      "fatal_unrecoverable_faults": 2
+    },
+    "P3": {
+      "recency_poison_event_rate": 1.0,
+      "provenance_poison_event_rate": 0.0
+    },
+    "P4": {
+      "lag1_heldout_accuracy": 0.8938547486033519,
+      "lag2_heldout_accuracy": 0.9213483146067416
+    },
+    "P5": {
+      "controls_matched": "7/7",
+      "ablation_effects_correct": 6
+    },
+    "P6": {
+      "pinned_final_accuracy": 1.0,
+      "recency_final_accuracy": 0.12,
+      "decay_final_accuracy": 0.34
+    },
+    "P8": {
+      "value_density_value": 807,
+      "safe_value_density_value": 530,
+      "safe_policy_value_ratio": 0.6567534076827757,
+      "safe_value_density_deadline_misses": 0
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v0",
+    "P3": "implemented-v0",
+    "P4": "cpu-symbolic-probe",
+    "P5": "implemented-v0",
+    "P6": "cpu-symbolic-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-symbolic-probe"
+  },
+  "notes": [
+    "v2 adds the frozen CLEAR-300-v1 substrate to the integrated P7 evidence.",
+    "The 300-task benchmark includes mock browser and gridworld environments, not real external engines.",
+    "P1, P4, P6, and P8 remain symbolic or toy controls.",
+    "No model download, GPU training, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No real language-model evaluation or activation-level goal-drift probe.",
+    "No trained latent world model.",
+    "No real browser/grid engine integration.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

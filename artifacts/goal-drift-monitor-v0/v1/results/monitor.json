@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-28T13:10:47.594933+00:00",
+  "metrics": {
+    "auroc": 0.8295472877596289,
+    "baseline_final_correct_rate": 0.5555555555555556,
+    "drift_episodes": 24,
+    "early_warning_rate": 0.0,
+    "evaluated_steps": 1440,
+    "false_alarm_rate": 0.08333333333333333,
+    "intervention_rate": 0.6944444444444444,
+    "intervention_recovery_rate": 0.36,
+    "mean_warning_lead": 0.0,
+    "monitored_final_correct_rate": 0.5555555555555556
+  },
+  "model": {
+    "kind": "logistic-regression",
+    "threshold": 0.5
+  },
+  "notes": [
+    "Features are observable synthetic state, not neural activations.",
+    "The monitor and intervention are evaluated on held-out traces.",
+    "The 0.5 threshold is fixed before evaluation."
+  ],
+  "scientific_result": false,
+  "scope": "synthetic trajectories; no model activations",
+  "status": "harness-validation",
+  "suite": "goal drift monitor v0",
+  "test_traces": 36,
+  "traces": 180,
+  "train_traces": 144
+}

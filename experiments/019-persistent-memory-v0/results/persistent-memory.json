@@ -1,0 +1,29 @@
+{
+  "config": {
+    "episodes": 32,
+    "layers": 3,
+    "schema_version": 1
+  },
+  "generated_at": "2026-10-29T08:40:10.009734+00:00",
+  "metrics": {
+    "active_records_after_forget": 64,
+    "conflict_detection_rate": 1.0,
+    "exported_records": 160,
+    "forgotten_records": 64,
+    "import_export_records_equal": true,
+    "imported_records": 160,
+    "integrity_check": "ok",
+    "poison_or_stale_selection_rate": 0.0,
+    "records_before_forget": 160,
+    "reopened_retrieval_correct_rate": 1.0,
+    "rollback_atomic": true
+  },
+  "notes": [
+    "The store uses standard-library SQLite only.",
+    "Restart, rollback, conflict, expiry, and import/export checks are synthetic.",
+    "This is a persistence-engineering control, not LongMemEval or LoCoMo."
+  ],
+  "scientific_result": false,
+  "status": "harness-validation",
+  "suite": "persistent SQLite memory v0"
+}

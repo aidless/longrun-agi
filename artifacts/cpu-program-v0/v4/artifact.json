@@ -1,0 +1,114 @@
+{
+  "name": "cpu-program-v0",
+  "version": 4,
+  "created_at": "2026-10-28T12:39:53Z",
+  "supersedes": "artifacts/cpu-program-v0/v3/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make recovery-matrix",
+    "make layered-memory",
+    "make program",
+    "make clear-v1-verify",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100,
+    "recovery_episodes_per_controller": 40
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "417ec129c0881d26dea93a66738c1f52b57b22a7b64d91933667ba68bd843931",
+      "src/longrun/clear/recovery.py": "7d039c385cbf4fbd9c202436aa8107be3a55a7355654cbbbbdf384b1585d705c",
+      "src/longrun/memory/layered.py": "c9707d5005684d4029dddbf35ef7754eafa66ae341dbac9e4a836d73445f581b",
+      "src/longrun/cli.py": "eab1d26af9a60d7476a6a9ac14e5164e238ebfbb3702c1ae1dce0606734e30d2",
+      "tests/test_recovery.py": "a8220dfbb810059f870147584176c14389787ef5eb5cb03f496e1e45345bb28a",
+      "tests/test_layered_memory.py": "e1129ce3373f91e12c8cee2a4b13bd6e2cea3d7f6c7f938f5d8a23f3f7dac295",
+      "experiments/011-recovery-v0/design.md": "b1046f747a418fe306ba24c8b12773bd773d1fe96c44149d877e2c01fc72035c",
+      "experiments/010-layered-memory-v0/design.md": "99db3b6728a1f5f030e696114cd74b44a735de97cda49801a926140f6574ba2b"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "1112d090a984567b49c3266bdcd9faa61467efb558bba35a9c41d731346a7223"
+  },
+  "canonical_output_sha256": "f8c4cb80c7b7b46df91120092cb43a6439501f34a405c58160b397bd4f85b007",
+  "canonicalization": "Remove only generated_at, then use sorted keys, compact separators, ASCII escaping, and disallow NaN.",
+  "checks": {
+    "unit_tests": "104 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P2": {
+      "retry_only_success_rate": 0.25,
+      "rollback_success_rate": 0.25,
+      "replan_success_rate": 1.0,
+      "state_check_replan_success_rate": 1.0,
+      "replan_mean_steps": 4.0,
+      "state_check_mean_steps": 4.5
+    },
+    "P3": {
+      "layers": 3,
+      "flat_rag_poison_rate": 1.0,
+      "layered_provenance_poison_rate": 0.0,
+      "layered_final_correct_rate": 1.0,
+      "conflict_cases": 34
+    },
+    "P7": {
+      "clear_v1_tasks": 300,
+      "clear_v1_splits": {
+        "train": 180,
+        "dev": 60,
+        "test": 60
+      },
+      "clear_v1_canonical_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22"
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v1-cpu-substrate",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-symbolic-probe",
+    "P5": "implemented-v0",
+    "P6": "cpu-symbolic-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-symbolic-probe"
+  },
+  "notes": [
+    "v4 adds four-fault recovery evidence to P2.",
+    "P2/P3/P7 are CPU substrates; P1/P4/P6/P8 remain symbolic or toy controls.",
+    "No model download, GPU training, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No OSWorld/WebArena/TAU-bench integration.",
+    "No LongMemEval/LoCoMo integration or persistent memory service.",
+    "No real model evaluation, activation probe, learned world model, or runtime controller.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

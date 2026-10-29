@@ -1,0 +1,3811 @@
+{
+  "config": {
+    "design": "3 families x rule_shift(2) x tool_fault(2) x instances",
+    "instances_per_cell": 4,
+    "tasks": 48
+  },
+  "generated_at": "2026-10-27T16:52:15.482122+00:00",
+  "policy_results": {
+    "fragile": {
+      "effects": {
+        "cell_success": {
+          "rs0_tf0": 1.0,
+          "rs0_tf1": 0.0,
+          "rs1_tf0": 0.0,
+          "rs1_tf1": 0.0
+        },
+        "factors": [
+          "rule_shift",
+          "tool_fault"
+        ],
+        "interaction_rule_x_tool": 1.0,
+        "interactions": {
+          "rule_shift_x_tool_fault": 1.0
+        },
+        "main_effects": {
+          "rule_shift": 0.5,
+          "tool_fault": 0.5
+        },
+        "rule_shift_main_effect": 0.5,
+        "tool_fault_main_effect": 0.5
+      },
+      "result": {
+        "families": {
+          "factorial_extension_sort": {
+            "base_success_rate": 0.5,
+            "faulted_recoveries": 0,
+            "faulted_recovery_rate": 0.0,
+            "faulted_runs": 8,
+            "mean_steps": 4.5625,
+            "runs": 16,
+            "shift_success_rate": 0.0,
+            "success_rate": 0.25,
+            "successes": 4
+          },
+          "factorial_prefix_route": {
+            "base_success_rate": 0.5,
+            "faulted_recoveries": 0,
+            "faulted_recovery_rate": 0.0,
+            "faulted_runs": 8,
+            "mean_steps": 5.0625,
+            "runs": 16,
+            "shift_success_rate": 0.0,
+            "success_rate": 0.25,
+            "successes": 4
+          },
+          "factorial_suffix_route": {
+            "base_success_rate": 0.5,
+            "faulted_recoveries": 0,
+            "faulted_recovery_rate": 0.0,
+            "faulted_runs": 8,
+            "mean_steps": 5.0625,
+            "runs": 16,
+            "shift_success_rate": 0.0,
+            "success_rate": 0.25,
+            "successes": 4
+          }
+        },
+        "overall": {
+          "base_success_rate": 0.5,
+          "faulted_recoveries": 0,
+          "faulted_recovery_rate": 0.0,
+          "faulted_runs": 24,
+          "mean_steps": 4.895833333333333,
+          "runs": 48,
+          "shift_success_rate": 0.0,
+          "success_rate": 0.25,
+          "successes": 12
+        },
+        "policy": "fragile",
+        "results": [
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "6aa48312bd75ec70dd00111ab87a7e243244fb0b16c33e0a5794aa505f161c9d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "5bb300224ddc0b7b09c6e1375b2c1b601457ba4096761855df8be1027e91903a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "085428e3b2f50f7bd087ea1fc08079b99ee27f55a493e6a20aafe332fd6a3964",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "143324c3adff2234225d73262a9c49db00ab2aba0e4ac92f2b2b0ed09ad5061e",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "82cd40331fc5c9c2e08a7896fe4652c2dc96294f5945e83ebb61f50bfb697d43",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "decb8fa8ff7d6555a8d9da79b3f699fae58fde6442d58c658c7a1abbef498660",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "a952ae6f68afaf8c800350afc8266ad2ce165f9783367be2bb572a506bea85c2",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "83cdd64cf33f7bf275a429dce748cd22805d2381c62541a49c1e242c4e9d5e57",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "97cdf1273394ed6ab6e4f8a6fb643b6b801456a1d42ba6ec89e7701f3d217d44",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "d0e04f107456c6b2e36e3a7ecc581986484c756f54c8b80891ac6c4346518362",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "ca93e3ad0db8fa6f4d330cb8fc1e14cba0debb752a396ead14fcca4737b4c73f",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "f17ad1a3ac74bc7a6861158dc7fc8e3d4914ac04a617f7d1aa2c27cda487f96d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "3f27fb0416e7b883281662f2be6b332b0f7ac6147c4bba1d136abd11a67e284a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "21449943d2a556a920e6cbf8530e72a899d49915083c5d6053f8f8c1e7dc5be9",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9f8ab5364c5fc4b0d3f6916462d6aaa43fd40c3d5a087cbe40b133d447ed1e21",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "324ae8a2f95742b818c344529b08bdf3482dc475ecd70851daf86a17cdff63bf",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "4aa701df4403c40d0e8b033288221081b47f0949d581b7d32fdca6065de43242",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "32be12f1f26ef00b5613bef61653ddc953af4c23973cc51d7436ced1842fd0fe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "93b8a485eb84324ce76bbe720ae8f0a3f49de8be59b5aa0b10d4b73dfc0187e6",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "c0316d11e3b4ae9d961725ca0e8a516fc3bba49cef253c5ccd500bd1520a50b8",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ebaf02e35a9d8132a494ea2668a5c033a7bde5fefb9c45a219c6139f8ea03b03",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "8a16a79f44452003075d2a6da46754d5bba70b923d0708698a68ac2f47901989",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9fc5eb0853d7486f938af6f35412550c444ef87e238a41165656203bb2ba685d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ce83e8226b7be817ca09a49cb38c5c182a02f958f91473c776bb7356f87f6d6c",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "7597718f655ad9b5b89a49d8b40021e747d2c9399d0d3fa6957e9b50726f5768",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "6d6de7553cc74b70563003061dafb944e016fe55fd4e6eb7dc7df9fea4967f61",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "71d52725209bfa125349d5ea8b5f672d38d725a6e51748e89e7a70c9102e89be",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "2a3a51ab834a9bced626b2dc510b838ffa1a71cc226be38fa46a777f4f3fd058",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "888febce6426635a2f58242663a5ae14c09f070359e1c343bf14dacf626a915f",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "78e6959928420a3763dd2e96688b1324c4e87ef587b03a39f2b9fc29a2ec539d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6ce62589959f0089a31946f7e6e8c1e24880a3ee147d107370369a3f26761283",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "39f8cc1c556e1fbbe006d027f84100b23b961ee5c16db4ac98e6ceb178f02a6b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "9427a53afd9ea4cc7150801821d4650611fe601b3494c905784cda71b28b463a",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "5784479621f3381c8dce2d2aff7aa39d1a21e270158e1694d66ce53a25963298",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "35240da2a2827175645c33371a4a9e0f07ca446cc0e570ef6688a51d815c9e79",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "f4d4217a249602a09142ffc9979d7ee9036f4806e1a5b2361f09ac8dce652afe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9a9fd869b6707ab5b2d65413a01b55773f0d223b30248ce70a6ef8878edf808d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "1e9abecb63b8024f3ef038b1aefa799c5baf8748e7cfe407f54ea0a1a7094f9f",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "44d41e09331005c42856dce27c5afcb544592ecaa02aeb5538243481d5d18fea",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "18753020ecea963dab7f1711e77ad73a5d5bb5d2ab2d251c227d6b1311ab5596",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "181ee3a213f8bb80ccacf0b0c6ff65c1131f9aa6fe6f37b6fcb8ebd1aea7bbac",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "2f63d5faa1107e49e064cc4c50d0871dab37656ed66bf662082afe0a79fbe082",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "401dfc22bb1619db2f8b40a58ebaf84876fcc2df281da11c2db980da1994aca9",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "f4d5f3e83918a04a38d860c37abbc34db57aa56d21571b9e3b376175b1e01f6b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "53c1ffa87478447418ddb8172b3db275c36a9647418b26a514dda03242ca2a34",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "03c1e1292a553fa2a1e56f1eca677872fcf5b20457695f3d2527f1f1145fa2d4",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6d5046bcd10d98aeef50a957e95c436bd9f26544db885cbc7c85c7cc12d506ea",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "57b6a3e6a2458a1f5555b3dfcc7e0d7a03b0bfedab885cf24cdadff682461e38",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=0",
+            "steps": 2,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          }
+        ]
+      },
+      "summary": {
+        "base_success_rate": 0.5,
+        "faulted_recoveries": 0,
+        "faulted_recovery_rate": 0.0,
+        "faulted_runs": 24,
+        "mean_steps": 4.895833333333333,
+        "runs": 48,
+        "shift_success_rate": 0.0,
+        "success_rate": 0.25,
+        "successes": 12
+      }
+    },
+    "no-retry": {
+      "effects": {
+        "cell_success": {
+          "rs0_tf0": 1.0,
+          "rs0_tf1": 0.0,
+          "rs1_tf0": 1.0,
+          "rs1_tf1": 0.0
+        },
+        "factors": [
+          "rule_shift",
+          "tool_fault"
+        ],
+        "interaction_rule_x_tool": 0.0,
+        "interactions": {
+          "rule_shift_x_tool_fault": 0.0
+        },
+        "main_effects": {
+          "rule_shift": 0.0,
+          "tool_fault": 1.0
+        },
+        "rule_shift_main_effect": 0.0,
+        "tool_fault_main_effect": 1.0
+      },
+      "result": {
+        "families": {
+          "factorial_extension_sort": {
+            "base_success_rate": 0.5,
+            "faulted_recoveries": 0,
+            "faulted_recovery_rate": 0.0,
+            "faulted_runs": 8,
+            "mean_steps": 5.5,
+            "runs": 16,
+            "shift_success_rate": 0.5,
+            "success_rate": 0.5,
+            "successes": 8
+          },
+          "factorial_prefix_route": {
+            "base_success_rate": 0.5,
+            "faulted_recoveries": 0,
+            "faulted_recovery_rate": 0.0,
+            "faulted_runs": 8,
+            "mean_steps": 6.0,
+            "runs": 16,
+            "shift_success_rate": 0.5,
+            "success_rate": 0.5,
+            "successes": 8
+          },
+          "factorial_suffix_route": {
+            "base_success_rate": 0.5,
+            "faulted_recoveries": 0,
+            "faulted_recovery_rate": 0.0,
+            "faulted_runs": 8,
+            "mean_steps": 6.0,
+            "runs": 16,
+            "shift_success_rate": 0.5,
+            "success_rate": 0.5,
+            "successes": 8
+          }
+        },
+        "overall": {
+          "base_success_rate": 0.5,
+          "faulted_recoveries": 0,
+          "faulted_recovery_rate": 0.0,
+          "faulted_runs": 24,
+          "mean_steps": 5.833333333333333,
+          "runs": 48,
+          "shift_success_rate": 0.5,
+          "success_rate": 0.5,
+          "successes": 24
+        },
+        "policy": "no-retry",
+        "results": [
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "6aa48312bd75ec70dd00111ab87a7e243244fb0b16c33e0a5794aa505f161c9d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "5bb300224ddc0b7b09c6e1375b2c1b601457ba4096761855df8be1027e91903a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "085428e3b2f50f7bd087ea1fc08079b99ee27f55a493e6a20aafe332fd6a3964",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "143324c3adff2234225d73262a9c49db00ab2aba0e4ac92f2b2b0ed09ad5061e",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "82cd40331fc5c9c2e08a7896fe4652c2dc96294f5945e83ebb61f50bfb697d43",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "decb8fa8ff7d6555a8d9da79b3f699fae58fde6442d58c658c7a1abbef498660",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "a952ae6f68afaf8c800350afc8266ad2ce165f9783367be2bb572a506bea85c2",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "83cdd64cf33f7bf275a429dce748cd22805d2381c62541a49c1e242c4e9d5e57",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "ff0b5121bc2caff7b5e936ba3f30d68b32fd20bb462229b0dac33684c6d53780",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "37ed61d16457f2b6ea4e2928c7778f9db0a548eb5358b9abe6a0b8e420ef1256",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "3c463eb6d815f60e559ccbc22b0f6821ed681faaea10abafbbe6c65cf2c635f5",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "6a0d59d85d6221e3ac7f202cc4e52100d0f1447f23f990d5b0b379811d3f912c",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "3f27fb0416e7b883281662f2be6b332b0f7ac6147c4bba1d136abd11a67e284a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "21449943d2a556a920e6cbf8530e72a899d49915083c5d6053f8f8c1e7dc5be9",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9f8ab5364c5fc4b0d3f6916462d6aaa43fd40c3d5a087cbe40b133d447ed1e21",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "324ae8a2f95742b818c344529b08bdf3482dc475ecd70851daf86a17cdff63bf",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "4aa701df4403c40d0e8b033288221081b47f0949d581b7d32fdca6065de43242",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "32be12f1f26ef00b5613bef61653ddc953af4c23973cc51d7436ced1842fd0fe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "93b8a485eb84324ce76bbe720ae8f0a3f49de8be59b5aa0b10d4b73dfc0187e6",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "c0316d11e3b4ae9d961725ca0e8a516fc3bba49cef253c5ccd500bd1520a50b8",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ebaf02e35a9d8132a494ea2668a5c033a7bde5fefb9c45a219c6139f8ea03b03",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "8a16a79f44452003075d2a6da46754d5bba70b923d0708698a68ac2f47901989",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9fc5eb0853d7486f938af6f35412550c444ef87e238a41165656203bb2ba685d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ce83e8226b7be817ca09a49cb38c5c182a02f958f91473c776bb7356f87f6d6c",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "91cefff533885a244a9763cdda5bce816759bc7fdea911b95ce792ffd1f151a3",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "535dedd526b21f685eadc6673c662244faec126dfb691080d0f7b7e3499428e7",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "ee6ad3e5e1173e59bcc00c714be5f0913c050ae5ad5aae020dc211511f0bbc9d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "ada86d443f03aa24f3c619f8a6733c45d9b13581687333343545b69ac77c2560",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "888febce6426635a2f58242663a5ae14c09f070359e1c343bf14dacf626a915f",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "78e6959928420a3763dd2e96688b1324c4e87ef587b03a39f2b9fc29a2ec539d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6ce62589959f0089a31946f7e6e8c1e24880a3ee147d107370369a3f26761283",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "39f8cc1c556e1fbbe006d027f84100b23b961ee5c16db4ac98e6ceb178f02a6b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "9427a53afd9ea4cc7150801821d4650611fe601b3494c905784cda71b28b463a",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "5784479621f3381c8dce2d2aff7aa39d1a21e270158e1694d66ce53a25963298",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "35240da2a2827175645c33371a4a9e0f07ca446cc0e570ef6688a51d815c9e79",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "f4d4217a249602a09142ffc9979d7ee9036f4806e1a5b2361f09ac8dce652afe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9a9fd869b6707ab5b2d65413a01b55773f0d223b30248ce70a6ef8878edf808d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "1e9abecb63b8024f3ef038b1aefa799c5baf8748e7cfe407f54ea0a1a7094f9f",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "44d41e09331005c42856dce27c5afcb544592ecaa02aeb5538243481d5d18fea",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "18753020ecea963dab7f1711e77ad73a5d5bb5d2ab2d251c227d6b1311ab5596",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "e7a1b0647fb68858c30d0229600f4d0f59fc90b7b35f2846ada8bdcd4121f658",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "a1ca527d0890c2c9a2f43dd84780afb7d76b63a62567d7926c73bf4be237628b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "1cff29125c4b0e3fc85f6a5474b126e28160b2dd759b1ee320af2406b9ef7428",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "65875efc6fbba4500c8d217f8f0d34c17ec173123c5503ca863c4a4b420dedff",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "53c1ffa87478447418ddb8172b3db275c36a9647418b26a514dda03242ca2a34",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "03c1e1292a553fa2a1e56f1eca677872fcf5b20457695f3d2527f1f1145fa2d4",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6d5046bcd10d98aeef50a957e95c436bd9f26544db885cbc7c85c7cc12d506ea",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "PolicyError: policy aborted after a tool failure",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "57b6a3e6a2458a1f5555b3dfcc7e0d7a03b0bfedab885cf24cdadff682461e38",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=0",
+            "steps": 3,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          }
+        ]
+      },
+      "summary": {
+        "base_success_rate": 0.5,
+        "faulted_recoveries": 0,
+        "faulted_recovery_rate": 0.0,
+        "faulted_runs": 24,
+        "mean_steps": 5.833333333333333,
+        "runs": 48,
+        "shift_success_rate": 0.5,
+        "success_rate": 0.5,
+        "successes": 24
+      }
+    },
+    "robust": {
+      "effects": {
+        "cell_success": {
+          "rs0_tf0": 1.0,
+          "rs0_tf1": 1.0,
+          "rs1_tf0": 1.0,
+          "rs1_tf1": 1.0
+        },
+        "factors": [
+          "rule_shift",
+          "tool_fault"
+        ],
+        "interaction_rule_x_tool": 0.0,
+        "interactions": {
+          "rule_shift_x_tool_fault": 0.0
+        },
+        "main_effects": {
+          "rule_shift": 0.0,
+          "tool_fault": 0.0
+        },
+        "rule_shift_main_effect": 0.0,
+        "tool_fault_main_effect": 0.0
+      },
+      "result": {
+        "families": {
+          "factorial_extension_sort": {
+            "base_success_rate": 1.0,
+            "faulted_recoveries": 8,
+            "faulted_recovery_rate": 1.0,
+            "faulted_runs": 8,
+            "mean_steps": 8.5,
+            "runs": 16,
+            "shift_success_rate": 1.0,
+            "success_rate": 1.0,
+            "successes": 16
+          },
+          "factorial_prefix_route": {
+            "base_success_rate": 1.0,
+            "faulted_recoveries": 8,
+            "faulted_recovery_rate": 1.0,
+            "faulted_runs": 8,
+            "mean_steps": 9.5,
+            "runs": 16,
+            "shift_success_rate": 1.0,
+            "success_rate": 1.0,
+            "successes": 16
+          },
+          "factorial_suffix_route": {
+            "base_success_rate": 1.0,
+            "faulted_recoveries": 8,
+            "faulted_recovery_rate": 1.0,
+            "faulted_runs": 8,
+            "mean_steps": 9.5,
+            "runs": 16,
+            "shift_success_rate": 1.0,
+            "success_rate": 1.0,
+            "successes": 16
+          }
+        },
+        "overall": {
+          "base_success_rate": 1.0,
+          "faulted_recoveries": 24,
+          "faulted_recovery_rate": 1.0,
+          "faulted_runs": 24,
+          "mean_steps": 9.166666666666666,
+          "runs": 48,
+          "shift_success_rate": 1.0,
+          "success_rate": 1.0,
+          "successes": 48
+        },
+        "policy": "robust",
+        "results": [
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "6aa48312bd75ec70dd00111ab87a7e243244fb0b16c33e0a5794aa505f161c9d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "5bb300224ddc0b7b09c6e1375b2c1b601457ba4096761855df8be1027e91903a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "085428e3b2f50f7bd087ea1fc08079b99ee27f55a493e6a20aafe332fd6a3964",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "143324c3adff2234225d73262a9c49db00ab2aba0e4ac92f2b2b0ed09ad5061e",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6aa48312bd75ec70dd00111ab87a7e243244fb0b16c33e0a5794aa505f161c9d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "5bb300224ddc0b7b09c6e1375b2c1b601457ba4096761855df8be1027e91903a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "085428e3b2f50f7bd087ea1fc08079b99ee27f55a493e6a20aafe332fd6a3964",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "143324c3adff2234225d73262a9c49db00ab2aba0e4ac92f2b2b0ed09ad5061e",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "ff0b5121bc2caff7b5e936ba3f30d68b32fd20bb462229b0dac33684c6d53780",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "37ed61d16457f2b6ea4e2928c7778f9db0a548eb5358b9abe6a0b8e420ef1256",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "3c463eb6d815f60e559ccbc22b0f6821ed681faaea10abafbbe6c65cf2c635f5",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "6a0d59d85d6221e3ac7f202cc4e52100d0f1447f23f990d5b0b379811d3f912c",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ff0b5121bc2caff7b5e936ba3f30d68b32fd20bb462229b0dac33684c6d53780",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "37ed61d16457f2b6ea4e2928c7778f9db0a548eb5358b9abe6a0b8e420ef1256",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "3c463eb6d815f60e559ccbc22b0f6821ed681faaea10abafbbe6c65cf2c635f5",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6a0d59d85d6221e3ac7f202cc4e52100d0f1447f23f990d5b0b379811d3f912c",
+            "final_file_count": 6,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "4aa701df4403c40d0e8b033288221081b47f0949d581b7d32fdca6065de43242",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "32be12f1f26ef00b5613bef61653ddc953af4c23973cc51d7436ced1842fd0fe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "93b8a485eb84324ce76bbe720ae8f0a3f49de8be59b5aa0b10d4b73dfc0187e6",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "c0316d11e3b4ae9d961725ca0e8a516fc3bba49cef253c5ccd500bd1520a50b8",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "4aa701df4403c40d0e8b033288221081b47f0949d581b7d32fdca6065de43242",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "32be12f1f26ef00b5613bef61653ddc953af4c23973cc51d7436ced1842fd0fe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "93b8a485eb84324ce76bbe720ae8f0a3f49de8be59b5aa0b10d4b73dfc0187e6",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "c0316d11e3b4ae9d961725ca0e8a516fc3bba49cef253c5ccd500bd1520a50b8",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "91cefff533885a244a9763cdda5bce816759bc7fdea911b95ce792ffd1f151a3",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "535dedd526b21f685eadc6673c662244faec126dfb691080d0f7b7e3499428e7",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "ee6ad3e5e1173e59bcc00c714be5f0913c050ae5ad5aae020dc211511f0bbc9d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "ada86d443f03aa24f3c619f8a6733c45d9b13581687333343545b69ac77c2560",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "91cefff533885a244a9763cdda5bce816759bc7fdea911b95ce792ffd1f151a3",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "535dedd526b21f685eadc6673c662244faec126dfb691080d0f7b7e3499428e7",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ee6ad3e5e1173e59bcc00c714be5f0913c050ae5ad5aae020dc211511f0bbc9d",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ada86d443f03aa24f3c619f8a6733c45d9b13581687333343545b69ac77c2560",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "9427a53afd9ea4cc7150801821d4650611fe601b3494c905784cda71b28b463a",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "5784479621f3381c8dce2d2aff7aa39d1a21e270158e1694d66ce53a25963298",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "35240da2a2827175645c33371a4a9e0f07ca446cc0e570ef6688a51d815c9e79",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "f4d4217a249602a09142ffc9979d7ee9036f4806e1a5b2361f09ac8dce652afe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9427a53afd9ea4cc7150801821d4650611fe601b3494c905784cda71b28b463a",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "5784479621f3381c8dce2d2aff7aa39d1a21e270158e1694d66ce53a25963298",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "35240da2a2827175645c33371a4a9e0f07ca446cc0e570ef6688a51d815c9e79",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "f4d4217a249602a09142ffc9979d7ee9036f4806e1a5b2361f09ac8dce652afe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "e7a1b0647fb68858c30d0229600f4d0f59fc90b7b35f2846ada8bdcd4121f658",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "a1ca527d0890c2c9a2f43dd84780afb7d76b63a62567d7926c73bf4be237628b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "1cff29125c4b0e3fc85f6a5474b126e28160b2dd759b1ee320af2406b9ef7428",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "65875efc6fbba4500c8d217f8f0d34c17ec173123c5503ca863c4a4b420dedff",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "e7a1b0647fb68858c30d0229600f4d0f59fc90b7b35f2846ada8bdcd4121f658",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "a1ca527d0890c2c9a2f43dd84780afb7d76b63a62567d7926c73bf4be237628b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "1cff29125c4b0e3fc85f6a5474b126e28160b2dd759b1ee320af2406b9ef7428",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "65875efc6fbba4500c8d217f8f0d34c17ec173123c5503ca863c4a4b420dedff",
+            "final_file_count": 7,
+            "policy": "configurable-retain=0-retry=1",
+            "steps": 10,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          }
+        ]
+      },
+      "summary": {
+        "base_success_rate": 1.0,
+        "faulted_recoveries": 24,
+        "faulted_recovery_rate": 1.0,
+        "faulted_runs": 24,
+        "mean_steps": 9.166666666666666,
+        "runs": 48,
+        "shift_success_rate": 1.0,
+        "success_rate": 1.0,
+        "successes": 48
+      }
+    },
+    "sticky-rule": {
+      "effects": {
+        "cell_success": {
+          "rs0_tf0": 1.0,
+          "rs0_tf1": 1.0,
+          "rs1_tf0": 0.0,
+          "rs1_tf1": 0.0
+        },
+        "factors": [
+          "rule_shift",
+          "tool_fault"
+        ],
+        "interaction_rule_x_tool": 0.0,
+        "interactions": {
+          "rule_shift_x_tool_fault": 0.0
+        },
+        "main_effects": {
+          "rule_shift": 1.0,
+          "tool_fault": 0.0
+        },
+        "rule_shift_main_effect": 1.0,
+        "tool_fault_main_effect": 0.0
+      },
+      "result": {
+        "families": {
+          "factorial_extension_sort": {
+            "base_success_rate": 1.0,
+            "faulted_recoveries": 4,
+            "faulted_recovery_rate": 0.5,
+            "faulted_runs": 8,
+            "mean_steps": 7.5625,
+            "runs": 16,
+            "shift_success_rate": 0.0,
+            "success_rate": 0.5,
+            "successes": 8
+          },
+          "factorial_prefix_route": {
+            "base_success_rate": 1.0,
+            "faulted_recoveries": 4,
+            "faulted_recovery_rate": 0.5,
+            "faulted_runs": 8,
+            "mean_steps": 8.5625,
+            "runs": 16,
+            "shift_success_rate": 0.0,
+            "success_rate": 0.5,
+            "successes": 8
+          },
+          "factorial_suffix_route": {
+            "base_success_rate": 1.0,
+            "faulted_recoveries": 4,
+            "faulted_recovery_rate": 0.5,
+            "faulted_runs": 8,
+            "mean_steps": 8.5625,
+            "runs": 16,
+            "shift_success_rate": 0.0,
+            "success_rate": 0.5,
+            "successes": 8
+          }
+        },
+        "overall": {
+          "base_success_rate": 1.0,
+          "faulted_recoveries": 12,
+          "faulted_recovery_rate": 0.5,
+          "faulted_runs": 24,
+          "mean_steps": 8.229166666666666,
+          "runs": 48,
+          "shift_success_rate": 0.0,
+          "success_rate": 0.5,
+          "successes": 24
+        },
+        "policy": "sticky-rule",
+        "results": [
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "6aa48312bd75ec70dd00111ab87a7e243244fb0b16c33e0a5794aa505f161c9d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "5bb300224ddc0b7b09c6e1375b2c1b601457ba4096761855df8be1027e91903a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "085428e3b2f50f7bd087ea1fc08079b99ee27f55a493e6a20aafe332fd6a3964",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "143324c3adff2234225d73262a9c49db00ab2aba0e4ac92f2b2b0ed09ad5061e",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6aa48312bd75ec70dd00111ab87a7e243244fb0b16c33e0a5794aa505f161c9d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "5bb300224ddc0b7b09c6e1375b2c1b601457ba4096761855df8be1027e91903a",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "085428e3b2f50f7bd087ea1fc08079b99ee27f55a493e6a20aafe332fd6a3964",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "143324c3adff2234225d73262a9c49db00ab2aba0e4ac92f2b2b0ed09ad5061e",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-extension_sort-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "97cdf1273394ed6ab6e4f8a6fb643b6b801456a1d42ba6ec89e7701f3d217d44",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "d0e04f107456c6b2e36e3a7ecc581986484c756f54c8b80891ac6c4346518362",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "ca93e3ad0db8fa6f4d330cb8fc1e14cba0debb752a396ead14fcca4737b4c73f",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [],
+            "final_digest": "f17ad1a3ac74bc7a6861158dc7fc8e3d4914ac04a617f7d1aa2c27cda487f96d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 7,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "97cdf1273394ed6ab6e4f8a6fb643b6b801456a1d42ba6ec89e7701f3d217d44",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "d0e04f107456c6b2e36e3a7ecc581986484c756f54c8b80891ac6c4346518362",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "ca93e3ad0db8fa6f4d330cb8fc1e14cba0debb752a396ead14fcca4737b4c73f",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_extension_sort",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "f17ad1a3ac74bc7a6861158dc7fc8e3d4914ac04a617f7d1aa2c27cda487f96d",
+            "final_file_count": 6,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-extension_sort-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "4aa701df4403c40d0e8b033288221081b47f0949d581b7d32fdca6065de43242",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "32be12f1f26ef00b5613bef61653ddc953af4c23973cc51d7436ced1842fd0fe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "93b8a485eb84324ce76bbe720ae8f0a3f49de8be59b5aa0b10d4b73dfc0187e6",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "c0316d11e3b4ae9d961725ca0e8a516fc3bba49cef253c5ccd500bd1520a50b8",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "4aa701df4403c40d0e8b033288221081b47f0949d581b7d32fdca6065de43242",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "32be12f1f26ef00b5613bef61653ddc953af4c23973cc51d7436ced1842fd0fe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "93b8a485eb84324ce76bbe720ae8f0a3f49de8be59b5aa0b10d4b73dfc0187e6",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "c0316d11e3b4ae9d961725ca0e8a516fc3bba49cef253c5ccd500bd1520a50b8",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-prefix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "7597718f655ad9b5b89a49d8b40021e747d2c9399d0d3fa6957e9b50726f5768",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "6d6de7553cc74b70563003061dafb944e016fe55fd4e6eb7dc7df9fea4967f61",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "71d52725209bfa125349d5ea8b5f672d38d725a6e51748e89e7a70c9102e89be",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [],
+            "final_digest": "2a3a51ab834a9bced626b2dc510b838ffa1a71cc226be38fa46a777f4f3fd058",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "7597718f655ad9b5b89a49d8b40021e747d2c9399d0d3fa6957e9b50726f5768",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "6d6de7553cc74b70563003061dafb944e016fe55fd4e6eb7dc7df9fea4967f61",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "71d52725209bfa125349d5ea8b5f672d38d725a6e51748e89e7a70c9102e89be",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_prefix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "2a3a51ab834a9bced626b2dc510b838ffa1a71cc226be38fa46a777f4f3fd058",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-prefix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "9427a53afd9ea4cc7150801821d4650611fe601b3494c905784cda71b28b463a",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i00",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "5784479621f3381c8dce2d2aff7aa39d1a21e270158e1694d66ce53a25963298",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i01",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "35240da2a2827175645c33371a4a9e0f07ca446cc0e570ef6688a51d815c9e79",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i02",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "f4d4217a249602a09142ffc9979d7ee9036f4806e1a5b2361f09ac8dce652afe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf0-i03",
+            "tool_failures": 0,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "9427a53afd9ea4cc7150801821d4650611fe601b3494c905784cda71b28b463a",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i00",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "5784479621f3381c8dce2d2aff7aa39d1a21e270158e1694d66ce53a25963298",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i01",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "35240da2a2827175645c33371a4a9e0f07ca446cc0e570ef6688a51d815c9e79",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i02",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": null,
+            "factors": {
+              "rule_shift": 0,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "f4d4217a249602a09142ffc9979d7ee9036f4806e1a5b2361f09ac8dce652afe",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": true,
+            "task_id": "factorial-suffix_route-rs0-tf1-i03",
+            "tool_failures": 1,
+            "variant": 0
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "181ee3a213f8bb80ccacf0b0c6ff65c1131f9aa6fe6f37b6fcb8ebd1aea7bbac",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i00",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "2f63d5faa1107e49e064cc4c50d0871dab37656ed66bf662082afe0a79fbe082",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i01",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "401dfc22bb1619db2f8b40a58ebaf84876fcc2df281da11c2db980da1994aca9",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i02",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 0
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [],
+            "final_digest": "f4d5f3e83918a04a38d860c37abbc34db57aa56d21571b9e3b376175b1e01f6b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 8,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf0-i03",
+            "tool_failures": 0,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "181ee3a213f8bb80ccacf0b0c6ff65c1131f9aa6fe6f37b6fcb8ebd1aea7bbac",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i00",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "2f63d5faa1107e49e064cc4c50d0871dab37656ed66bf662082afe0a79fbe082",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i01",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "401dfc22bb1619db2f8b40a58ebaf84876fcc2df281da11c2db980da1994aca9",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i02",
+            "tool_failures": 1,
+            "variant": 1
+          },
+          {
+            "error": "finished",
+            "factors": {
+              "rule_shift": 1,
+              "tool_fault": 1
+            },
+            "family_id": "factorial_suffix_route",
+            "faults_injected": [
+              "transient_error: injected transient tool failure"
+            ],
+            "final_digest": "f4d5f3e83918a04a38d860c37abbc34db57aa56d21571b9e3b376175b1e01f6b",
+            "final_file_count": 7,
+            "policy": "configurable-retain=1-retry=1",
+            "steps": 9,
+            "success": false,
+            "task_id": "factorial-suffix_route-rs1-tf1-i03",
+            "tool_failures": 1,
+            "variant": 1
+          }
+        ]
+      },
+      "summary": {
+        "base_success_rate": 1.0,
+        "faulted_recoveries": 12,
+        "faulted_recovery_rate": 0.5,
+        "faulted_runs": 24,
+        "mean_steps": 8.229166666666666,
+        "runs": 48,
+        "shift_success_rate": 0.0,
+        "success_rate": 0.5,
+        "successes": 24
+      }
+    }
+  },
+  "suite": "CLEAR factorial attribution v0"
+}

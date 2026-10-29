@@ -1,0 +1,118 @@
+{
+  "cases": 80,
+  "confounding_blind_spot": {
+    "cases": 10,
+    "detected_by_gate": false,
+    "gated_claims": 10
+  },
+  "generated_at": "2026-10-28T12:44:21.633120+00:00",
+  "notes": [
+    "The 80 cases are synthetic controls, not a live research-agent benchmark.",
+    "Evidence Gate intentionally does not detect confounding in this v0."
+  ],
+  "policies": {
+    "gated": {
+      "by_defect": {
+        "broken-baseline": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "confounded": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "p-hacking": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "split-overlap": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "target-leakage": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "unreproducible": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-negative": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-positive": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 10
+        }
+      },
+      "cases": 80,
+      "claims": 20,
+      "false_discoveries": 10,
+      "false_discovery_rate": 0.5,
+      "true_discoveries": 10,
+      "valid_discovery_rate": 1.0
+    },
+    "naive": {
+      "by_defect": {
+        "broken-baseline": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "confounded": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "p-hacking": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "split-overlap": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "target-leakage": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "unreproducible": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "valid-negative": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-positive": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 10
+        }
+      },
+      "cases": 80,
+      "claims": 70,
+      "false_discoveries": 60,
+      "false_discovery_rate": 0.8571428571428571,
+      "true_discoveries": 10,
+      "valid_discovery_rate": 1.0
+    }
+  },
+  "scientific_result": false,
+  "status": "harness-validation",
+  "suite": "negative-control research agent v0"
+}

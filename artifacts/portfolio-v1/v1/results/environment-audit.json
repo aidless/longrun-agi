@@ -1,0 +1,56 @@
+{
+  "boundary": {
+    "audit_read_only": true,
+    "gpu_job_started": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "paid_api_calls": 0
+  },
+  "cpu": {
+    "affinity_count": 16,
+    "logical_count": 16,
+    "model": "AMD Ryzen 7 5800H with Radeon Graphics"
+  },
+  "disk": {
+    "free_bytes": 27084079104,
+    "path": "/home/liuzewen/projects/longrun-agi-20261027",
+    "total_bytes": 657190785024,
+    "used_bytes": 630106705920,
+    "used_percent": 95.88
+  },
+  "generated_at": "2026-10-29T02:45:41.860229+00:00",
+  "gpu": {
+    "count": 0,
+    "devices": [],
+    "nvidia_device_nodes": {
+      "/dev/nvidia0": false,
+      "/dev/nvidiactl": false
+    },
+    "nvidia_smi": null,
+    "usable_accelerator_established": false
+  },
+  "memory": {
+    "available_bytes": 3497996288,
+    "swap_total_bytes": 17179860992,
+    "total_bytes": 16076931072
+  },
+  "optional_ml_packages": {
+    "accelerate": true,
+    "safetensors": true,
+    "torch": true,
+    "transformers": true
+  },
+  "platform": {
+    "distribution": "Ubuntu 24.04.5 LTS",
+    "machine": "x86_64",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "release": "7.0.0-38-generic",
+    "system": "Linux"
+  },
+  "python": {
+    "implementation": "CPython",
+    "version": "3.12.3"
+  },
+  "root": "/home/liuzewen/projects/longrun-agi-20261027",
+  "schema_version": 1
+}

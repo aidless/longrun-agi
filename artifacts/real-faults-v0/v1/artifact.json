@@ -1,0 +1,102 @@
+{
+  "name": "real-faults-v0",
+  "version": 1,
+  "created_at": "2026-10-29T08:40:10Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make real-faults",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "python3 scripts/verify_artifact.py artifacts/real-faults-v0/v1"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "faults": 5,
+    "policies": 4,
+    "case_pairs": 20,
+    "real_filesystem": true,
+    "subprocesses": true,
+    "temporary_directory_only": true
+  },
+  "inputs": {
+    "design": "experiments/021-real-faults-v0/design.md",
+    "source_sha256": {
+      "src/longrun/runtime/real_faults.py": "54e4e0f9b8e08c7598b4f44cb96db7eea189bc5836c19f40026cb94a26d87d89",
+      "tests/test_real_faults.py": "97ee25fafb9f55ff8e6d0a3763d335ab2da64aafd86b3e5dab1322611b3d2a9e",
+      "experiments/021-real-faults-v0/design.md": "6d888f9eee58b267908e4d7cf40c12b84ae5d63b0351d445da319c9f1e517542"
+      ,
+      "experiments/021-real-faults-v0/log.md": "1df695a6ae6774ce2f366c20dd438fa0a2943fed769059ed50d8de70dee48789"
+    }
+  },
+  "outputs": {
+    "results/real-faults.json": "2f51789c0b1f5e7e3768759d497aed95f2d3250fb02f6fdfd3eb49b177908fa6"
+  },
+  "canonical_output_sha256": "28c69674e8ac490263af26a12f27fd19adf41ded4d841f505c06ea9094be6b17",
+  "checks": {
+    "unit_tests": "174 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_aggregates_equal": true,
+    "retry_only_success_rate": 0.0,
+    "rollback_success_rate": 0.8,
+    "state_check_replan_success_rate": 1.0,
+    "replan_success_rate": 1.0,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+    ,
+    "artifact_hash_check": "passed"
+  },
+  "key_observations": {
+    "retry-only": {
+      "successes": 0,
+      "success_rate": 0.0,
+      "mean_attempts": 2.0,
+      "rollbacks": 0,
+      "replans": 0
+    },
+    "rollback": {
+      "successes": 4,
+      "success_rate": 0.8,
+      "mean_attempts": 1.2,
+      "rollbacks": 1,
+      "replans": 0
+    },
+    "state-check-replan": {
+      "successes": 5,
+      "success_rate": 1.0,
+      "mean_attempts": 1.2,
+      "rollbacks": 2,
+      "replans": 4
+    },
+    "replan": {
+      "successes": 5,
+      "success_rate": 1.0,
+      "mean_attempts": 1.2,
+      "rollbacks": 2,
+      "replans": 4
+    }
+  },
+  "notes": [
+    "All operations occur inside TemporaryDirectory on the cloud CPU host.",
+    "The worker is a short-lived local Python subprocess.",
+    "This validates recovery mechanics, not model policy quality.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No real browser or production filesystem.",
+    "No model policy evaluation.",
+    "No general system-resilience claim."
+  ]
+}

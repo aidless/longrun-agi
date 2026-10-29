@@ -1,0 +1,132 @@
+{
+  "name": "cpu-program-v0",
+  "version": 11,
+  "created_at": "2026-10-29T05:14:13Z",
+  "supersedes": "artifacts/cpu-program-v0/v10/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make claim-schema",
+    "make program",
+    "make verify"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100,
+    "recovery_episodes_per_controller": 40,
+    "negative_control_cases": 80,
+    "confounding_control_cases": 90,
+    "claim_schema_cases": 110,
+    "goal_monitor_episodes": 60,
+    "world_model_samples_per_pair": 20,
+    "verifier_train_episodes": 600,
+    "controller_train_episodes": 600
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "286b6ffbc8db1204e4c53b82acbab5605f249a12f25a7a15a0ed8296c9cadc1e",
+      "src/longrun/controls/claim_gate.py": "1d8494e58173a0845bc778e6ae3e50b3552b12a3fc5043b6a09f515e8a271f54",
+      "src/longrun/controls/confounding.py": "6d2df5ffbb826b674236dbfaf841402c1d53b341cd84a394c9a312267940a2de",
+      "src/longrun/controls/evidence.py": "3d7fc1e6c481e015b44a091d9b2bfb98796862a4571300ec298d1ab825a8496c",
+      "src/longrun/cli.py": "9d4314b9b4055d9b8eaff0dbbd1047243af925c62dc27aebb15bd800403d5980",
+      "tests/test_program_scientific_guards.py": "90a82f14c67de3dfeeb9101975a07e38addc7938f9df5e6a0a7c6bf4d2b7a369",
+      "tests/test_claim_gate.py": "a93b72c31ada4085b768df9c89039d64afc142b93813985244c1e487ad861bf6",
+      "experiments/018-claim-schema-v0/design.md": "adcbd89d8b0d9117d71798874769c9cfa6e59812cd81576bb0d80a291e90f58c",
+      "experiments/018-claim-schema-v0/log.md": "262afdc7f96b0b3c79888f3e8af50200f0dea7c9c5c933c47900bc1db43d5cbb",
+      "experiments/008-cpu-program-v0/log.md": "3fddf2b3ac873eab9da978c8e8fa7c8e920f8abd413fbae2661f3b41521e66d1"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "5a4406418a4dccf823702f6e50cc97a670fbceb08aedc2d67201163436ecc401"
+  },
+  "canonical_output_sha256": "103f64aff17240a7b4adf74997cd5afe94b3dcd5fccda22aaa4253150e8d87df",
+  "checks": {
+    "unit_tests": "157 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P5": {
+      "claim_schema_cases": 110,
+      "strict_false_discoveries": 0,
+      "strict_valid_discovery_rate": 0.5,
+      "accepted": 20,
+      "rejected": 70,
+      "non_evaluable": 20,
+      "declared_confounding_detected": 10,
+      "undeclared_confounding_detected": 0,
+      "undeclared_confounding_blocked": 10,
+      "valid_undeclared_blocked": 10,
+      "invalid_schema_rejected": 10
+    },
+    "P8": {
+      "success_rate": 0.48333333333333334,
+      "mean_cost": 1.7333333333333334,
+      "cost_per_success": 3.586206896551724,
+      "stability_range": 0.041666666666666685,
+      "memory_writes": 0
+    },
+    "P1": {
+      "answer_ood_success": 0.43333333333333335,
+      "ensemble_ood_success": 0.5233333333333333
+    },
+    "P4": {
+      "id_accuracy": 1.0,
+      "ood_accuracy": 0.25,
+      "planning_uncertainty": 0.5
+    },
+    "P6": {
+      "early_warning_rate": 0.0
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v1-cpu-substrate",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-weak-calibration-probe",
+    "P5": "implemented-v2-cpu-substrate",
+    "P6": "cpu-weak-monitor-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-weak-controller-probe"
+  },
+  "notes": [
+    "v11 adds the 110-case strict subgroup claim-schema control to P5.",
+    "P5 now distinguishes missing declarations from detected confounding.",
+    "The strict schema has zero false discoveries in the synthetic suite but intentionally blocks valid undeclared positives.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No real runtime tool/retriever/memory integration.",
+    "No language-model controller or measured token/latency costs.",
+    "No live research-agent evaluation.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "by_policy": {
+    "replan": {
+      "cases": 5,
+      "mean_attempts": 1.2,
+      "replans": 1,
+      "rollbacks": 1,
+      "success_rate": 1.0,
+      "successes": 5
+    },
+    "retry-only": {
+      "cases": 5,
+      "mean_attempts": 2.0,
+      "replans": 0,
+      "rollbacks": 0,
+      "success_rate": 0.0,
+      "successes": 0
+    },
+    "rollback": {
+      "cases": 5,
+      "mean_attempts": 1.8,
+      "replans": 0,
+      "rollbacks": 4,
+      "success_rate": 0.8,
+      "successes": 4
+    },
+    "state-check-replan": {
+      "cases": 5,
+      "mean_attempts": 1.2,
+      "replans": 1,
+      "rollbacks": 1,
+      "success_rate": 1.0,
+      "successes": 5
+    }
+  },
+  "config": {
+    "faults": 5,
+    "network_calls": 0,
+    "policies": 4,
+    "real_filesystem": true,
+    "subprocesses": true
+  },
+  "generated_at": "2026-10-29T08:40:10.891530+00:00",
+  "notes": [
+    "All file operations occur under a temporary directory.",
+    "The worker is a short-lived local Python subprocess in the cloud test environment.",
+    "This validates recovery mechanics, not model policy quality."
+  ],
+  "rows": [
+    {
+      "attempts": 2,
+      "failures": [
+        "timeout",
+        "timeout"
+      ],
+      "fault": "transient-process",
+      "policy": "retry-only",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": false
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "transient-process"
+      ],
+      "fault": "transient-process",
+      "policy": "rollback",
+      "replans": 0,
+      "rollbacks": 1,
+      "success": true
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "transient-process"
+      ],
+      "fault": "transient-process",
+      "policy": "state-check-replan",
+      "replans": 1,
+      "rollbacks": 1,
+      "success": true
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "transient-process"
+      ],
+      "fault": "transient-process",
+      "policy": "replan",
+      "replans": 1,
+      "rollbacks": 1,
+      "success": true
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "timeout",
+        "timeout"
+      ],
+      "fault": "timeout",
+      "policy": "retry-only",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": false
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "timeout",
+      "policy": "rollback",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "timeout",
+      "policy": "state-check-replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "timeout",
+      "policy": "replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "environment-drift",
+        "environment-drift"
+      ],
+      "fault": "missing-spec",
+      "policy": "retry-only",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": false
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "environment-drift"
+      ],
+      "fault": "missing-spec",
+      "policy": "rollback",
+      "replans": 0,
+      "rollbacks": 1,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "missing-spec",
+      "policy": "state-check-replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "missing-spec",
+      "policy": "replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "timeout",
+        "timeout"
+      ],
+      "fault": "stale-tree",
+      "policy": "retry-only",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": false
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "environment-drift",
+        "environment-drift"
+      ],
+      "fault": "stale-tree",
+      "policy": "rollback",
+      "replans": 0,
+      "rollbacks": 1,
+      "success": false
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "stale-tree",
+      "policy": "state-check-replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "stale-tree",
+      "policy": "replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "timeout",
+        "timeout"
+      ],
+      "fault": "misleading-doc",
+      "policy": "retry-only",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": false
+    },
+    {
+      "attempts": 2,
+      "failures": [
+        "environment-drift"
+      ],
+      "fault": "misleading-doc",
+      "policy": "rollback",
+      "replans": 0,
+      "rollbacks": 1,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "misleading-doc",
+      "policy": "state-check-replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    },
+    {
+      "attempts": 1,
+      "failures": [],
+      "fault": "misleading-doc",
+      "policy": "replan",
+      "replans": 0,
+      "rollbacks": 0,
+      "success": true
+    }
+  ],
+  "scientific_result": false,
+  "status": "harness-validation",
+  "suite": "real filesystem and subprocess recovery v0"
+}

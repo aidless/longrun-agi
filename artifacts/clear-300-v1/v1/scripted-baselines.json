@@ -1,0 +1,48 @@
+{
+  "current-rule": {
+    "by_environment": {
+      "browser": {
+        "success_rate": 1.0,
+        "successes": 100,
+        "tasks": 100
+      },
+      "filesystem": {
+        "success_rate": 1.0,
+        "successes": 100,
+        "tasks": 100
+      },
+      "gridworld": {
+        "success_rate": 1.0,
+        "successes": 100,
+        "tasks": 100
+      }
+    },
+    "success_rate": 1.0,
+    "successes": 300,
+    "tasks": 300
+  },
+  "scientific_result": false,
+  "status": "harness-validation",
+  "sticky-first-rule": {
+    "by_environment": {
+      "browser": {
+        "success_rate": 0.32,
+        "successes": 32,
+        "tasks": 100
+      },
+      "filesystem": {
+        "success_rate": 0.2,
+        "successes": 20,
+        "tasks": 100
+      },
+      "gridworld": {
+        "success_rate": 0.42,
+        "successes": 42,
+        "tasks": 100
+      }
+    },
+    "success_rate": 0.31333333333333335,
+    "successes": 94,
+    "tasks": 300
+  }
+}

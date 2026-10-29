@@ -1,0 +1,76 @@
+{
+  "name": "adaptive-controller-v0",
+  "version": 1,
+  "created_at": "2026-10-28T13:57:28Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make adaptive-controller",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 scripts/verify_artifact.py artifacts/adaptive-controller-v0/v1"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "train_episodes": 600,
+    "evaluation_tasks": 120,
+    "blocks": 5,
+    "actions": [
+      "retrieve",
+      "reflect",
+      "tool",
+      "write-memory",
+      "stop"
+    ]
+  },
+  "inputs": {
+    "design": "experiments/016-adaptive-controller-v0/design.md",
+    "source_sha256": {
+      "src/longrun/probes/adaptive_controller.py": "bf66745956acd625505087ffa682676b32836c3604f08ad48468f94ee10a81b2",
+      "src/longrun/cli.py": "07c61dc55f66a885075405181a3450fecbfc3e22c64e25dcdee5aab26090ef0d",
+      "tests/test_adaptive_controller.py": "7168096b64d7c822f54004f3bccdbd8bab4b1886d2a0bf9aa0b1cf6f63b19836",
+      "experiments/016-adaptive-controller-v0/design.md": "649b4f0ed9bf8bc1448b02302ebc27e9f447fef39f8580450964e0535b8bf970"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/controller.json": "aa201b02cfd3910d41b45d105ee594db709f45fe080a1800b683529ce063824d"
+  },
+  "canonical_output_sha256": "e71e375817e872781a4595ff2929cabb6f3e96e691044cb6571c78ef8d798272",
+  "key_observations": {
+    "success_rate": 0.48333333333333334,
+    "mean_cost": 1.7333333333333334,
+    "cost_per_success": 3.586206896551724,
+    "mean_token_proxy": 211.33333333333334,
+    "mean_latency_ms": 153.0,
+    "calibration_error": 0.2287092731829574,
+    "stability_range": 0.041666666666666685,
+    "action_counts": {
+      "retrieve": 56,
+      "reflect": 16,
+      "tool": 40,
+      "write-memory": 0,
+      "stop": 8
+    }
+  },
+  "notes": [
+    "The controller is a tabular contextual bandit over synthetic outcomes.",
+    "Token and latency values are proxies, not measured model costs.",
+    "The policy did not use write-memory and did not beat fixed reflect on success."
+  ],
+  "not_completed": [
+    "No model runtime or real tool/retriever integration.",
+    "No claim that the controller improves real compute allocation."
+  ]
+}

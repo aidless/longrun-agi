@@ -1,0 +1,56 @@
+{
+  "boundary": {
+    "audit_read_only": true,
+    "gpu_job_started": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "paid_api_calls": 0
+  },
+  "cpu": {
+    "affinity_count": 2,
+    "logical_count": 2,
+    "model": "Intel(R) Xeon(R) Platinum"
+  },
+  "disk": {
+    "free_bytes": 30076932096,
+    "path": "/root/codex-work/longrun-agi-20261027-p5-20261029",
+    "total_bytes": 41882943488,
+    "used_bytes": 11806011392,
+    "used_percent": 28.19
+  },
+  "generated_at": "2026-10-29T05:27:35.013089+00:00",
+  "gpu": {
+    "count": 0,
+    "devices": [],
+    "nvidia_device_nodes": {
+      "/dev/nvidia0": false,
+      "/dev/nvidiactl": false
+    },
+    "nvidia_smi": null,
+    "usable_accelerator_established": false
+  },
+  "memory": {
+    "available_bytes": 902967296,
+    "swap_total_bytes": 0,
+    "total_bytes": 1687068672
+  },
+  "optional_ml_packages": {
+    "accelerate": false,
+    "safetensors": false,
+    "torch": false,
+    "transformers": false
+  },
+  "platform": {
+    "distribution": "Ubuntu 22.04.5 LTS",
+    "machine": "x86_64",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "release": "5.15.0-181-generic",
+    "system": "Linux"
+  },
+  "python": {
+    "implementation": "CPython",
+    "version": "3.12.15"
+  },
+  "root": "/root/codex-work/longrun-agi-20261027-p5-20261029",
+  "schema_version": 1
+}

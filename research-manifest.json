@@ -1,0 +1,906 @@
+{
+  "schema": 1,
+  "project": {
+    "id": "longrun-agi-20261027",
+    "title": "LongRun-AGI: CPU-first long-horizon continual agent harness",
+    "domain": "LLM agents, continual learning, evaluation, AI safety",
+    "created": "2026-10-27T16:30:00Z",
+    "status": "active"
+  },
+  "question": {
+    "text": "Can a single agent remain reliable and adaptive over a long series of tasks when rules change, tools fail, memory is stale or poisoned, and evidence must be audited?",
+    "updatedAt": "2026-10-29T08:54:45Z"
+  },
+  "model_gate": {
+    "status": "hold",
+    "approval_status": null,
+    "capacity_preflight": {
+      "status": "not-measured",
+      "scope": "exact cloud execution target",
+      "measured_gpu": false,
+      "measured_model_peak_memory": false
+    },
+    "document": "MODEL-GATE.md",
+    "reason": "No exact approved model artifact and no passed capacity preflight for an exact cloud target are recorded."
+  },
+  "portfolio_status": {
+    "status": "cpu-substrate-complete-model-gate-hold",
+    "document": "PORTFOLIO-STATUS.md",
+    "artifact": "artifacts/portfolio-v4/v1/artifact.json",
+    "model_evaluation_completed": false
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "text": "Paired rule-shift tasks distinguish memorization from re-reading and adaptation.",
+      "status": "testing"
+    },
+    {
+      "id": "H2",
+      "text": "Provenance, trust, and expiry reduce stale and poisoned memory use compared with recency-only memory.",
+      "status": "testing"
+    },
+    {
+      "id": "H3",
+      "text": "Transient tool-failure injection exposes recovery behavior that ordinary task success hides.",
+      "status": "testing"
+    },
+    {
+      "id": "H4",
+      "text": "Deterministic negative controls catch a meaningful subset of invalid small-ML claims before a research agent reports success.",
+      "status": "testing"
+    },
+    {
+      "id": "H5",
+      "text": "A balanced factorial task design can separate rule-shift and tool-fault effects and recover a constructed interaction using scripted reference policies.",
+      "status": "harness-validated"
+    },
+    {
+      "id": "H6",
+      "text": "A three-factor task design can add a memory-poison condition whose effect is visible for naive memory and removed by provenance-aware memory.",
+      "status": "harness-validated"
+    },
+    {
+      "id": "H7",
+      "text": "For complete balanced two-level designs, standard orthogonal factorial contrasts with nested family/episode bootstrap and Holm/BH adjustment recover planted effects with nominal finite-sample error behavior in the declared simulation.",
+      "status": "harness-iterated"
+    },
+    {
+      "id": "H8",
+      "text": "A frozen 300-task CLEAR split across filesystem, mock-browser, and gridworld can be deterministically regenerated, automatically verified, and split into non-overlapping train/dev/test rule variants.",
+      "status": "harness-validated"
+    },
+    {
+      "id": "H9",
+      "text": "Separating episodic, semantic, and procedural memory with provenance, trust, expiry, conflict detection, and active forgetting reduces poison selection compared with flat recency-only retrieval in the declared synthetic cross-session probe.",
+      "status": "harness-validated"
+    },
+    {
+      "id": "H10",
+      "text": "In a deterministic four-fault recovery probe, replanning and state-check-replan controllers recover stale state, transient tool errors, misleading documentation, and rule changes without human intervention, whereas retry-only and rollback do not.",
+      "status": "harness-validated"
+    },
+    {
+      "id": "H11",
+      "text": "An evidence-gated research-claim policy rejects more synthetic invalid findings than a naive improvement claim; a strict subgroup schema blocks malformed or undeclared positive claims, while missing declarations remain non-evaluable rather than detected.",
+      "status": "harness-iterated"
+    },
+    {
+      "id": "H12",
+      "text": "A logistic monitor trained on observable synthetic goal-drift state features can rank held-out drift risk, but the current construction does not establish pre-drift warning or checkpoint-recovery benefit.",
+      "status": "inconclusive"
+    },
+    {
+      "id": "H13",
+      "text": "Symbolic ensemble uncertainty can separate unseen states in a table world, but in v0 it does not rank OOD one-step errors or improve the tested planning objective.",
+      "status": "inconclusive"
+    },
+    {
+      "id": "H14",
+      "text": "In a synthetic tabular verifier protocol, ensemble-disagreement reward improves OOD transfer and reduces transfer drop relative to answer reward, but no reward mode dominates success, calibration, hacking, and cost together.",
+      "status": "harness-validated"
+    },
+    {
+      "id": "H15",
+      "text": "A contextual bandit over retrieve/reflect/tool/write-memory/stop can produce a stable action mix on CLEAR-300 contexts, but the v0 controller does not beat fixed reflect and does not learn to write memory.",
+      "status": "inconclusive"
+    }
+  ],
+  "loop": {
+    "phase": "CPU-bootstrap",
+    "iteration": 15,
+    "history": [
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "003-estimator-validity-v0",
+        "status": "harness-validation",
+        "summary": "Estimator validity grid completed; scope limited to a declared balanced synthetic design.",
+        "artifact": "artifacts/estimator-validity-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "008-cpu-program-v0",
+        "status": "harness-validation",
+        "summary": "All eight project-defined CPU work packages now run through one program with symbolic/model boundaries explicit.",
+        "artifact": "artifacts/cpu-program-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "009-clear-300-v1",
+        "status": "frozen-benchmark",
+        "summary": "CLEAR-300-v1 frozen with 300 tasks, 180/60/60 split, automatic verifier, and scripted rule-shift baselines.",
+        "artifact": "artifacts/clear-300-v1/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "010-layered-memory-v0",
+        "status": "harness-validation",
+        "summary": "Three-layer provenance memory probe added; flat poison 1.0 vs layered 0.0 in the synthetic cross-session test.",
+        "artifact": "artifacts/layered-memory-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "011-recovery-v0",
+        "status": "harness-validation",
+        "summary": "Four-fault recovery matrix added; replan/state-check recover all cases, retry/rollback only handle tool errors.",
+        "artifact": "artifacts/recovery-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "012-negative-control-agent-v0",
+        "status": "harness-validation",
+        "summary": "80-case synthetic research-agent probe added; gate cuts false discoveries from 60 to 10, with 10 confounding cases undetected.",
+        "artifact": "artifacts/negative-control-agent-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "013-goal-drift-monitor-v0",
+        "status": "harness-validation-weak",
+        "summary": "Synthetic goal-drift monitor AUROC 0.83, but zero pre-drift warning and no final-correctness improvement; retained as weak/negative evidence.",
+        "artifact": "artifacts/goal-drift-monitor-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "014-world-model-calibration-v0",
+        "status": "harness-validation-weak",
+        "summary": "Symbolic uncertainty separated unseen states but had OOD error AUROC 0.5 and no planning improvement; retained as weak evidence.",
+        "artifact": "artifacts/world-model-calibration-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "015-verifier-rewards-v0",
+        "status": "harness-validated",
+        "summary": "Four-mode verifier reward protocol added; ensemble OOD transfer improves over answer reward but no mode dominates all metrics.",
+        "artifact": "artifacts/verifier-rewards-v0/v2/artifact.json"
+      },
+      {
+        "date": "2026-10-28",
+        "phase": "CPU-bootstrap",
+        "experiment": "016-adaptive-controller-v0",
+        "status": "harness-validation-weak",
+        "summary": "Five-action contextual controller added; it is stable but does not beat fixed reflect and never writes memory.",
+        "artifact": "artifacts/adaptive-controller-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "portfolio-v1",
+        "status": "portfolio-audit",
+        "summary": "Consolidated the eight work packages, verified artifact output hashes, and added an environment/model gate without starting model work.",
+        "artifact": "artifacts/portfolio-v1/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "017-confounding-control-v0",
+        "status": "harness-validation",
+        "summary": "Added a 90-case stratified confounding control; declared confounding fell to 10 false discoveries and undeclared confounding remained a 10-case blind spot.",
+        "artifact": "artifacts/confounding-control-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "008-cpu-program-v0",
+        "status": "harness-validation",
+        "summary": "Integrated the stratified confounding control into P5 and regenerated the full CPU program on the cloud CPU target.",
+        "artifact": "artifacts/cpu-program-v0/v10/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "portfolio-v2",
+        "status": "portfolio-audit",
+        "summary": "Re-audited the portfolio with latest-artifact discovery and separated authoring-host limits from cloud-target capacity.",
+        "artifact": "artifacts/portfolio-v2/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "018-claim-schema-v0",
+        "status": "harness-validation",
+        "summary": "Added a 110-case strict subgroup-schema control; strict gating reached zero false discoveries while measuring the cost of blocking undeclared valid claims.",
+        "artifact": "artifacts/claim-schema-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "008-cpu-program-v0",
+        "status": "harness-validation",
+        "summary": "Integrated strict subgroup-schema metrics into P5 and regenerated the full CPU program on the cloud CPU target.",
+        "artifact": "artifacts/cpu-program-v0/v11/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "portfolio-v3",
+        "status": "portfolio-audit",
+        "summary": "Re-audited the portfolio after the strict subgroup-schema experiment and registered the new evidence without changing the model gate.",
+        "artifact": "artifacts/portfolio-v3/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "019-persistent-memory-v0",
+        "status": "harness-validation",
+        "summary": "Added standard-library SQLite memory with restart recovery, atomic rollback, conflicts, expiry, forgetting, and import/export integrity.",
+        "artifact": "artifacts/persistent-memory-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "020-model-protocol-v0",
+        "status": "harness-validation",
+        "summary": "Froze the CLEAR-300-v1 model-facing prompt, response, scoring, and failure contract and completed a 240-task train/dev fixture dry run without touching the test split.",
+        "artifact": "artifacts/model-protocol-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "021-real-faults-v0",
+        "status": "harness-validation",
+        "summary": "Validated recovery over real temporary files and subprocesses; replanning policies recovered all five faults while rollback recovered four and retry-only none.",
+        "artifact": "artifacts/real-faults-v0/v1/artifact.json"
+      },
+      {
+        "date": "2026-10-29",
+        "phase": "CPU-bootstrap",
+        "experiment": "008-cpu-program-v0",
+        "status": "harness-validation",
+        "summary": "Integrated persistent memory, model-protocol dry run, and real-fault recovery into the unified CPU program as v12.",
+        "artifact": "artifacts/cpu-program-v0/v12/artifact.json"
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "id": "000-clear-v0",
+      "title": "CLEAR-Bench v0, fault recovery, ProvMem, and Evidence Gate",
+      "status": "harness-validated",
+      "design": "experiments/000-clear-v0/design.md",
+      "log": "experiments/000-clear-v0/log.md",
+      "verification": {
+        "unit_tests": "11 passed",
+        "repeat_determinism": true,
+        "artifact": "artifacts/cpu-bootstrap-v0/v1/artifact.json",
+        "mlflow_experiment_id": "12",
+        "mlflow_run_id": "e16a8b9efa2f49e9844a992c05d1f02a"
+      }
+    },
+    {
+      "id": "001-factorial-v0",
+      "title": "Factorial attribution v0: rule shift x tool fault",
+      "status": "harness-validated",
+      "design": "experiments/001-factorial-v0/design.md",
+      "log": "experiments/001-factorial-v0/log.md",
+      "verification": {
+        "unit_tests": "16 passed",
+        "repeat_determinism": true,
+        "artifact": "artifacts/factorial-attribution-v0/v2/artifact.json",
+        "tasks": 48,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "002-three-factor-v0",
+      "title": "Three-factor attribution v0: rule shift x tool fault x memory poison",
+      "status": "harness-validated",
+      "design": "experiments/002-three-factor-v0/design.md",
+      "log": "experiments/002-three-factor-v0/log.md",
+      "verification": {
+        "unit_tests": "20 passed",
+        "repeat_determinism": true,
+        "artifact": "artifacts/three-factor-attribution-v0/v1/artifact.json",
+        "tasks": 96,
+        "novelty_status": "not-established",
+        "mlflow_experiment_id": "12",
+        "mlflow_run_id": "3ff9487161c447ba9229d9f6fa860057"
+      }
+    },
+    {
+      "id": "003-estimator-validity-v0",
+      "title": "Factorial estimator validity v0",
+      "status": "harness-validated",
+      "design": "experiments/003-estimator-validity-v0/design.md",
+      "log": "experiments/003-estimator-validity-v0/log.md",
+      "verification": {
+        "unit_tests": "45 passed",
+        "repeat_determinism": true,
+        "artifact": "artifacts/estimator-validity-v0/v1/artifact.json",
+        "seed": 20261027,
+        "repetitions": 200,
+        "bootstrap_replicates": 299,
+        "canonical_output_sha256": "88fca75c04b552439bf6628993e30fb5b717ec8f536df443b21c6ffe595bc1cc",
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "008-cpu-program-v0",
+      "title": "Integrated CPU program: eight work packages",
+      "status": "harness-validated",
+      "design": "experiments/008-cpu-program-v0/design.md",
+      "log": "experiments/008-cpu-program-v0/log.md",
+      "verification": {
+        "unit_tests": "124 passed",
+        "repeat_determinism": true,
+        "artifact": "artifacts/cpu-program-v0/v9/artifact.json",
+        "seed": 20261028,
+        "cpu_probes": "8/8",
+        "gpu_used": false,
+        "external_api_calls": 0,
+        "novelty_status": "not-established",
+        "clear_v1_tasks": 300,
+        "clear_v1_canonical_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+        "layered_memory_layers": 3,
+        "layered_flat_poison_rate": 1.0,
+        "layered_provenance_poison_rate": 0.0,
+        "recovery_replan_success_rate": 1.0,
+        "recovery_retry_only_success_rate": 0.25,
+        "negative_control_cases": 80,
+        "gated_false_discoveries": 10,
+        "goal_monitor_auroc": 0.8295472877596289,
+        "goal_monitor_early_warning_rate": 0.0,
+        "world_model_ood_accuracy": 0.25,
+        "world_model_ood_uncertainty": 1.0,
+        "world_model_planning_uncertainty": 0.5,
+        "verifier_answer_ood": 0.43333333333333335,
+        "verifier_ensemble_ood": 0.5233333333333333,
+        "controller_success_rate": 0.48333333333333334,
+        "controller_memory_writes": 0
+      }
+    },
+    {
+      "id": "009-clear-300-v1",
+      "title": "CLEAR-300-v1: frozen three-environment rule-shift substrate",
+      "status": "frozen-benchmark",
+      "design": "experiments/009-clear-300-v1/design.md",
+      "log": "experiments/009-clear-300-v1/log.md",
+      "verification": {
+        "tasks": 300,
+        "splits": {
+          "train": 180,
+          "dev": 60,
+          "test": 60
+        },
+        "environments": {
+          "filesystem": 100,
+          "browser": 100,
+          "gridworld": 100
+        },
+        "current_rule_success": 1.0,
+        "sticky_first_rule_success": 0.31333333333333335,
+        "canonical_task_list_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+        "artifact": "artifacts/clear-300-v1/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "010-layered-memory-v0",
+      "title": "Layered provenance memory v0",
+      "status": "harness-validated",
+      "design": "experiments/010-layered-memory-v0/design.md",
+      "log": "experiments/010-layered-memory-v0/log.md",
+      "verification": {
+        "episodes": 100,
+        "layers": 3,
+        "flat_rag_poison_rate": 1.0,
+        "layered_provenance_poison_rate": 0.0,
+        "layered_final_correct_rate": 1.0,
+        "conflict_cases": 34,
+        "repeat_determinism": true,
+        "artifact": "artifacts/layered-memory-v0/v3/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "011-recovery-v0",
+      "title": "Four-fault recovery controller matrix v0",
+      "status": "harness-validated",
+      "design": "experiments/011-recovery-v0/design.md",
+      "log": "experiments/011-recovery-v0/log.md",
+      "verification": {
+        "episodes_per_controller": 40,
+        "faults": 4,
+        "controllers": 4,
+        "retry_only_success_rate": 0.25,
+        "rollback_success_rate": 0.25,
+        "replan_success_rate": 1.0,
+        "state_check_replan_success_rate": 1.0,
+        "repeat_determinism": true,
+        "artifact": "artifacts/recovery-v0/v2/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "012-negative-control-agent-v0",
+      "title": "Negative-control research agent v0",
+      "status": "harness-validated",
+      "design": "experiments/012-negative-control-agent-v0/design.md",
+      "log": "experiments/012-negative-control-agent-v0/log.md",
+      "verification": {
+        "cases": 80,
+        "naive_false_discoveries": 60,
+        "gated_false_discoveries": 10,
+        "gated_valid_discovery_rate": 1.0,
+        "confounding_blind_spot_cases": 10,
+        "repeat_determinism": true,
+        "artifact": "artifacts/negative-control-agent-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "013-goal-drift-monitor-v0",
+      "title": "Synthetic goal-drift monitor v0",
+      "status": "harness-validated-weak",
+      "design": "experiments/013-goal-drift-monitor-v0/design.md",
+      "log": "experiments/013-goal-drift-monitor-v0/log.md",
+      "verification": {
+        "episodes": 60,
+        "steps": 40,
+        "auroc": 0.8295472877596289,
+        "early_warning_rate": 0.0,
+        "false_alarm_rate": 0.08333333333333333,
+        "intervention_recovery_rate": 0.36,
+        "baseline_final_correct_rate": 0.5555555555555556,
+        "monitored_final_correct_rate": 0.5555555555555556,
+        "repeat_determinism": true,
+        "artifact": "artifacts/goal-drift-monitor-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "014-world-model-calibration-v0",
+      "title": "Calibrated symbolic world model v0",
+      "status": "harness-validated-weak",
+      "design": "experiments/014-world-model-calibration-v0/design.md",
+      "log": "experiments/014-world-model-calibration-v0/log.md",
+      "verification": {
+        "id_accuracy": 1.0,
+        "ood_accuracy": 0.25,
+        "id_mean_uncertainty": 0.5373182711665996,
+        "ood_mean_uncertainty": 1.0,
+        "ood_error_auroc": 0.5,
+        "planning_argmax": 0.5,
+        "planning_uncertainty_penalized": 0.5,
+        "repeat_determinism": true,
+        "artifact": "artifacts/world-model-calibration-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "015-verifier-rewards-v0",
+      "title": "Verifier reward protocol v0",
+      "status": "harness-validated",
+      "design": "experiments/015-verifier-rewards-v0/design.md",
+      "log": "experiments/015-verifier-rewards-v0/log.md",
+      "verification": {
+        "train_episodes": 600,
+        "answer_ood_success": 0.43333333333333335,
+        "ensemble_ood_success": 0.5233333333333333,
+        "answer_transfer_drop": 0.30333333333333334,
+        "ensemble_transfer_drop": 0.19333333333333336,
+        "answer_mean_cost": 1.37,
+        "ensemble_mean_cost": 1.38,
+        "repeat_determinism": true,
+        "artifact": "artifacts/verifier-rewards-v0/v2/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "016-adaptive-controller-v0",
+      "title": "Adaptive compute-memory controller v0",
+      "status": "harness-validated-weak",
+      "design": "experiments/016-adaptive-controller-v0/design.md",
+      "log": "experiments/016-adaptive-controller-v0/log.md",
+      "verification": {
+        "train_episodes": 600,
+        "evaluation_tasks": 120,
+        "success_rate": 0.48333333333333334,
+        "mean_cost": 1.7333333333333334,
+        "cost_per_success": 3.586206896551724,
+        "stability_range": 0.041666666666666685,
+        "memory_writes": 0,
+        "repeat_determinism": true,
+        "artifact": "artifacts/adaptive-controller-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "017-confounding-control-v0",
+      "title": "Stratified confounding control v0",
+      "status": "harness-validated",
+      "design": "experiments/017-confounding-control-v0/design.md",
+      "log": "experiments/017-confounding-control-v0/log.md",
+      "verification": {
+        "cases": 90,
+        "cases_per_category": 10,
+        "categories": 9,
+        "min_subgroup_weight": 0.2,
+        "tolerance": 1e-06,
+        "naive_false_discoveries": 70,
+        "gated_v0_false_discoveries": 20,
+        "gated_v1_false_discoveries": 10,
+        "declared_confounding_detected": 10,
+        "undeclared_confounding_detected": 0,
+        "residual_blind_spot_cases": 10,
+        "false_alarms_on_valid_cases": 0,
+        "valid_discovery_rate": 1.0,
+        "repeat_determinism": true,
+        "artifact": "artifacts/confounding-control-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "018-claim-schema-v0",
+      "title": "Strict subgroup claim schema v0",
+      "status": "harness-validated",
+      "design": "experiments/018-claim-schema-v0/design.md",
+      "log": "experiments/018-claim-schema-v0/log.md",
+      "verification": {
+        "cases": 110,
+        "source_control_cases": 90,
+        "added_cases": 20,
+        "naive_false_discoveries": 80,
+        "gated_v0_false_discoveries": 30,
+        "gated_v1_false_discoveries": 20,
+        "strict_v2_false_discoveries": 0,
+        "strict_v2_valid_discovery_rate": 0.5,
+        "accepted_decisions": 20,
+        "rejected_decisions": 70,
+        "non_evaluable_decisions": 20,
+        "declared_confounding_detected": 10,
+        "undeclared_confounding_detected": 0,
+        "undeclared_confounding_blocked": 10,
+        "valid_undeclared_blocked": 10,
+        "invalid_schema_rejected": 10,
+        "false_alarms_on_valid_declared_cases": 0,
+        "repeat_determinism": true,
+        "artifact": "artifacts/claim-schema-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "019-persistent-memory-v0",
+      "title": "Persistent provenance memory v0",
+      "status": "harness-validated",
+      "design": "experiments/019-persistent-memory-v0/design.md",
+      "log": "experiments/019-persistent-memory-v0/log.md",
+      "verification": {
+        "episodes": 32,
+        "records_before_forget": 160,
+        "reopened_retrieval_correct_rate": 1.0,
+        "poison_or_stale_selection_rate": 0.0,
+        "rollback_atomic": true,
+        "import_export_records_equal": true,
+        "integrity_check": "ok",
+        "repeat_determinism": true,
+        "artifact": "artifacts/persistent-memory-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "020-model-protocol-v0",
+      "title": "CLEAR-300-v1 model protocol dry run v0",
+      "status": "harness-validated",
+      "design": "experiments/020-model-protocol-v0/design.md",
+      "log": "experiments/020-model-protocol-v0/log.md",
+      "verification": {
+        "dry_run_tasks": 240,
+        "sealed_test_tasks": 60,
+        "test_split_accessed": false,
+        "model_downloaded": false,
+        "model_loaded": false,
+        "valid_fixture_success_rate": 1.0,
+        "mixed_fixture_success_rate": 0.8458333333333333,
+        "repeat_determinism": true,
+        "artifact": "artifacts/model-protocol-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    },
+    {
+      "id": "021-real-faults-v0",
+      "title": "Real filesystem and subprocess recovery v0",
+      "status": "harness-validated",
+      "design": "experiments/021-real-faults-v0/design.md",
+      "log": "experiments/021-real-faults-v0/log.md",
+      "verification": {
+        "fault_policy_pairs": 20,
+        "retry_only_success_rate": 0.0,
+        "rollback_success_rate": 0.8,
+        "state_check_replan_success_rate": 1.0,
+        "replan_success_rate": 1.0,
+        "temporary_directory_only": true,
+        "repeat_determinism": true,
+        "artifact": "artifacts/real-faults-v0/v1/artifact.json",
+        "scientific_result": false,
+        "novelty_status": "not-established"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "cpu-bootstrap-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "path": "artifacts/cpu-bootstrap-v0/v1/artifact.json"
+    },
+    {
+      "name": "factorial-attribution-v0",
+      "latestVersion": 2,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "path": "artifacts/factorial-attribution-v0/v2/artifact.json"
+    },
+    {
+      "name": "three-factor-attribution-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "path": "artifacts/three-factor-attribution-v0/v1/artifact.json"
+    },
+    {
+      "name": "estimator-validity-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "path": "artifacts/estimator-validity-v0/v1/artifact.json"
+    },
+    {
+      "name": "cpu-program-v0",
+      "latestVersion": 12,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "path": "artifacts/cpu-program-v0/v12/artifact.json",
+      "unit_tests": "174 passed",
+      "clear_v1_tasks": 300,
+      "layered_memory_layers": 3,
+      "recovery_replan_success_rate": 1.0,
+      "negative_control_cases": 80,
+      "confounding_control_cases": 90,
+      "claim_schema_cases": 110,
+      "persistent_memory_episodes": 32,
+      "model_protocol_dry_run_tasks": 240,
+      "real_fault_case_pairs": 20,
+      "strict_schema_false_discoveries": 0,
+      "strict_schema_valid_discovery_rate": 0.5,
+      "world_model_ood_accuracy": 0.25
+    },
+    {
+      "name": "clear-300-v1",
+      "latestVersion": 1,
+      "status": "frozen-benchmark",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "tasks": 300,
+      "splits": {
+        "train": 180,
+        "dev": 60,
+        "test": 60
+      },
+      "path": "artifacts/clear-300-v1/v1/artifact.json"
+    },
+    {
+      "name": "layered-memory-v0",
+      "latestVersion": 3,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "layers": 3,
+      "episodes": 100,
+      "path": "artifacts/layered-memory-v0/v3/artifact.json"
+    },
+    {
+      "name": "recovery-v0",
+      "latestVersion": 2,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "faults": 4,
+      "controllers": 4,
+      "path": "artifacts/recovery-v0/v2/artifact.json"
+    },
+    {
+      "name": "negative-control-agent-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "cases": 80,
+      "path": "artifacts/negative-control-agent-v0/v1/artifact.json"
+    },
+    {
+      "name": "confounding-control-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "cases": 90,
+      "categories": 9,
+      "declared_confounding_detected": 10,
+      "undeclared_confounding_detected": 0,
+      "residual_blind_spot_cases": 10,
+      "path": "artifacts/confounding-control-v0/v1/artifact.json"
+    },
+    {
+      "name": "claim-schema-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "cases": 110,
+      "strict_false_discoveries": 0,
+      "strict_valid_discovery_rate": 0.5,
+      "non_evaluable_decisions": 20,
+      "invalid_schema_rejected": 10,
+      "path": "artifacts/claim-schema-v0/v1/artifact.json"
+    },
+    {
+      "name": "persistent-memory-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "episodes": 32,
+      "reopened_retrieval_correct_rate": 1.0,
+      "rollback_atomic": true,
+      "integrity_check": "ok",
+      "path": "artifacts/persistent-memory-v0/v1/artifact.json"
+    },
+    {
+      "name": "model-protocol-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "dry_run_tasks": 240,
+      "sealed_test_tasks": 60,
+      "test_split_accessed": false,
+      "path": "artifacts/model-protocol-v0/v1/artifact.json"
+    },
+    {
+      "name": "real-faults-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "fault_policy_pairs": 20,
+      "retry_only_success_rate": 0.0,
+      "replan_success_rate": 1.0,
+      "path": "artifacts/real-faults-v0/v1/artifact.json"
+    },
+    {
+      "name": "goal-drift-monitor-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "monitor_kind": "synthetic-logistic",
+      "path": "artifacts/goal-drift-monitor-v0/v1/artifact.json"
+    },
+    {
+      "name": "world-model-calibration-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "kind": "symbolic-calibration",
+      "path": "artifacts/world-model-calibration-v0/v1/artifact.json"
+    },
+    {
+      "name": "verifier-rewards-v0",
+      "latestVersion": 2,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "reward_modes": 4,
+      "path": "artifacts/verifier-rewards-v0/v2/artifact.json"
+    },
+    {
+      "name": "adaptive-controller-v0",
+      "latestVersion": 1,
+      "status": "harness-validation",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "actions": 5,
+      "path": "artifacts/adaptive-controller-v0/v1/artifact.json"
+    },
+    {
+      "name": "portfolio-v1",
+      "latestVersion": 1,
+      "status": "portfolio-audit",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "work_packages": 8,
+      "unit_tests": "129 passed",
+      "portfolio_checks": "59/59",
+      "model_gate": "hold",
+      "environment_audit": "artifacts/portfolio-v1/v1/results/environment-audit.json",
+      "path": "artifacts/portfolio-v1/v1/artifact.json"
+    },
+    {
+      "name": "portfolio-v2",
+      "latestVersion": 1,
+      "status": "portfolio-audit",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "work_packages": 8,
+      "unit_tests": "140 passed",
+      "portfolio_checks": "65/65",
+      "model_gate": "hold",
+      "environment_audit": "artifacts/portfolio-v2/v1/results/environment-audit.json",
+      "path": "artifacts/portfolio-v2/v1/artifact.json"
+    },
+    {
+      "name": "portfolio-v3",
+      "latestVersion": 1,
+      "status": "portfolio-audit",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "work_packages": 8,
+      "unit_tests": "157 passed",
+      "portfolio_checks": "71/71",
+      "model_gate": "hold",
+      "environment_audit": "artifacts/portfolio-v3/v1/results/environment-audit.json",
+      "path": "artifacts/portfolio-v3/v1/artifact.json"
+    },
+    {
+      "name": "portfolio-v4",
+      "latestVersion": 1,
+      "status": "portfolio-audit",
+      "scientific_result": false,
+      "novelty_status": "not-established",
+      "work_packages": 8,
+      "unit_tests": "174 passed",
+      "portfolio_checks": "83/83",
+      "model_gate": "hold",
+      "environment_audit": "artifacts/portfolio-v4/v1/results/environment-audit.json",
+      "path": "artifacts/portfolio-v4/v1/artifact.json"
+    }
+  ],
+  "reviews": []
+}

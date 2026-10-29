@@ -1,0 +1,189 @@
+{
+  "cases": 90,
+  "confounding_control": {
+    "confounded_declared_cases": 10,
+    "confounded_declared_detected": 10,
+    "confounded_undeclared_cases": 10,
+    "confounded_undeclared_detected": 0,
+    "declared_evaluable_rate": 1.0,
+    "false_alarms_on_valid_cases": 0,
+    "residual_blind_spot_cases": 10,
+    "undeclared_evaluable_rate": 0.0
+  },
+  "generated_at": "2026-10-29T04:02:39.711516+00:00",
+  "notes": [
+    "The 90 cases are synthetic controls, not a live research-agent benchmark.",
+    "gated_v0 is the v0 Evidence Gate; gated_v1 adds the stratified confounding control.",
+    "Confounding that is not declared as a subgroup breakdown stays undetectable, so the residual blind spot is reported rather than removed."
+  ],
+  "policies": {
+    "gated_v0": {
+      "by_defect": {
+        "broken-baseline": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "confounded-declared": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "confounded-undeclared": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "p-hacking": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "split-overlap": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "target-leakage": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "unreproducible": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-negative": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-positive": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 10
+        }
+      },
+      "cases": 90,
+      "claims": 30,
+      "false_discoveries": 20,
+      "false_discovery_rate": 0.6666666666666666,
+      "true_discoveries": 10,
+      "valid_discovery_rate": 1.0
+    },
+    "gated_v1": {
+      "by_defect": {
+        "broken-baseline": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "confounded-declared": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "confounded-undeclared": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "p-hacking": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "split-overlap": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "target-leakage": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "unreproducible": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-negative": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-positive": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 10
+        }
+      },
+      "cases": 90,
+      "claims": 20,
+      "false_discoveries": 10,
+      "false_discovery_rate": 0.5,
+      "true_discoveries": 10,
+      "valid_discovery_rate": 1.0
+    },
+    "naive": {
+      "by_defect": {
+        "broken-baseline": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "confounded-declared": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "confounded-undeclared": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "p-hacking": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "split-overlap": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "target-leakage": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "unreproducible": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 0
+        },
+        "valid-negative": {
+          "cases": 10,
+          "claims": 0,
+          "expected_positive": 0
+        },
+        "valid-positive": {
+          "cases": 10,
+          "claims": 10,
+          "expected_positive": 10
+        }
+      },
+      "cases": 90,
+      "claims": 80,
+      "false_discoveries": 70,
+      "false_discovery_rate": 0.875,
+      "true_discoveries": 10,
+      "valid_discovery_rate": 1.0
+    }
+  },
+  "scientific_result": false,
+  "status": "harness-validation",
+  "suite": "confounding control v1"
+}

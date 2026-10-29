@@ -1,0 +1,112 @@
+{
+  "name": "clear-300-v1",
+  "version": 1,
+  "created_at": "2026-10-28T12:10:39Z",
+  "status": "frozen-benchmark",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 scripts/freeze_clear_v1.py --output-dir benchmarks/clear-300-v1 --seed 20261028",
+    "PYTHONPATH=src python3 scripts/verify_clear_v1.py",
+    "PYTHONPATH=src python3 -m pytest",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "families": 15,
+    "families_per_environment": 5,
+    "variants_per_family": 5,
+    "instances_per_variant": 4,
+    "tasks_per_environment": 100,
+    "total_tasks": 300,
+    "split_rule": {
+      "train": [
+        0,
+        1,
+        2
+      ],
+      "dev": [
+        3
+      ],
+      "test": [
+        4
+      ]
+    },
+    "environments": [
+      "filesystem",
+      "browser-mock",
+      "gridworld-mock"
+    ]
+  },
+  "inputs": {
+    "design": "experiments/009-clear-300-v1/design.md",
+    "source_sha256": {
+      "src/longrun/benchmarks/clear_v1.py": "1fb927c1fb17940cec56f874ac160560f6b3011f6383234bd7345d0578dfc651",
+      "scripts/freeze_clear_v1.py": "8d5331a89156d6852fb8d56ff636ce679abaae95b4eed5c30db291a5c1ad5b2c",
+      "scripts/verify_clear_v1.py": "01aeff803de49489fcc240a32dfbc91b580fe2fc3e7d2d1bc8ed5a705c983692",
+      "experiments/009-clear-300-v1/design.md": "3e35f78c44af561980db9608d2a79bf29a6e19d2bd74689c55e1bc6120b74e2e",
+      "tests/test_clear_v1.py": "bb53b055f4e17e14530d8fb4acd28dc9281d299c525309bc4cb9cde216f6b6c8"
+    }
+  },
+  "outputs": {
+    "tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+    "split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517",
+    "scripted-baselines.json": "592fb4500d0dab5386f848bfb0817f458b6be147e9e145ac6cb35b8a71f594fb",
+    "README.md": "0aca74df9161777301d76b707be32254f6f140d93b1d0622422afdf50bb1760a"
+  },
+  "canonical_task_list_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+  "checks": {
+    "tasks": 300,
+    "unique_task_ids": 300,
+    "split_counts": {
+      "train": 180,
+      "dev": 60,
+      "test": 60
+    },
+    "environment_counts": {
+      "filesystem": 100,
+      "browser": 100,
+      "gridworld": 100
+    },
+    "current_rule_verified": "300/300",
+    "frozen_files_match_generator": true,
+    "frozen_files_match_manifest": true
+  },
+  "scripted_baselines": {
+    "current-rule": {
+      "successes": 300,
+      "success_rate": 1.0
+    },
+    "sticky-first-rule": {
+      "successes": 94,
+      "success_rate": 0.31333333333333335,
+      "by_environment": {
+        "filesystem": 0.2,
+        "browser": 0.32,
+        "gridworld": 0.42
+      }
+    }
+  },
+  "notes": [
+    "This is a frozen CPU benchmark substrate, not a model evaluation.",
+    "Browser and gridworld tasks are deterministic local mocks, not real external environments.",
+    "The sticky-policy result is a constructed harness contrast, not evidence about any model.",
+    "No GPU, model download, external API, account change, or submission was used.",
+    "Changing any task requires a new benchmark version; v1 files must not be edited in place."
+  ],
+  "not_completed": [
+    "No real browser engine integration.",
+    "No MiniHack, Crafter, or Atari environment integration.",
+    "No open-weight model evaluation.",
+    "No leaderboard or external-validity result.",
+    "No novelty assessment or publication claim."
+  ]
+}

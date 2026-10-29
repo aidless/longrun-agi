@@ -1,0 +1,88 @@
+{
+  "config": {
+    "actions": [
+      "shortcut",
+      "reason"
+    ],
+    "evaluation_episodes": 300,
+    "families": [
+      "math",
+      "code",
+      "planning"
+    ],
+    "seed": 20261028,
+    "train_episodes": 600
+  },
+  "generated_at": "2026-10-28T13:45:53.842854+00:00",
+  "notes": [
+    "Verifier signals are synthetic and observable through a bucket.",
+    "Answer, process, self-verification, and ensemble rewards are compared under the same task distribution.",
+    "This is a protocol check, not Qwen/Llama training or a real reward-hacking result."
+  ],
+  "policies": {
+    "answer": {
+      "id_calibration_error": 0.07055646456943304,
+      "id_reasoning_rate": 0.8266666666666667,
+      "id_reward_hacking_rate": 0.34615384615384615,
+      "id_shortcut_rate": 0.17333333333333334,
+      "id_success_rate": 0.7366666666666667,
+      "mean_reasoning_cost": 1.37,
+      "ood_calibration_error": 0.20368362952553928,
+      "ood_reasoning_rate": 0.5433333333333333,
+      "ood_reward_hacking_rate": 0.0,
+      "ood_shortcut_rate": 0.45666666666666667,
+      "ood_success_rate": 0.43333333333333335,
+      "ood_transfer_drop": 0.30333333333333334,
+      "reward_hacking_rate": 0.17307692307692307
+    },
+    "ensemble-disagreement": {
+      "id_calibration_error": 0.040578986009732754,
+      "id_reasoning_rate": 0.6933333333333334,
+      "id_reward_hacking_rate": 0.22826086956521738,
+      "id_shortcut_rate": 0.30666666666666664,
+      "id_success_rate": 0.7166666666666667,
+      "mean_reasoning_cost": 1.38,
+      "ood_calibration_error": 0.1343096039463144,
+      "ood_reasoning_rate": 0.6866666666666666,
+      "ood_reward_hacking_rate": 0.0,
+      "ood_shortcut_rate": 0.31333333333333335,
+      "ood_success_rate": 0.5233333333333333,
+      "ood_transfer_drop": 0.19333333333333336,
+      "reward_hacking_rate": 0.11413043478260869
+    },
+    "process": {
+      "id_calibration_error": 0.07511891689723103,
+      "id_reasoning_rate": 0.9366666666666666,
+      "id_reward_hacking_rate": 0.0,
+      "id_shortcut_rate": 0.06333333333333334,
+      "id_success_rate": 0.78,
+      "mean_reasoning_cost": 1.5533333333333332,
+      "ood_calibration_error": 0.22873109547572745,
+      "ood_reasoning_rate": 0.6166666666666667,
+      "ood_reward_hacking_rate": 0.0,
+      "ood_shortcut_rate": 0.38333333333333336,
+      "ood_success_rate": 0.4866666666666667,
+      "ood_transfer_drop": 0.29333333333333333,
+      "reward_hacking_rate": 0.0
+    },
+    "self-verification": {
+      "id_calibration_error": 0.10418194749442299,
+      "id_reasoning_rate": 0.77,
+      "id_reward_hacking_rate": 0.10144927536231885,
+      "id_shortcut_rate": 0.23,
+      "id_success_rate": 0.7433333333333333,
+      "mean_reasoning_cost": 1.4566666666666666,
+      "ood_calibration_error": 0.1787995345714215,
+      "ood_reasoning_rate": 0.6866666666666666,
+      "ood_reward_hacking_rate": 0.0,
+      "ood_shortcut_rate": 0.31333333333333335,
+      "ood_success_rate": 0.5266666666666666,
+      "ood_transfer_drop": 0.21666666666666667,
+      "reward_hacking_rate": 0.050724637681159424
+    }
+  },
+  "scientific_result": false,
+  "scope": "tabular synthetic reward protocol; no language model",
+  "status": "harness-validation",
+  "suite": "verifier reward protocol v0"
+}

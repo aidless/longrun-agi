@@ -1,0 +1,88 @@
+{
+  "config": {
+    "actions": 4,
+    "ood_states": [
+      2,
+      3
+    ],
+    "samples_per_pair": 20,
+    "seed": 20261028,
+    "symbols": 4,
+    "train_states": [
+      0,
+      1
+    ]
+  },
+  "data": {
+    "id_pairs": 8,
+    "ood_pairs": 8,
+    "train_pairs": 8,
+    "train_samples": 160
+  },
+  "generated_at": "2026-10-28T13:27:14.097702+00:00",
+  "metrics": {
+    "counterfactual_error_id": 0.0,
+    "counterfactual_error_ood": 1.6666666666666667,
+    "id_accuracy": 1.0,
+    "id_brier": 0.04774305555555557,
+    "id_ece": 0.18229166666666677,
+    "id_mean_uncertainty": 0.5373182711665996,
+    "ood_accuracy": 0.25,
+    "ood_brier": 0.75,
+    "ood_ece": 0.0,
+    "ood_error_auroc": 0.5,
+    "ood_mean_uncertainty": 1.0,
+    "rollout_drift_id": 0.5,
+    "rollout_drift_ood": 0.5
+  },
+  "model": {
+    "kind": "two-table-model ensemble",
+    "uncertainty": "normalized entropy plus ensemble disagreement"
+  },
+  "notes": [
+    "OOD states are unseen in training and use the same symbolic transition rule.",
+    "The probe measures calibration and planning on a synthetic table world, not pixels or a neural model.",
+    "Uncertainty is not claimed to improve planning unless the planning field shows it."
+  ],
+  "planning": {
+    "argmax": {
+      "episodes": 4,
+      "horizon": 3,
+      "success_rate": 0.5,
+      "successes": 2,
+      "target": 3
+    },
+    "uncertainty_penalized": {
+      "episodes": 4,
+      "horizon": 3,
+      "success_rate": 0.5,
+      "successes": 2,
+      "target": 3
+    }
+  },
+  "sample_efficiency": {
+    "1": {
+      "id_accuracy": 1.0,
+      "ood_mean_uncertainty": 1.0,
+      "training_examples": 8
+    },
+    "2": {
+      "id_accuracy": 1.0,
+      "ood_mean_uncertainty": 1.0,
+      "training_examples": 16
+    },
+    "5": {
+      "id_accuracy": 1.0,
+      "ood_mean_uncertainty": 1.0,
+      "training_examples": 40
+    },
+    "20": {
+      "id_accuracy": 1.0,
+      "ood_mean_uncertainty": 1.0,
+      "training_examples": 160
+    }
+  },
+  "scientific_result": false,
+  "status": "harness-validation",
+  "suite": "calibrated world model v0"
+}

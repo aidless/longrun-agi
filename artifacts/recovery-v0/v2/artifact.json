@@ -1,0 +1,63 @@
+{
+  "name": "recovery-v0",
+  "version": 2,
+  "created_at": "2026-10-28T12:52:45Z",
+  "supersedes": "artifacts/recovery-v0/v1/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make recovery-matrix",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 scripts/verify_artifact.py artifacts/recovery-v0/v2"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0
+  },
+  "config": {
+    "episodes_per_controller": 40,
+    "faults": [
+      "stale_state",
+      "tool_error",
+      "misleading_doc",
+      "rule_change"
+    ],
+    "controllers": [
+      "retry-only",
+      "rollback",
+      "replan",
+      "state-check-replan"
+    ]
+  },
+  "inputs": {
+    "design": "experiments/011-recovery-v0/design.md",
+    "source_sha256": {
+      "src/longrun/clear/recovery.py": "7d039c385cbf4fbd9c202436aa8107be3a55a7355654cbbbbdf384b1585d705c",
+      "src/longrun/cli.py": "5ef2f6754daa6e43b00407977160bb063b30f034f2769155a5e9c1de08842a6e",
+      "tests/test_recovery.py": "a8220dfbb810059f870147584176c14389787ef5eb5cb03f496e1e45345bb28a",
+      "experiments/011-recovery-v0/design.md": "b1046f747a418fe306ba24c8b12773bd773d1fe96c44149d877e2c01fc72035c"
+    }
+  },
+  "outputs": {
+    "results/recovery-matrix.json": "37fd761c4ac01fbfc1966711aee09f953f463b2784be95bda3017c042c55080b"
+  },
+  "canonical_output_sha256": "2e58cc8c087f310782aeda5f274662417930607d61da533a4438dd5a5321e9b1",
+  "key_observations": {
+    "unit_tests": "108 passed",
+    "retry_only_success_rate": 0.25,
+    "rollback_success_rate": 0.25,
+    "replan_success_rate": 1.0,
+    "state_check_replan_success_rate": 1.0,
+    "replan_mean_steps": 4.0,
+    "state_check_mean_steps": 4.5
+  },
+  "notes": [
+    "v2 preserves the output and updates the CLI source hash after the research-agent command was added.",
+    "This is a deterministic synthetic recovery state machine, not an external benchmark."
+  ]
+}

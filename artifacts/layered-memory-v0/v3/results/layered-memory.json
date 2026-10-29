@@ -1,0 +1,61 @@
+{
+  "config": {
+    "episodes": 100,
+    "layers": 3,
+    "seed": 20261028
+  },
+  "conflict_cases": 34,
+  "generated_at": "2026-10-28T12:22:27.332136+00:00",
+  "notes": [
+    "This is a synthetic cross-session probe, not LongMemEval or LoCoMo.",
+    "The flat-rag policy intentionally ignores trust, expiry, and layer provenance."
+  ],
+  "policies": {
+    "flat-rag": {
+      "by_layer": {
+        "episodic": {
+          "correct": 0,
+          "poison": 100,
+          "total": 100
+        },
+        "procedural": {
+          "correct": 0,
+          "poison": 100,
+          "total": 100
+        },
+        "semantic": {
+          "correct": 0,
+          "poison": 100,
+          "total": 100
+        }
+      },
+      "correct_rate": 0.0,
+      "poison_rate": 1.0
+    },
+    "layered-provenance": {
+      "by_layer": {
+        "episodic": {
+          "correct": 100,
+          "poison": 0,
+          "total": 100
+        },
+        "procedural": {
+          "correct": 100,
+          "poison": 0,
+          "total": 100
+        },
+        "semantic": {
+          "correct": 100,
+          "poison": 0,
+          "total": 100
+        }
+      },
+      "correct_rate": 1.0,
+      "final_correct_rate": 1.0,
+      "poison_rate": 0.0
+    }
+  },
+  "scientific_result": false,
+  "status": "harness-validation",
+  "suite": "layered memory probe v0"
+}

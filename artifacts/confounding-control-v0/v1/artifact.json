@@ -1,0 +1,92 @@
+{
+  "name": "confounding-control-v0",
+  "version": 1,
+  "created_at": "2026-10-29T04:02:39Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make confounding-control",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "python3 scripts/verify_artifact.py artifacts/confounding-control-v0/v1"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "cases": 90,
+    "cases_per_category": 10,
+    "categories": [
+      "valid-positive",
+      "valid-negative",
+      "split-overlap",
+      "target-leakage",
+      "broken-baseline",
+      "p-hacking",
+      "unreproducible",
+      "confounded-declared",
+      "confounded-undeclared"
+    ],
+    "min_subgroup_weight": 0.2,
+    "tolerance": 1e-06
+  },
+  "inputs": {
+    "design": "experiments/017-confounding-control-v0/design.md",
+    "source_sha256": {
+      "src/longrun/controls/confounding.py": "6d2df5ffbb826b674236dbfaf841402c1d53b341cd84a394c9a312267940a2de",
+      "src/longrun/controls/evidence.py": "3251deedab2a195d3961f4e3dd705efcf0ae61a5e16926d50ee47e986940de13",
+      "src/longrun/cli.py": "e47ebf34916f23134ff1071d0d8b08de6dfe47ad9032f191cf977ee11db288c0",
+      "tests/test_confounding_control.py": "61ca4e761f8dc0dfb6ad3063e639f739df979970ddcf297ed9178db44e90439f",
+      "experiments/017-confounding-control-v0/design.md": "1136b477865883e15b7ff38fec11f6a0b3a30179e519d75d306739f3eeb4a729",
+      "experiments/017-confounding-control-v0/log.md": "7928a3b863d5fcf6547d630c4b7cfaa1536de0cb315cefe9be0c330cc65a2266"
+    }
+  },
+  "outputs": {
+    "results/confounding-control.json": "2bac106e2ac62b1b93f80f26c61773a415cc34bf8076a5a6242cd73474e4b02e"
+  },
+  "canonical_output_sha256": "3cf4db0788f73a585e5d28200fca061eb4cc8fe52225acb4aff600a78cc15dc5",
+  "checks": {
+    "unit_tests": "140 passed",
+    "compileall": "passed",
+    "artifact_hash_check": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "declared_confounding_detection": "10/10",
+    "undeclared_confounding_detection": "0/10",
+    "false_alarms_on_declared_valid_cases": 0,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "naive_false_discoveries": 70,
+    "gated_v0_false_discoveries": 20,
+    "gated_v1_false_discoveries": 10,
+    "declared_confounding_cases": 10,
+    "declared_confounding_detected": 10,
+    "undeclared_confounding_cases": 10,
+    "undeclared_confounding_detected": 0,
+    "residual_blind_spot_cases": 10,
+    "false_alarms_on_valid_cases": 0,
+    "valid_discovery_rate": 1.0
+  },
+  "notes": [
+    "The 90 cases are synthetic controls, not a live research-agent benchmark.",
+    "The v1 check evaluates only records with a declared subgroup breakdown.",
+    "Missing subgroup data is reported as not evaluable and remains a residual blind spot.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No live research-agent evaluation.",
+    "No causal adjustment or sensitivity analysis for unmeasured confounding.",
+    "No external validity, novelty, or publication claim."
+  ]
+}

@@ -1,0 +1,909 @@
+{
+  "artifacts": [
+    {
+      "name": "cpu-bootstrap-v0",
+      "outputs": [
+        {
+          "actual": "6d503364c11856e782a83e0423cd7291db8edb8a43b286444127599ed1a1e831",
+          "expected": "6d503364c11856e782a83e0423cd7291db8edb8a43b286444127599ed1a1e831",
+          "match": true,
+          "path": "results/clear-eval.json"
+        },
+        {
+          "actual": "4a57d01d5ee9fcade67e62746e314efb3ab3c6631066c9a2b155a0ff2e2b2bf1",
+          "expected": "4a57d01d5ee9fcade67e62746e314efb3ab3c6631066c9a2b155a0ff2e2b2bf1",
+          "match": true,
+          "path": "results/clear-faults.json"
+        },
+        {
+          "actual": "ae70ef733d1f66b0048043c57f147d8956f59a3f22203f76225d184e55216283",
+          "expected": "ae70ef733d1f66b0048043c57f147d8956f59a3f22203f76225d184e55216283",
+          "match": true,
+          "path": "results/controls-audit.json"
+        },
+        {
+          "actual": "fc5021fcfebdc94272394b9c48f80eb0f84305d1191a50c547e7c37ba9b8086a",
+          "expected": "fc5021fcfebdc94272394b9c48f80eb0f84305d1191a50c547e7c37ba9b8086a",
+          "match": true,
+          "path": "results/provmem-audit.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/cpu-bootstrap-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "factorial-attribution-v0",
+      "outputs": [
+        {
+          "actual": "73de0279c64f9a0cb1124762c6da67c4fb07a79d67ec96056412872cc04f89aa",
+          "expected": "73de0279c64f9a0cb1124762c6da67c4fb07a79d67ec96056412872cc04f89aa",
+          "match": true,
+          "path": "results/factorial-eval.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/factorial-attribution-v0/v2/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 2
+    },
+    {
+      "name": "three-factor-attribution-v0",
+      "outputs": [
+        {
+          "actual": "ae439bfa4d5c76f6e3f6e55eb4dd8b3a8ad35fe4cbcb33f4126bafd73faae531",
+          "expected": "ae439bfa4d5c76f6e3f6e55eb4dd8b3a8ad35fe4cbcb33f4126bafd73faae531",
+          "match": true,
+          "path": "results/three-factor-eval.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/three-factor-attribution-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "estimator-validity-v0",
+      "outputs": [
+        {
+          "actual": "62fc42429131fe9c01eec2ce80cff80c93238b83d95cb1332b94ee5ae56b6e75",
+          "expected": "62fc42429131fe9c01eec2ce80cff80c93238b83d95cb1332b94ee5ae56b6e75",
+          "match": true,
+          "path": "results/estimator-grid.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/estimator-validity-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "cpu-program-v0",
+      "outputs": [
+        {
+          "actual": "d4f98d78b94b5e66f8a65167b5bc58476225a0ad9f9067639e30469b6354221f",
+          "expected": "d4f98d78b94b5e66f8a65167b5bc58476225a0ad9f9067639e30469b6354221f",
+          "match": true,
+          "path": "results/program.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/cpu-program-v0/v12/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 12
+    },
+    {
+      "name": "clear-300-v1",
+      "outputs": [
+        {
+          "actual": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+          "expected": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+          "match": true,
+          "path": "tasks.json"
+        },
+        {
+          "actual": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517",
+          "expected": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517",
+          "match": true,
+          "path": "split-manifest.json"
+        },
+        {
+          "actual": "592fb4500d0dab5386f848bfb0817f458b6be147e9e145ac6cb35b8a71f594fb",
+          "expected": "592fb4500d0dab5386f848bfb0817f458b6be147e9e145ac6cb35b8a71f594fb",
+          "match": true,
+          "path": "scripted-baselines.json"
+        },
+        {
+          "actual": "0aca74df9161777301d76b707be32254f6f140d93b1d0622422afdf50bb1760a",
+          "expected": "0aca74df9161777301d76b707be32254f6f140d93b1d0622422afdf50bb1760a",
+          "match": true,
+          "path": "README.md"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/clear-300-v1/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "frozen-benchmark",
+      "version": 1
+    },
+    {
+      "name": "layered-memory-v0",
+      "outputs": [
+        {
+          "actual": "b229eb8497badb364717767ed96cb053a7a8dd3ebd6e71bcc1ade2050ef1715e",
+          "expected": "b229eb8497badb364717767ed96cb053a7a8dd3ebd6e71bcc1ade2050ef1715e",
+          "match": true,
+          "path": "results/layered-memory.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/layered-memory-v0/v3/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 3
+    },
+    {
+      "name": "recovery-v0",
+      "outputs": [
+        {
+          "actual": "37fd761c4ac01fbfc1966711aee09f953f463b2784be95bda3017c042c55080b",
+          "expected": "37fd761c4ac01fbfc1966711aee09f953f463b2784be95bda3017c042c55080b",
+          "match": true,
+          "path": "results/recovery-matrix.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/recovery-v0/v2/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 2
+    },
+    {
+      "name": "negative-control-agent-v0",
+      "outputs": [
+        {
+          "actual": "e97852ed4bbb226e47d3970962528fcd41fdd160d785bbb2857aa0ef4960825a",
+          "expected": "e97852ed4bbb226e47d3970962528fcd41fdd160d785bbb2857aa0ef4960825a",
+          "match": true,
+          "path": "results/research-agent.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/negative-control-agent-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "confounding-control-v0",
+      "outputs": [
+        {
+          "actual": "2bac106e2ac62b1b93f80f26c61773a415cc34bf8076a5a6242cd73474e4b02e",
+          "expected": "2bac106e2ac62b1b93f80f26c61773a415cc34bf8076a5a6242cd73474e4b02e",
+          "match": true,
+          "path": "results/confounding-control.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/confounding-control-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "claim-schema-v0",
+      "outputs": [
+        {
+          "actual": "eb3f0c2e51ea73f0786729d085effa9e9754b68be6080d3354c607f2ac9ebdac",
+          "expected": "eb3f0c2e51ea73f0786729d085effa9e9754b68be6080d3354c607f2ac9ebdac",
+          "match": true,
+          "path": "results/claim-schema.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/claim-schema-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "persistent-memory-v0",
+      "outputs": [
+        {
+          "actual": "281e99021360450192d956ac959fcb8978c8095798652a2ee51b72e51caf7707",
+          "expected": "281e99021360450192d956ac959fcb8978c8095798652a2ee51b72e51caf7707",
+          "match": true,
+          "path": "results/persistent-memory.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/persistent-memory-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "model-protocol-v0",
+      "outputs": [
+        {
+          "actual": "94220f8c4f073e32e0d65ee6338da6eb66df91e70f357391fc5d3a877dfdba66",
+          "expected": "94220f8c4f073e32e0d65ee6338da6eb66df91e70f357391fc5d3a877dfdba66",
+          "match": true,
+          "path": "results/model-protocol.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/model-protocol-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "real-faults-v0",
+      "outputs": [
+        {
+          "actual": "2f51789c0b1f5e7e3768759d497aed95f2d3250fb02f6fdfd3eb49b177908fa6",
+          "expected": "2f51789c0b1f5e7e3768759d497aed95f2d3250fb02f6fdfd3eb49b177908fa6",
+          "match": true,
+          "path": "results/real-faults.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/real-faults-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "goal-drift-monitor-v0",
+      "outputs": [
+        {
+          "actual": "b3fc68e4ae7980241d26260f106a456652651b50926f3106c970d7bc4c1b283d",
+          "expected": "b3fc68e4ae7980241d26260f106a456652651b50926f3106c970d7bc4c1b283d",
+          "match": true,
+          "path": "results/monitor.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/goal-drift-monitor-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "world-model-calibration-v0",
+      "outputs": [
+        {
+          "actual": "b9467660668f27806f67beb1e40c6c43b820dfdc48ba1d59dbb3aded6864c448",
+          "expected": "b9467660668f27806f67beb1e40c6c43b820dfdc48ba1d59dbb3aded6864c448",
+          "match": true,
+          "path": "results/calibration.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/world-model-calibration-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "verifier-rewards-v0",
+      "outputs": [
+        {
+          "actual": "8fb999a10deebcdcc515f8e29933263041d073c4005391f95b34770100980aa9",
+          "expected": "8fb999a10deebcdcc515f8e29933263041d073c4005391f95b34770100980aa9",
+          "match": true,
+          "path": "results/rewards.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/verifier-rewards-v0/v2/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 2
+    },
+    {
+      "name": "adaptive-controller-v0",
+      "outputs": [
+        {
+          "actual": "aa201b02cfd3910d41b45d105ee594db709f45fe080a1800b683529ce063824d",
+          "expected": "aa201b02cfd3910d41b45d105ee594db709f45fe080a1800b683529ce063824d",
+          "match": true,
+          "path": "results/controller.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/adaptive-controller-v0/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "harness-validation",
+      "version": 1
+    },
+    {
+      "name": "portfolio-v1",
+      "outputs": [
+        {
+          "actual": "35217aba5c561f876f9b5d60616bcd87b3e89d354f893e184b8336cbfb3774bd",
+          "expected": "35217aba5c561f876f9b5d60616bcd87b3e89d354f893e184b8336cbfb3774bd",
+          "match": true,
+          "path": "results/portfolio-audit.json"
+        },
+        {
+          "actual": "b9363b691aadcd571c095ed91ca99ae5a6e6d95c06e75e50c482efbe35ee6d07",
+          "expected": "b9363b691aadcd571c095ed91ca99ae5a6e6d95c06e75e50c482efbe35ee6d07",
+          "match": true,
+          "path": "results/environment-audit.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/portfolio-v1/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "portfolio-audit",
+      "version": 1
+    },
+    {
+      "name": "portfolio-v2",
+      "outputs": [
+        {
+          "actual": "8940a3b01960c4a4e8235ed3ceffa68b7137a6201ee4cf43ae42c0e42b48543a",
+          "expected": "8940a3b01960c4a4e8235ed3ceffa68b7137a6201ee4cf43ae42c0e42b48543a",
+          "match": true,
+          "path": "results/portfolio-audit.json"
+        },
+        {
+          "actual": "210d9d863a65294120e47b40672bf437b1980c508f960f50bafea2f867bd9719",
+          "expected": "210d9d863a65294120e47b40672bf437b1980c508f960f50bafea2f867bd9719",
+          "match": true,
+          "path": "results/environment-audit.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/portfolio-v2/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "portfolio-audit",
+      "version": 1
+    },
+    {
+      "name": "portfolio-v3",
+      "outputs": [
+        {
+          "actual": "6866fe905d960dbca6f6d02436098bbe9e1bb0beba1f7cebb713a237035970b5",
+          "expected": "6866fe905d960dbca6f6d02436098bbe9e1bb0beba1f7cebb713a237035970b5",
+          "match": true,
+          "path": "results/portfolio-audit.json"
+        },
+        {
+          "actual": "0a8965000e2007d6142043f1111956d0d4d0c15cf595621c3d5564897d48e912",
+          "expected": "0a8965000e2007d6142043f1111956d0d4d0c15cf595621c3d5564897d48e912",
+          "match": true,
+          "path": "results/environment-audit.json"
+        }
+      ],
+      "outputs_match": true,
+      "path": "artifacts/portfolio-v3/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": false,
+      "status": "portfolio-audit",
+      "version": 1
+    },
+    {
+      "name": "portfolio-v4",
+      "outputs": [],
+      "outputs_match": null,
+      "path": "artifacts/portfolio-v4/v1/artifact.json",
+      "scientific_result": false,
+      "self_reference": true,
+      "status": "portfolio-audit",
+      "version": 1
+    }
+  ],
+  "checks": [
+    {
+      "detail": "present and non-empty",
+      "id": "document:README.md",
+      "ok": true
+    },
+    {
+      "detail": "present and non-empty",
+      "id": "document:PROGRAM.md",
+      "ok": true
+    },
+    {
+      "detail": "present and non-empty",
+      "id": "document:ORIGINAL-EIGHT.md",
+      "ok": true
+    },
+    {
+      "detail": "present and non-empty",
+      "id": "document:PORTFOLIO-STATUS.md",
+      "ok": true
+    },
+    {
+      "detail": "present and non-empty",
+      "id": "document:MODEL-GATE.md",
+      "ok": true
+    },
+    {
+      "detail": "P1-P8 mapped",
+      "id": "original-eight-mapping",
+      "ok": true
+    },
+    {
+      "detail": "required sections present",
+      "id": "portfolio-status-sections",
+      "ok": true
+    },
+    {
+      "detail": "required sections present",
+      "id": "model-gate-sections",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:cpu-bootstrap-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=cpu-bootstrap-v0, version=1, path=artifacts/cpu-bootstrap-v0/v1/artifact.json",
+      "id": "artifact-version:cpu-bootstrap-v0",
+      "ok": true
+    },
+    {
+      "detail": "4/4 output hashes match",
+      "id": "artifact-outputs:cpu-bootstrap-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:factorial-attribution-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=factorial-attribution-v0, version=2, path=artifacts/factorial-attribution-v0/v2/artifact.json",
+      "id": "artifact-version:factorial-attribution-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:factorial-attribution-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:three-factor-attribution-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=three-factor-attribution-v0, version=1, path=artifacts/three-factor-attribution-v0/v1/artifact.json",
+      "id": "artifact-version:three-factor-attribution-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:three-factor-attribution-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:estimator-validity-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=estimator-validity-v0, version=1, path=artifacts/estimator-validity-v0/v1/artifact.json",
+      "id": "artifact-version:estimator-validity-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:estimator-validity-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:cpu-program-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=cpu-program-v0, version=12, path=artifacts/cpu-program-v0/v12/artifact.json",
+      "id": "artifact-version:cpu-program-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:cpu-program-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:clear-300-v1",
+      "ok": true
+    },
+    {
+      "detail": "name=clear-300-v1, version=1, path=artifacts/clear-300-v1/v1/artifact.json",
+      "id": "artifact-version:clear-300-v1",
+      "ok": true
+    },
+    {
+      "detail": "4/4 output hashes match",
+      "id": "artifact-outputs:clear-300-v1",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:layered-memory-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=layered-memory-v0, version=3, path=artifacts/layered-memory-v0/v3/artifact.json",
+      "id": "artifact-version:layered-memory-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:layered-memory-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:recovery-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=recovery-v0, version=2, path=artifacts/recovery-v0/v2/artifact.json",
+      "id": "artifact-version:recovery-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:recovery-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:negative-control-agent-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=negative-control-agent-v0, version=1, path=artifacts/negative-control-agent-v0/v1/artifact.json",
+      "id": "artifact-version:negative-control-agent-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:negative-control-agent-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:confounding-control-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=confounding-control-v0, version=1, path=artifacts/confounding-control-v0/v1/artifact.json",
+      "id": "artifact-version:confounding-control-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:confounding-control-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:claim-schema-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=claim-schema-v0, version=1, path=artifacts/claim-schema-v0/v1/artifact.json",
+      "id": "artifact-version:claim-schema-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:claim-schema-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:persistent-memory-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=persistent-memory-v0, version=1, path=artifacts/persistent-memory-v0/v1/artifact.json",
+      "id": "artifact-version:persistent-memory-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:persistent-memory-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:model-protocol-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=model-protocol-v0, version=1, path=artifacts/model-protocol-v0/v1/artifact.json",
+      "id": "artifact-version:model-protocol-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:model-protocol-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:real-faults-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=real-faults-v0, version=1, path=artifacts/real-faults-v0/v1/artifact.json",
+      "id": "artifact-version:real-faults-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:real-faults-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:goal-drift-monitor-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=goal-drift-monitor-v0, version=1, path=artifacts/goal-drift-monitor-v0/v1/artifact.json",
+      "id": "artifact-version:goal-drift-monitor-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:goal-drift-monitor-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:world-model-calibration-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=world-model-calibration-v0, version=1, path=artifacts/world-model-calibration-v0/v1/artifact.json",
+      "id": "artifact-version:world-model-calibration-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:world-model-calibration-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:verifier-rewards-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=verifier-rewards-v0, version=2, path=artifacts/verifier-rewards-v0/v2/artifact.json",
+      "id": "artifact-version:verifier-rewards-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:verifier-rewards-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:adaptive-controller-v0",
+      "ok": true
+    },
+    {
+      "detail": "name=adaptive-controller-v0, version=1, path=artifacts/adaptive-controller-v0/v1/artifact.json",
+      "id": "artifact-version:adaptive-controller-v0",
+      "ok": true
+    },
+    {
+      "detail": "1/1 output hashes match",
+      "id": "artifact-outputs:adaptive-controller-v0",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:portfolio-v1",
+      "ok": true
+    },
+    {
+      "detail": "name=portfolio-v1, version=1, path=artifacts/portfolio-v1/v1/artifact.json",
+      "id": "artifact-version:portfolio-v1",
+      "ok": true
+    },
+    {
+      "detail": "2/2 output hashes match",
+      "id": "artifact-outputs:portfolio-v1",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:portfolio-v2",
+      "ok": true
+    },
+    {
+      "detail": "name=portfolio-v2, version=1, path=artifacts/portfolio-v2/v1/artifact.json",
+      "id": "artifact-version:portfolio-v2",
+      "ok": true
+    },
+    {
+      "detail": "2/2 output hashes match",
+      "id": "artifact-outputs:portfolio-v2",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:portfolio-v3",
+      "ok": true
+    },
+    {
+      "detail": "name=portfolio-v3, version=1, path=artifacts/portfolio-v3/v1/artifact.json",
+      "id": "artifact-version:portfolio-v3",
+      "ok": true
+    },
+    {
+      "detail": "2/2 output hashes match",
+      "id": "artifact-outputs:portfolio-v3",
+      "ok": true
+    },
+    {
+      "detail": "artifact exists",
+      "id": "artifact-exists:portfolio-v4",
+      "ok": true
+    },
+    {
+      "detail": "name=portfolio-v4, version=1, path=artifacts/portfolio-v4/v1/artifact.json",
+      "id": "artifact-version:portfolio-v4",
+      "ok": true
+    },
+    {
+      "detail": "self-referential outputs delegated to scripts/verify_artifact.py",
+      "id": "portfolio-self-verification:portfolio-v4",
+      "ok": true
+    },
+    {
+      "detail": "status=active",
+      "id": "project-active",
+      "ok": true
+    },
+    {
+      "detail": "18 experiments",
+      "id": "experiment-ids-unique",
+      "ok": true
+    },
+    {
+      "detail": "all design/log files present",
+      "id": "experiment-files-exist",
+      "ok": true
+    },
+    {
+      "detail": "all loop-history artifacts present",
+      "id": "history-artifacts-exist",
+      "ok": true
+    },
+    {
+      "detail": "latest=portfolio-v4; 4 manifest entries",
+      "id": "portfolio-artifact-registered",
+      "ok": true
+    },
+    {
+      "detail": "packages=P1,P2,P3,P4,P5,P6,P7,P8",
+      "id": "cpu-program-eight-packages",
+      "ok": true
+    },
+    {
+      "detail": "scientific_result=false, novelty_status=not-established",
+      "id": "cpu-program-scientific-boundary",
+      "ok": true
+    },
+    {
+      "detail": "10/10 source hashes match",
+      "id": "portfolio-source-hashes",
+      "ok": true
+    },
+    {
+      "detail": "all artifacts retain scientific_result=false",
+      "id": "scientific-claims-not-promoted",
+      "ok": true
+    }
+  ],
+  "counts": {
+    "artifacts": 22,
+    "checks": 83,
+    "checks_passed": 83,
+    "documents": 5,
+    "experiments": 18,
+    "verified_outputs": 30,
+    "work_packages": 8
+  },
+  "generated_at": "2026-10-29T08:58:31.444036+00:00",
+  "integrity_ok": true,
+  "model_gate": {
+    "approval_status": null,
+    "capacity_preflight_scope": "exact cloud execution target",
+    "capacity_preflight_status": "not-measured",
+    "document": "MODEL-GATE.md",
+    "environment_snapshot_role": "execution-host context only",
+    "reasons": [
+      "No approved model-download/runtime record in manifest",
+      "No passed model-capacity preflight for the exact cloud target"
+    ],
+    "status": "hold"
+  },
+  "project": {
+    "id": "longrun-agi-20261027",
+    "iteration": 15,
+    "phase": "CPU-bootstrap",
+    "title": "LongRun-AGI: CPU-first long-horizon continual agent harness"
+  },
+  "schema_version": 1,
+  "scientific_boundary": {
+    "external_benchmark_completed": false,
+    "model_evaluation_completed": false,
+    "novelty_status": "not-established",
+    "scientific_result": false
+  },
+  "status": "pass",
+  "verification": {
+    "self_outputs_verified_by": "scripts/verify_artifact.py",
+    "self_referential_artifact": "portfolio-v4"
+  },
+  "work_packages": {
+    "P1": {
+      "status": "cpu-symbolic-probe"
+    },
+    "P2": {
+      "status": "implemented-v2-cpu-substrate"
+    },
+    "P3": {
+      "status": "implemented-v2-cpu-substrate"
+    },
+    "P4": {
+      "status": "cpu-weak-calibration-probe"
+    },
+    "P5": {
+      "status": "implemented-v2-cpu-substrate"
+    },
+    "P6": {
+      "status": "cpu-weak-monitor-probe"
+    },
+    "P7": {
+      "status": "implemented-v2-cpu-substrate"
+    },
+    "P8": {
+      "status": "cpu-weak-controller-probe"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "name": "cpu-program-v0",
+  "version": 3,
+  "created_at": "2026-10-28T12:29:21Z",
+  "supersedes": "artifacts/cpu-program-v0/v2/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make layered-memory",
+    "make program",
+    "make clear-v1-verify",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100
+  },
+  "inputs": {
+    "design": "experiments/008-cpu-program-v0/design.md",
+    "layered_memory_design": "experiments/010-layered-memory-v0/design.md",
+    "source_sha256": {
+      "src/longrun/program.py": "185071699aafb9f02834c8253059e672690ef5dee85c06cf98db00a36bd72faa",
+      "src/longrun/memory/layered.py": "c9707d5005684d4029dddbf35ef7754eafa66ae341dbac9e4a836d73445f581b",
+      "src/longrun/cli.py": "1d7bb8438e900eb80a5d95ce6b5a8865d8e0b6343ce7193372f5fd7c2cdf0f11",
+      "tests/test_layered_memory.py": "e1129ce3373f91e12c8cee2a4b13bd6e2cea3d7f6c7f938f5d8a23f3f7dac295",
+      "experiments/008-cpu-program-v0/design.md": "e614fb925e9c1f0707c92317ec429187d40943c9ca575af3a07b3c3d2a28eeaf",
+      "experiments/010-layered-memory-v0/design.md": "99db3b6728a1f5f030e696114cd74b44a735de97cda49801a926140f6574ba2b"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "c6c7bc318f300caf2482688e51bcae1cad8e3428f7fc5ef413786c52e44d6bfe"
+  },
+  "canonical_output_sha256": "eb626873c12b8e55f59b14c19e9b18d46051cb769f8a9d747e14ef1b76aa1b94",
+  "canonicalization": "Remove only generated_at, then use sorted keys, compact separators, ASCII escaping, and disallow NaN.",
+  "checks": {
+    "unit_tests": "98 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P3": {
+      "layers": 3,
+      "flat_rag_poison_rate": 1.0,
+      "layered_provenance_poison_rate": 0.0,
+      "layered_final_correct_rate": 1.0,
+      "conflict_cases": 34
+    },
+    "P7": {
+      "clear_v1_tasks": 300,
+      "clear_v1_splits": {
+        "train": 180,
+        "dev": 60,
+        "test": 60
+      },
+      "clear_v1_canonical_sha256": "a8c1c421662f67a6e447ad1beda42a057fb8c7104ff740e0ab029998634b5c22",
+      "clear_v1_current_rule_success": 1.0,
+      "clear_v1_sticky_first_rule_success": 0.31333333333333335
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v0",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-symbolic-probe",
+    "P5": "implemented-v0",
+    "P6": "cpu-symbolic-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-symbolic-probe"
+  },
+  "notes": [
+    "v3 adds three-layer provenance memory evidence to P3.",
+    "The layered memory probe is synthetic and does not use LongMemEval or LoCoMo.",
+    "P1, P4, P6, and P8 remain symbolic or toy controls.",
+    "No model download, GPU training, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No LongMemEval/LoCoMo integration or persistent memory service.",
+    "No real language-model evaluation or activation-level goal-drift probe.",
+    "No trained latent world model and no real browser/grid engine integration.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

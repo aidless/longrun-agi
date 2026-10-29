@@ -1,0 +1,114 @@
+{
+  "name": "cpu-program-v0",
+  "version": 9,
+  "created_at": "2026-10-28T14:04:29Z",
+  "supersedes": "artifacts/cpu-program-v0/v8/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make adaptive-controller",
+    "make verifier-rewards",
+    "make program",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100,
+    "recovery_episodes_per_controller": 40,
+    "negative_control_cases": 80,
+    "goal_monitor_episodes": 60,
+    "world_model_samples_per_pair": 20,
+    "verifier_train_episodes": 600,
+    "controller_train_episodes": 600
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "73df2d951d94bd97162c70c0cdcc57d6b12a8767c343f85894dcafa638030c08",
+      "src/longrun/probes/adaptive_controller.py": "bf66745956acd625505087ffa682676b32836c3604f08ad48468f94ee10a81b2",
+      "src/longrun/cli.py": "07c61dc55f66a885075405181a3450fecbfc3e22c64e25dcdee5aab26090ef0d",
+      "tests/test_adaptive_controller.py": "7168096b64d7c822f54004f3bccdbd8bab4b1886d2a0bf9aa0b1cf6f63b19836",
+      "experiments/016-adaptive-controller-v0/design.md": "649b4f0ed9bf8bc1448b02302ebc27e9f447fef39f8580450964e0535b8bf970"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "141f86147fae57a38e32fd4dabad4f77d3ac58e8b193208a7c83921fd2bf6414"
+  },
+  "canonical_output_sha256": "0cd8b626bff48f3a1bc639069da82cf9cf95817f94c1452bcf470ed81721a5cf",
+  "checks": {
+    "unit_tests": "124 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P8": {
+      "success_rate": 0.48333333333333334,
+      "mean_cost": 1.7333333333333334,
+      "cost_per_success": 3.586206896551724,
+      "stability_range": 0.041666666666666685,
+      "action_counts": {
+        "retrieve": 56,
+        "reflect": 16,
+        "tool": 40,
+        "write-memory": 0,
+        "stop": 8
+      }
+    },
+    "P1": {
+      "answer_ood_success": 0.43333333333333335,
+      "ensemble_ood_success": 0.5233333333333333
+    },
+    "P4": {
+      "id_accuracy": 1.0,
+      "ood_accuracy": 0.25,
+      "planning_uncertainty": 0.5
+    },
+    "P6": {
+      "early_warning_rate": 0.0
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v1-cpu-substrate",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-weak-calibration-probe",
+    "P5": "implemented-v1-cpu-substrate",
+    "P6": "cpu-weak-monitor-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-weak-controller-probe"
+  },
+  "notes": [
+    "v9 adds the five-action contextual controller to P8.",
+    "The adaptive controller is more stable than fixed baselines but does not beat fixed reflect and never writes memory.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No real runtime tool/retriever/memory integration.",
+    "No language-model controller or measured token/latency costs.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

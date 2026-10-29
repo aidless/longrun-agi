@@ -1,0 +1,90 @@
+{
+  "name": "portfolio-v4",
+  "version": 1,
+  "created_at": "2026-10-29T08:54:45Z",
+  "supersedes": "artifacts/portfolio-v3/v1/artifact.json",
+  "status": "portfolio-audit",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "python3 scripts/audit_portfolio.py",
+    "python3 scripts/audit_portfolio.py --check",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make verify"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "work_packages": 8,
+    "unit_tests_expected": 171,
+    "portfolio_checks_expected": 77,
+    "disk_used_percent_limit": 90,
+    "disk_free_reserve_gib": 20,
+    "peak_memory_margin_multiplier": 1.5,
+    "scientific_result": false
+  },
+  "inputs": {
+    "source_sha256": {
+      "README.md": "95314ca73098be424e4fa062ecd4f8f413d3eae9d4c0ddc706e517d6fdd6cb28",
+      "PROGRAM.md": "e168812503fb86cf2b0b697f1717102b89cb84151fed0f02d00e9ea6cfdc205b",
+      "ORIGINAL-EIGHT.md": "fd69856af0bdf44cbd0e1894c5cce0ab8a5d7a2ccaaf31c6e11589f9ed501ac9",
+      "PORTFOLIO-STATUS.md": "ebfebe81a3ebbdff9371494b60bbbac170acda311e17c930877deb9392e5cc3d",
+      "MODEL-GATE.md": "47f86751debd4e7a7ef027a40ce5b5933085a2e164a5dbf36fe5ee55968e5925",
+      "research-manifest.json": "d8d59a688dd176fecb6e7ff6c6a81e337997869059b336b5ad340f62421d3987",
+      "scripts/audit_portfolio.py": "56db35a8d7dff96654462da2f5e1b026bcc32636306e28ec12a70417bfc23854",
+      "tests/test_portfolio.py": "00de87554165256cf9b7e1d102b840716a0411e0ae90779b6fa771f17f59bca0",
+      "Makefile": "5e8a4c1381c1babe1f2a92187a9c1120246deef91125d347844217039b226121",
+      ".github/workflows/ci.yml": "e3fef3bc5788e8baa7cbdc247644214fdc6bed35f316515092fb4b8231669cae"
+    }
+  },
+  "outputs": {
+    "results/portfolio-audit.json": "7f42e38fdc9fdc7ec3854458e1a425bbac635b2dc70bd399181d2fe2c15d89ca",
+    "results/environment-audit.json": "f1595d2c58fc4406db63b3d1f29b75ba1af45b0be0bc3e359147c6cc22b76bec"
+  },
+  "checks": {
+    "unit_tests": "174 passed",
+    "compileall": "passed",
+    "portfolio_integrity": "83/83 checks passed",
+    "verified_outputs": 30,
+    "model_gate": "hold",
+    "gpu_used": false,
+    "network_calls": 0
+    ,
+    "artifact_hash_check": "38/38 versions passed"
+  },
+  "key_observations": {
+    "cpu_substrates": "8/8",
+    "persistent_memory_reopened_correct_rate": 1.0,
+    "persistent_memory_rollback_atomic": true,
+    "model_protocol_dry_run_tasks": 240,
+    "model_protocol_test_split": "sealed-not-accessed",
+    "real_fault_retry_success_rate": 0.0,
+    "real_fault_replan_success_rate": 1.0,
+    "model_evaluations": 0,
+    "external_benchmark_results": 0,
+    "scientific_results": 0
+  },
+  "notes": [
+    "Portfolio v4 includes persistent SQLite memory, a frozen model protocol dry run, and real filesystem/subprocess recovery.",
+    "The CLEAR-300-v1 60-task test split remains sealed.",
+    "Open-source packaging is prepared, but public publication remains a separate user gate.",
+    "The portfolio artifact outputs are verified externally by scripts/verify_artifact.py."
+  ],
+  "not_completed": [
+    "No public repository publication action has been taken.",
+    "No model-level evaluation.",
+    "No external benchmark or leaderboard result.",
+    "No novelty assessment or publication claim."
+  ]
+}

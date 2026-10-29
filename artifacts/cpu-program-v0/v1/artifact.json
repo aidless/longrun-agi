@@ -1,0 +1,152 @@
+{
+  "name": "cpu-program-v0",
+  "version": 1,
+  "created_at": "2026-10-28T11:31:13Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest",
+    "python3 -m compileall src tests",
+    "make program",
+    "make verify",
+    "python3 scripts/verify_artifact.py artifacts/cpu-program-v0/v1"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0,
+    "runtime_dependencies": "Python standard library; pytest for checks"
+  },
+  "scope": {
+    "work_packages": "project-defined P1-P8, not the user's original eight AGI points",
+    "result_kind": "integrated CPU harness and symbolic probe validation",
+    "model_level_evidence": false,
+    "physical_device_test": false
+  },
+  "config": {
+    "seed": 20261028,
+    "quick": false,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "compute_jobs": 120,
+    "compute_budget": 240,
+    "compute_robustness_seeds": 40,
+    "goal_drift_episodes": 100,
+    "goal_drift_steps": 50,
+    "world_model_sequence_length": 600,
+    "world_model_train_fraction": 0.7,
+    "q_learning_episodes": 500
+  },
+  "inputs": {
+    "design": "experiments/008-cpu-program-v0/design.md",
+    "source_sha256": {
+      "src/longrun/program.py": "dc10aaaf3589cfa9f78a9f7673ddd28653dc8ed2a9596b9d43d474a5a169408e",
+      "src/longrun/probes/verifier_gap.py": "5087885dffbc18ef9e37b382fba652dbcc47da5d05d209c9919b913e53dbcbf4",
+      "src/longrun/probes/world_model.py": "8c3345c9129a3026a77e38d5981be275014ef5fdec5fc4213dfae6d6d0c8dba7",
+      "src/longrun/probes/goal_drift.py": "30957acb91011c2d3092f89eb60bba32f0921042020467141e9d2919fbae6084",
+      "src/longrun/probes/compute.py": "f39b6c0da9e93db39097b0bc4c4e33a36879230df52057631d0422d2bae25a43",
+      "src/longrun/clear/failure_matrix.py": "98be2f52a4d44ffad6c58c118193f3371a47d0989fd0370076137836b529300d",
+      "src/longrun/memory/adversarial.py": "8f585078c1ea0683c02be1b6681ec4788a809229f3c306a5575a3353aad11477",
+      "src/longrun/clear/second_generator.py": "e4d6c7ce7c1bacc52257d722d8ea6aa3421e06b3442848a76783b36cc465c72d",
+      "src/longrun/clear/cross_family.py": "91188d509366bb77705d5a9d1c4d7d24a7ac74c2f236aae02a46e9f6b10c975c",
+      "src/longrun/agent_loop.py": "e6d7cd9ffb568d93567c41899e7c94e08504fda6227a83c229751e4eceecb585",
+      "src/longrun/controls/evidence.py": "b7ca837310d4cdcb57667661ec6e44bd50211bf0aff3f7688322555ab84be496",
+      "src/longrun/clear/policies.py": "9a272e006307909896037f0f255d50888bf6a3eecf2dd79d3fc6c4b3fd215c22",
+      "tests/test_program.py": "8468f63b1af065db224731fc3e7265cf57542d656300e6d67966de4810660c45",
+      "experiments/008-cpu-program-v0/design.md": "e614fb925e9c1f0707c92317ec429187d40943c9ca575af3a07b3c3d2a28eeaf"
+    }
+  },
+  "outputs": {
+    "results/program.json": "9c4aeaa05e5d8015b6333d71c07fdac85e993b09e48b7607f6574ce773a04c41"
+  },
+  "canonical_output_sha256": "201e645d876c3985e48f1acf43b50517aa76444ac02a6cdddd959f27be5e6f5d",
+  "canonicalization": "Remove only generated_at, then use sorted keys, compact separators, ASCII escaping, and disallow NaN.",
+  "checks": {
+    "unit_tests": "83 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P1": {
+      "proxy_q_learning_final_true_reward": -3.0,
+      "true_reward_q_learning_final_true_reward": 4.0,
+      "verifier_gap": 7.22
+    },
+    "P2": {
+      "recoverable_transient_faults": 3,
+      "fatal_unrecoverable_faults": 2,
+      "retry_recovery_rate": 1.0,
+      "no_retry_recovery_rate": 0.0
+    },
+    "P3": {
+      "recency_poison_event_rate": 1.0,
+      "provenance_poison_event_rate": 0.0
+    },
+    "P4": {
+      "lag1_heldout_accuracy": 0.8938547486033519,
+      "lag2_heldout_accuracy": 0.9213483146067416,
+      "lag2_minus_lag1": 0.027493566003389702
+    },
+    "P5": {
+      "controls_matched": "7/7",
+      "ablation_effects_correct": 6
+    },
+    "P6": {
+      "pinned_final_accuracy": 1.0,
+      "recency_final_accuracy": 0.12,
+      "decay_final_accuracy": 0.34
+    },
+    "P7": {
+      "second_generator_tasks": 24,
+      "second_generator_success": 1.0,
+      "estimator_coverage": 0.9928571428571429,
+      "estimator_fwer": 0.005,
+      "cross_family_transfer": 0.0,
+      "loop_resume_success": true,
+      "trace_hash_valid": true
+    },
+    "P8": {
+      "best_policy_by_value": "value-density",
+      "value_density_value": 807,
+      "safe_value_density_value": 530,
+      "safe_policy_value_ratio": 0.6567534076827757,
+      "safe_value_density_deadline_misses": 0,
+      "overspend": false
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v0",
+    "P3": "implemented-v0",
+    "P4": "cpu-symbolic-probe",
+    "P5": "implemented-v0",
+    "P6": "cpu-symbolic-probe",
+    "P7": "implemented-v0",
+    "P8": "cpu-symbolic-probe"
+  },
+  "not_completed": [
+    "No real language-model evaluation, model download, GPU training, or activation access.",
+    "No claim that P1-P8 match the user's original eight AGI research points.",
+    "No learned world model; P4 is a symbolic lag-context predictor.",
+    "No real compute scheduling; P8 is a synthetic budget/deadline simulation.",
+    "No external dataset, submission, account change, or publication.",
+    "No novelty assessment for the integrated program."
+  ],
+  "notes": [
+    "P1, P4, P6, and P8 are deliberately toy or symbolic controls.",
+    "The cross-family result is a negative transfer result for a retained routing rule, not a claim that all transfer is impossible.",
+    "The safe scheduler is not called superior: it avoids executed deadline misses but loses about 34% of the value-density policy's value.",
+    "All result files and source hashes are local and reproducible without network access."
+  ]
+}

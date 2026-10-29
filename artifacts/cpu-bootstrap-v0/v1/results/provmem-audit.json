@@ -1,0 +1,411 @@
+{
+  "generated_at": "2026-10-27T16:21:16.953670+00:00",
+  "policies": {
+    "provenance-aware": {
+      "correct_rate": 1.0,
+      "counts": {
+        "correct": 24
+      },
+      "poison_rate": 0.0,
+      "rows": [
+        {
+          "classification": "correct",
+          "expected": "rule-current-000",
+          "key": "routing-rule-000",
+          "selected": "rule-current-000",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-001",
+          "key": "routing-rule-001",
+          "selected": "rule-current-001",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-002",
+          "key": "routing-rule-002",
+          "selected": "rule-current-002",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-003",
+          "key": "routing-rule-003",
+          "selected": "rule-current-003",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-004",
+          "key": "routing-rule-004",
+          "selected": "rule-current-004",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-005",
+          "key": "routing-rule-005",
+          "selected": "rule-current-005",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-006",
+          "key": "routing-rule-006",
+          "selected": "rule-current-006",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-007",
+          "key": "routing-rule-007",
+          "selected": "rule-current-007",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-008",
+          "key": "routing-rule-008",
+          "selected": "rule-current-008",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-009",
+          "key": "routing-rule-009",
+          "selected": "rule-current-009",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-010",
+          "key": "routing-rule-010",
+          "selected": "rule-current-010",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-011",
+          "key": "routing-rule-011",
+          "selected": "rule-current-011",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-012",
+          "key": "routing-rule-012",
+          "selected": "rule-current-012",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-013",
+          "key": "routing-rule-013",
+          "selected": "rule-current-013",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-014",
+          "key": "routing-rule-014",
+          "selected": "rule-current-014",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-015",
+          "key": "routing-rule-015",
+          "selected": "rule-current-015",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-016",
+          "key": "routing-rule-016",
+          "selected": "rule-current-016",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-017",
+          "key": "routing-rule-017",
+          "selected": "rule-current-017",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-018",
+          "key": "routing-rule-018",
+          "selected": "rule-current-018",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-019",
+          "key": "routing-rule-019",
+          "selected": "rule-current-019",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-020",
+          "key": "routing-rule-020",
+          "selected": "rule-current-020",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-021",
+          "key": "routing-rule-021",
+          "selected": "rule-current-021",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-022",
+          "key": "routing-rule-022",
+          "selected": "rule-current-022",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        },
+        {
+          "classification": "correct",
+          "expected": "rule-current-023",
+          "key": "routing-rule-023",
+          "selected": "rule-current-023",
+          "selected_source": "docs/SPEC.md",
+          "selected_trust": 0.95
+        }
+      ],
+      "stale_rate": 0.0
+    },
+    "recency-only": {
+      "correct_rate": 0.0,
+      "counts": {
+        "poison": 24
+      },
+      "poison_rate": 1.0,
+      "rows": [
+        {
+          "classification": "poison",
+          "expected": "rule-current-000",
+          "key": "routing-rule-000",
+          "selected": "rule-poison-000",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-001",
+          "key": "routing-rule-001",
+          "selected": "rule-poison-001",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-002",
+          "key": "routing-rule-002",
+          "selected": "rule-poison-002",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-003",
+          "key": "routing-rule-003",
+          "selected": "rule-poison-003",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-004",
+          "key": "routing-rule-004",
+          "selected": "rule-poison-004",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-005",
+          "key": "routing-rule-005",
+          "selected": "rule-poison-005",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-006",
+          "key": "routing-rule-006",
+          "selected": "rule-poison-006",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-007",
+          "key": "routing-rule-007",
+          "selected": "rule-poison-007",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-008",
+          "key": "routing-rule-008",
+          "selected": "rule-poison-008",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-009",
+          "key": "routing-rule-009",
+          "selected": "rule-poison-009",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-010",
+          "key": "routing-rule-010",
+          "selected": "rule-poison-010",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-011",
+          "key": "routing-rule-011",
+          "selected": "rule-poison-011",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-012",
+          "key": "routing-rule-012",
+          "selected": "rule-poison-012",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-013",
+          "key": "routing-rule-013",
+          "selected": "rule-poison-013",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-014",
+          "key": "routing-rule-014",
+          "selected": "rule-poison-014",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-015",
+          "key": "routing-rule-015",
+          "selected": "rule-poison-015",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-016",
+          "key": "routing-rule-016",
+          "selected": "rule-poison-016",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-017",
+          "key": "routing-rule-017",
+          "selected": "rule-poison-017",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-018",
+          "key": "routing-rule-018",
+          "selected": "rule-poison-018",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-019",
+          "key": "routing-rule-019",
+          "selected": "rule-poison-019",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-020",
+          "key": "routing-rule-020",
+          "selected": "rule-poison-020",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-021",
+          "key": "routing-rule-021",
+          "selected": "rule-poison-021",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-022",
+          "key": "routing-rule-022",
+          "selected": "rule-poison-022",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        },
+        {
+          "classification": "poison",
+          "expected": "rule-current-023",
+          "key": "routing-rule-023",
+          "selected": "rule-poison-023",
+          "selected_source": "user-note.txt",
+          "selected_trust": 0.1
+        }
+      ],
+      "stale_rate": 0.0
+    }
+  },
+  "scenarios": 24,
+  "suite": "ProvMem synthetic audit v0"
+}

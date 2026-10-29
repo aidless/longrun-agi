@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "all_four_cells_per_family": true,
+    "compileall": "passed",
+    "normalized_repeat_equal": true,
+    "pytest": "16 passed"
+  },
+  "commands": [
+    "python3 -m pytest -q",
+    "make factorial"
+  ],
+  "created_at": "2026-10-27T16:41:33.726375+00:00",
+  "environment": {
+    "accelerator": "none",
+    "external_api_calls": 0,
+    "network_calls": 0,
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "inputs": {
+    "design": "experiments/001-factorial-v0/design.md",
+    "source_sha256": {
+      "src/longrun/clear/generators.py": "a7ba45b8071d61b5db93e335a3831e8052161402d7847581fc423e06d9de6a03",
+      "src/longrun/clear/policies.py": "ce77fb31e3b2356c8a9273a2e1ad1e6ae4ccc1e2b9342fa9ace6995f76c5142c",
+      "src/longrun/clear/runner.py": "c449b6731a0bd392c0972a9e7a7ad0c2ff58e309d1b92f5db2a63e84d73e59ee",
+      "src/longrun/cli.py": "ffc68bab500759043090be5c85fea973295f6d7fa143f3f0b934ce8232309e0c",
+      "tests/test_clear_policies.py": "d0f120c1553573ab0c0d6b7def6ddf3eda327b0b03e526703b3e44624aa718c7"
+    },
+    "suite": "48 tasks: 3 families x rule_shift(2) x tool_fault(2) x 4 instances"
+  },
+  "name": "factorial-attribution-v0",
+  "notes": [
+    "Scripted-policy effects validate the attribution harness, not LLM capability.",
+    "The 2x2 design does not establish benchmark novelty or external validity.",
+    "No GPU, model download, paid API, external dataset, or submission was used.",
+    "The related-work search found direct work on counterfactual agent attribution and individual failure factors.",
+    "Superseded after correcting factorial main effects from conditional contrasts to marginal contrasts.",
+    "Superseded after adding explicit factor metadata to episode outputs."
+  ],
+  "outputs": {
+    "results/factorial-eval.json": "e385307eadfe29dc2e27e8b8a928dd344fc4c360829c6aa82ec6df2d2a255168"
+  },
+  "scientific_result": false,
+  "status": "superseded",
+  "superseded_by": "artifacts/factorial-attribution-v0/v2/artifact.json",
+  "version": 1
+}

@@ -1,0 +1,283 @@
+{
+  "generated_at": "2026-10-28T11:31:04.088224+00:00",
+  "novelty_status": "not-established",
+  "quick": false,
+  "schema_version": 1,
+  "scientific_result": false,
+  "status": "harness-validation",
+  "summary": {
+    "completed_cpu_probes": 8,
+    "external_api_calls": 0,
+    "gpu_used": false,
+    "long_run_loop": {
+      "all_traces_hash_valid": true,
+      "completed": 200,
+      "duplicate_actions_prevented": 5,
+      "episodes": 200,
+      "notes": [
+        "This validates the local trace and resume mechanism, not an external job runner.",
+        "No subprocess or network call is performed."
+      ],
+      "resume_success": true,
+      "scientific_result": false,
+      "status": "harness-validation",
+      "trace_digest": "f462da200dbfb9d665842d35b95f9c8bf9a3896cd445a90cc3e64f7f0d86a643"
+    },
+    "note": "All eight packages have a CPU probe, but P1/P4/P6/P8 are symbolic or toy controls and are not model-level or AGI evidence.",
+    "scientific_result": false
+  },
+  "work_packages": {
+    "P1": {
+      "deliverable": "toy MDP and tabular reward-sensitivity probe",
+      "evidence": {
+        "proxy_policy": {
+          "actions": [
+            "skip-verification-and-stop"
+          ],
+          "hazard_hits": 1,
+          "proxy_reward": 5,
+          "proxy_success": true,
+          "steps": 1,
+          "true_reward": -3,
+          "true_success": false
+        },
+        "q_learning_proxy_final_true_reward": -3.0,
+        "q_learning_true_final_true_reward": 4.0,
+        "status": "cpu-symbolic-probe",
+        "true_policy": {
+          "actions": [
+            "verify",
+            "verify-and-stop"
+          ],
+          "hazard_hits": 0,
+          "proxy_reward": 3,
+          "proxy_success": true,
+          "steps": 2,
+          "true_reward": 3,
+          "true_success": true
+        },
+        "verifier_gap": 7.22
+      },
+      "name": "Verifier-Gap RL",
+      "next_gate": "real model and training integration"
+    },
+    "P2": {
+      "deliverable": "fault injection and retry control",
+      "evidence": {
+        "abort_rate": 1.0,
+        "failure_matrix": [
+          {
+            "fault_kind": "transient_read",
+            "no_retry_success": false,
+            "retry_recovers": true,
+            "retry_success": true
+          },
+          {
+            "fault_kind": "transient_list",
+            "no_retry_success": false,
+            "retry_recovers": true,
+            "retry_success": true
+          },
+          {
+            "fault_kind": "transient_move",
+            "no_retry_success": false,
+            "retry_recovers": true,
+            "retry_success": true
+          },
+          {
+            "fault_kind": "schema_corruption",
+            "no_retry_success": false,
+            "retry_recovers": false,
+            "retry_success": false
+          },
+          {
+            "fault_kind": "missing_source",
+            "no_retry_success": false,
+            "retry_recovers": false,
+            "retry_success": false
+          }
+        ],
+        "fatal_unrecoverable_faults": 2,
+        "quick_mode": false,
+        "recoverable_transient_faults": 3,
+        "recovery_rate": 1.0,
+        "status": "implemented-v0",
+        "tasks": 2
+      },
+      "name": "FailRecover",
+      "next_gate": "heterogeneous tool error and model policy"
+    },
+    "P3": {
+      "deliverable": "provenance memory and poison controls",
+      "evidence": {
+        "adversarial_events": {
+          "expired": 42,
+          "superseded": 100
+        },
+        "adversarial_poison_event_rate": 1.0,
+        "adversarial_provenance_poison_event_rate": 0.0,
+        "provenance_poison_rate": 0.0,
+        "recency_only_poison_rate": 1.0,
+        "scenarios": 24,
+        "status": "implemented-v0"
+      },
+      "name": "ProvMem",
+      "next_gate": "cross-session memory and adversarial notes"
+    },
+    "P4": {
+      "deliverable": "symbolic next-symbol and rollout probe",
+      "evidence": {
+        "lag1_accuracy": 0.8938547486033519,
+        "lag2_accuracy": 0.9213483146067416,
+        "lag2_minus_lag1": 0.027493566003389702,
+        "lag2_rollout_accuracy": 0.78,
+        "model": "conditional next-symbol table",
+        "status": "cpu-symbolic-probe"
+      },
+      "name": "World Model",
+      "next_gate": "learned transition model with bounded compute"
+    },
+    "P5": {
+      "deliverable": "deterministic claim checks",
+      "evidence": {
+        "ablation_all_expected": true,
+        "accepted_valid": true,
+        "all_expected": true,
+        "controls": 7,
+        "rejected": 6,
+        "status": "implemented-v0"
+      },
+      "name": "Evidence Gate",
+      "next_gate": "broader leakage and protocol checks"
+    },
+    "P6": {
+      "deliverable": "pinned/recency/decay control probe",
+      "evidence": {
+        "decay_final_accuracy": 0.34,
+        "episodes": 100,
+        "pinned_final_accuracy": 1.0,
+        "recency_drift_rate": 0.16,
+        "recency_final_accuracy": 0.12,
+        "status": "cpu-symbolic-probe"
+      },
+      "name": "Goal-Drift Probe",
+      "next_gate": "activation-level or model-level probe"
+    },
+    "P7": {
+      "deliverable": "task suite, factorial designs, estimator validity",
+      "evidence": {
+        "clear_tasks": 36,
+        "cross_family_transfer": {
+          "extension_to_prefix": {
+            "source_family": "extension_sort",
+            "source_tasks": 2,
+            "target_family": "prefix_route",
+            "target_tasks": 2,
+            "train_success": 1.0,
+            "transfer_drop": 1.0,
+            "transfer_success": 0.0
+          },
+          "prefix_to_suffix": {
+            "source_family": "prefix_route",
+            "source_tasks": 2,
+            "target_family": "suffix_route",
+            "target_tasks": 2,
+            "train_success": 1.0,
+            "transfer_drop": 1.0,
+            "transfer_success": 0.0
+          },
+          "suffix_to_extension": {
+            "source_family": "suffix_route",
+            "source_tasks": 2,
+            "target_family": "extension_sort",
+            "target_tasks": 2,
+            "train_success": 1.0,
+            "transfer_drop": 1.0,
+            "transfer_success": 0.0
+          }
+        },
+        "estimator_coverage": 0.9928571428571429,
+        "estimator_fwer": 0.005,
+        "estimator_repetitions": 200,
+        "estimator_status": "harness-validation",
+        "factorial_recheck_success": 1.0,
+        "factorial_tasks": 48,
+        "loop_audit": {
+          "all_traces_hash_valid": true,
+          "completed": 200,
+          "duplicate_actions_prevented": 5,
+          "episodes": 200,
+          "notes": [
+            "This validates the local trace and resume mechanism, not an external job runner.",
+            "No subprocess or network call is performed."
+          ],
+          "resume_success": true,
+          "scientific_result": false,
+          "status": "harness-validation",
+          "trace_digest": "f462da200dbfb9d665842d35b95f9c8bf9a3896cd445a90cc3e64f7f0d86a643"
+        },
+        "reactive_shift_success": 1.0,
+        "second_generator_success": 1.0,
+        "second_generator_tasks": 24,
+        "status": "implemented-v0",
+        "sticky_shift_success": 0.0,
+        "three_factor_provenance_success": 1.0,
+        "three_factor_tasks": 96
+      },
+      "name": "CLEAR-Bench and attribution",
+      "next_gate": "model-agent evaluation"
+    },
+    "P8": {
+      "deliverable": "synthetic job scheduling interface",
+      "evidence": {
+        "best_policy_by_value": "value-density",
+        "budget": 240,
+        "jobs": 120,
+        "policies": {
+          "fifo": {
+            "deadline_misses": 109,
+            "overspend": false,
+            "spent": 240,
+            "value": 424
+          },
+          "random": {
+            "deadline_misses": 103,
+            "overspend": false,
+            "spent": 240,
+            "value": 497
+          },
+          "safe-value-density": {
+            "deadline_misses": 0,
+            "overspend": false,
+            "spent": 117,
+            "value": 530
+          },
+          "shortest-job": {
+            "deadline_misses": 84,
+            "overspend": false,
+            "spent": 238,
+            "value": 699
+          },
+          "value-density": {
+            "deadline_misses": 88,
+            "overspend": false,
+            "spent": 239,
+            "value": 807
+          }
+        },
+        "robustness": {
+          "best_policy_frequency": {
+            "value-density": 40
+          },
+          "note": "Ties are broken by fewer deadline misses. This checks seed sensitivity of a synthetic scheduler, not real hardware.",
+          "seeds": 40,
+          "value_density_wins_share": 1.0
+        },
+        "safe_policy_value_ratio": 0.6567534076827757,
+        "status": "cpu-symbolic-probe"
+      },
+      "name": "Compute Controller",
+      "next_gate": "real local process launch with explicit approval"
+    }
+  }
+}

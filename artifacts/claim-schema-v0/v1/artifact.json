@@ -1,0 +1,90 @@
+{
+  "name": "claim-schema-v0",
+  "version": 1,
+  "created_at": "2026-10-29T04:54:40Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make claim-schema",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "python3 scripts/verify_artifact.py artifacts/claim-schema-v0/v1"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "cases": 110,
+    "source_control_cases": 90,
+    "added_cases": 20,
+    "categories": 11,
+    "tolerance": 1e-06,
+    "min_subgroup_weight": 0.2,
+    "require_subgroups_for_positive_claims": true
+  },
+  "inputs": {
+    "design": "experiments/018-claim-schema-v0/design.md",
+    "source_sha256": {
+      "src/longrun/controls/claim_gate.py": "1d8494e58173a0845bc778e6ae3e50b3552b12a3fc5043b6a09f515e8a271f54",
+      "src/longrun/controls/evidence.py": "3d7fc1e6c481e015b44a091d9b2bfb98796862a4571300ec298d1ab825a8496c",
+      "src/longrun/controls/confounding.py": "6d2df5ffbb826b674236dbfaf841402c1d53b341cd84a394c9a312267940a2de",
+      "src/longrun/cli.py": "9d4314b9b4055d9b8eaff0dbbd1047243af925c62dc27aebb15bd800403d5980",
+      "tests/test_claim_gate.py": "a93b72c31ada4085b768df9c89039d64afc142b93813985244c1e487ad861bf6",
+      "experiments/018-claim-schema-v0/design.md": "adcbd89d8b0d9117d71798874769c9cfa6e59812cd81576bb0d80a291e90f58c",
+      "experiments/018-claim-schema-v0/log.md": "262afdc7f96b0b3c79888f3e8af50200f0dea7c9c5c933c47900bc1db43d5cbb"
+    }
+  },
+  "outputs": {
+    "results/claim-schema.json": "eb3f0c2e51ea73f0786729d085effa9e9754b68be6080d3354c607f2ac9ebdac"
+  },
+  "canonical_output_sha256": "445130447acfde90587b98e810bcd39c1d7cba76838e65f2232bfa1f4e56a8d0",
+  "checks": {
+    "unit_tests": "157 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "strict_false_discoveries": 0,
+    "strict_valid_discovery_rate": 0.5,
+    "invalid_schema_rejected": "10/10",
+    "undeclared_confounding_detected": "0/10",
+    "undeclared_confounding_blocked_non_evaluable": "10/10",
+    "artifact_hash_check": "passed",
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "naive_false_discoveries": 80,
+    "gated_v0_false_discoveries": 30,
+    "gated_v1_false_discoveries": 20,
+    "strict_v2_false_discoveries": 0,
+    "strict_v2_valid_discovery_rate": 0.5,
+    "accepted": 20,
+    "rejected": 70,
+    "non_evaluable": 20,
+    "declared_confounding_detected": 10,
+    "undeclared_confounding_detected": 0,
+    "undeclared_confounding_blocked": 10,
+    "valid_undeclared_blocked": 10,
+    "invalid_schema_rejected": 10
+  },
+  "notes": [
+    "The 110 cases extend the historical 90-case confounding control.",
+    "Missing subgroup metadata yields non-evaluable, never detected.",
+    "The strict policy intentionally blocks valid but undeclared positive claims.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No live research-agent evaluation.",
+    "No causal adjustment or unmeasured-confounding sensitivity analysis.",
+    "No external validity, novelty, or publication claim."
+  ]
+}

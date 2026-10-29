@@ -1,0 +1,110 @@
+{
+  "name": "cpu-program-v0",
+  "version": 7,
+  "created_at": "2026-10-28T13:35:50Z",
+  "supersedes": "artifacts/cpu-program-v0/v6/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make world-model-calibration",
+    "make goal-drift-monitor",
+    "make program",
+    "make verify"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "estimator_seed": 20261027,
+    "estimator_repetitions": 200,
+    "estimator_bootstrap_replicates": 299,
+    "loop_episodes": 200,
+    "clear_v1_tasks": 300,
+    "layered_memory_episodes": 100,
+    "recovery_episodes_per_controller": 40,
+    "negative_control_cases": 80,
+    "goal_monitor_episodes": 60,
+    "world_model_samples_per_pair": 20
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "a85c33681f1465672a5b6db84b4a987c9dd7b684774b34e09a4123e28107d781",
+      "src/longrun/probes/world_model_calibration.py": "f804bbb6f4b10d4ed938a46842a2616e760c9a0d01b23bfcf2af746950ed764d",
+      "src/longrun/cli.py": "45d4fe9b39c0384c7d64b946842cb1f15ebcb6a1d3d5301610efbf4f9f8d5e7f",
+      "tests/test_world_model_calibration.py": "44ceabf3226823896d8a94035627fd937e3f0a102171bfb3faca377017c4ad63",
+      "experiments/014-world-model-calibration-v0/design.md": "034b34aa5a4b1b20ee1e215a29dc6156a8ec256f1f861fe9efb97d1b728c8c0c"
+    },
+    "benchmark_sha256": {
+      "benchmarks/clear-300-v1/tasks.json": "8537735a7751caf4a19a48473013b889ce364aa4d1fb4608a2168a62851b5d09",
+      "benchmarks/clear-300-v1/split-manifest.json": "cacf2a6469a6810600ff9dbdb4c4e872fcc5cfa7c6cb67eec3c73b7302f63517"
+    }
+  },
+  "outputs": {
+    "results/program.json": "6920882cdde80e6fe5e39ccdfa586feb3e8247ee44f642c9f083ff84b15fe7f4"
+  },
+  "canonical_output_sha256": "cd5345be8d557ee2dd3ef323d3475fb4f6f4946b38810d849f6bf38bc8a391c2",
+  "checks": {
+    "unit_tests": "116 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P4": {
+      "id_accuracy": 1.0,
+      "ood_accuracy": 0.25,
+      "id_mean_uncertainty": 0.5373182711665996,
+      "ood_mean_uncertainty": 1.0,
+      "ood_error_auroc": 0.5,
+      "planning_argmax": 0.5,
+      "planning_uncertainty_penalized": 0.5
+    },
+    "P6": {
+      "auroc": 0.8295472877596289,
+      "early_warning_rate": 0.0,
+      "false_alarm_rate": 0.08333333333333333,
+      "baseline_final_correct_rate": 0.5555555555555556,
+      "monitored_final_correct_rate": 0.5555555555555556
+    },
+    "P5": {
+      "negative_control_cases": 80,
+      "gated_false_discoveries": 10
+    },
+    "P7": {
+      "clear_v1_tasks": 300
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v1-cpu-substrate",
+    "P3": "implemented-v1-cpu-substrate",
+    "P4": "cpu-weak-calibration-probe",
+    "P5": "implemented-v1-cpu-substrate",
+    "P6": "cpu-weak-monitor-probe",
+    "P7": "implemented-v1-cpu-substrate",
+    "P8": "cpu-symbolic-probe"
+  },
+  "notes": [
+    "v7 adds the symbolic calibrated-world-model probe to P4.",
+    "High uncertainty separates unseen states but does not rank OOD errors or improve planning in v7.",
+    "No neural world model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No learned latent world model or MiniHack/Crafter/Atari integration.",
+    "No open-weight activation probe or runtime controller.",
+    "No external benchmark, leaderboard, novelty assessment, or paper submission."
+  ]
+}

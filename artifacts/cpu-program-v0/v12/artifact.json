@@ -1,0 +1,100 @@
+{
+  "name": "cpu-program-v0",
+  "version": 12,
+  "created_at": "2026-10-29T08:46:33Z",
+  "supersedes": "artifacts/cpu-program-v0/v11/artifact.json",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 -m compileall -q src tests scripts",
+    "make persistent-memory",
+    "make model-protocol",
+    "make real-faults",
+    "make program",
+    "make verify"
+  ],
+  "environment": {
+    "execution_role": "cloud-cpu",
+    "cloud_alias": "ecs-hz",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.12.15",
+    "accelerator": "none-established",
+    "gpu_used": false,
+    "model_loaded": false,
+    "network_calls": 0,
+    "external_api_calls": 0,
+    "paid_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "persistent_memory_episodes": 32,
+    "model_protocol_dry_run_tasks": 240,
+    "real_fault_case_pairs": 20
+  },
+  "inputs": {
+    "source_sha256": {
+      "src/longrun/program.py": "20c29c5d5b546318ca840161377d6d6d51385820a532e5238ad8db8e8ec513bb",
+      "src/longrun/memory/sqlite_store.py": "695a1d8dd013f08eca9602123a0df442bc348a2f7cf386ae4650e4d956f3396b",
+      "src/longrun/evaluation/protocol.py": "c271320abfb9c5efb94bc782b799d6ccd0f90e2a04aa291da579698c7347cb91",
+      "src/longrun/runtime/real_faults.py": "54e4e0f9b8e08c7598b4f44cb96db7eea189bc5836c19f40026cb94a26d87d89",
+      "src/longrun/cli.py": "cd022081fddf911d0a54e2df64f5d81c306bd5766f7292dc0ec6894561c02f15",
+      "Makefile": "5e8a4c1381c1babe1f2a92187a9c1120246deef91125d347844217039b226121"
+    }
+  },
+  "outputs": {
+    "results/program.json": "d4f98d78b94b5e66f8a65167b5bc58476225a0ad9f9067639e30469b6354221f"
+  },
+  "canonical_output_sha256": "8fc96ead495dc8739b47878b029b33b113b38133b84602639d4f3478b2f151f1",
+  "checks": {
+    "unit_tests": "174 passed",
+    "compileall": "passed",
+    "fixed_seed_repeat_canonical_equal": true,
+    "artifact_hash_check": "38/38 versions passed",
+    "all_eight_cpu_probes_completed": true,
+    "gpu_not_used": true,
+    "external_api_calls_zero": true
+  },
+  "key_observations": {
+    "P2_real_faults": {
+      "retry_only": 0.0,
+      "rollback": 0.8,
+      "state_check_replan": 1.0,
+      "replan": 1.0
+    },
+    "P3_persistent_memory": {
+      "reopened_retrieval_correct_rate": 1.0,
+      "poison_or_stale_selection_rate": 0.0,
+      "rollback_atomic": true,
+      "integrity_check": "ok"
+    },
+    "P7_model_protocol": {
+      "protocol_sha256": "1916f54b2d1a870c850bb2be7f7badae1f1e4193849635497c5f83297cd76655",
+      "dry_run_tasks": 240,
+      "test_split": "sealed-not-accessed"
+    }
+  },
+  "work_package_status": {
+    "P1": "cpu-symbolic-probe",
+    "P2": "implemented-v2-cpu-substrate",
+    "P3": "implemented-v2-cpu-substrate",
+    "P4": "cpu-weak-calibration-probe",
+    "P5": "implemented-v2-cpu-substrate",
+    "P6": "cpu-weak-monitor-probe",
+    "P7": "implemented-v2-cpu-substrate",
+    "P8": "cpu-weak-controller-probe"
+  },
+  "notes": [
+    "v12 adds persistent SQLite memory, a frozen CLEAR-300-v1 train/dev dry-run protocol, and real filesystem/subprocess recovery.",
+    "The 60-task CLEAR test split remains sealed and no model is downloaded or loaded.",
+    "P2 and P3 now expose v2 engineering controls while P1/P4/P6/P8 remain symbolic probes.",
+    "No model, GPU, external API, account change, or submission was used."
+  ],
+  "not_completed": [
+    "No language-model evaluation.",
+    "No external memory benchmark or leaderboard.",
+    "No production filesystem integration.",
+    "No novelty, publication, or AGI capability claim."
+  ]
+}

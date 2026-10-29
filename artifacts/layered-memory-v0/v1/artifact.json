@@ -1,0 +1,67 @@
+{
+  "name": "layered-memory-v0",
+  "version": 1,
+  "created_at": "2026-10-28T12:22:53Z",
+  "status": "superseded",
+  "superseded_by": "artifacts/layered-memory-v0/v2/artifact.json",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make layered-memory",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 scripts/verify_artifact.py artifacts/layered-memory-v0/v1"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0
+  },
+  "config": {
+    "seed": 20261028,
+    "episodes": 100,
+    "layers": [
+      "episodic",
+      "semantic",
+      "procedural"
+    ],
+    "policies": [
+      "flat-rag",
+      "layered-provenance"
+    ]
+  },
+  "inputs": {
+    "design": "experiments/010-layered-memory-v0/design.md",
+    "source_sha256": {
+      "src/longrun/memory/layered.py": "c9707d5005684d4029dddbf35ef7754eafa66ae341dbac9e4a836d73445f581b",
+      "src/longrun/cli.py": "1d7bb8438e900eb80a5d95ce6b5a8865d8e0b6343ce7193372f5fd7c2cdf0f11",
+      "tests/test_layered_memory.py": "e1129ce3373f91e12c8cee2a4b13bd6e2cea3d7f6c7f938f5d8a23f3f7dac295",
+      "experiments/010-layered-memory-v0/design.md": "99db3b6728a1f5f030e696114cd74b44a735de97cda49801a926140f6574ba2b"
+    }
+  },
+  "outputs": {
+    "results/layered-memory.json": "b229eb8497badb364717767ed96cb053a7a8dd3ebd6e71bcc1ade2050ef1715e"
+  },
+  "canonical_output_sha256": "0b9df56fe35d24b543777eeae67a0c98dfb3e2f91891671ecf2936d892ad9f11",
+  "canonicalization": "Remove only generated_at, then use sorted keys, compact separators, ASCII escaping, and disallow NaN.",
+  "checks": {
+    "unit_tests": "104 passed",
+    "flat_rag_poison_rate": 1.0,
+    "layered_provenance_poison_rate": 0.0,
+    "layered_final_correct_rate": 1.0,
+    "conflict_cases": 34,
+    "repeat_determinism": true
+  },
+  "not_completed": [
+    "No LongMemEval or LoCoMo integration.",
+    "No persistent vector store or cross-process memory service.",
+    "No LLM or agent evaluation.",
+    "No claim that the synthetic poison rate predicts real-world behavior."
+  ],
+  "notes": [
+    "The probe compares a deliberately recency-only flat policy with a layer-aware provenance policy.",
+    "No GPU, model download, external API, account change, or submission was used."
+  ]
+}

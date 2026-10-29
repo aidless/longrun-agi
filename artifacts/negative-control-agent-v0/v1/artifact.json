@@ -1,0 +1,70 @@
+{
+  "name": "negative-control-agent-v0",
+  "version": 1,
+  "created_at": "2026-10-28T12:44:32Z",
+  "status": "harness-validation",
+  "scientific_result": false,
+  "novelty_status": "not-established",
+  "commands": [
+    "make research-agent",
+    "PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings",
+    "python3 scripts/verify_artifact.py artifacts/negative-control-agent-v0/v1"
+  ],
+  "environment": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "accelerator": "none",
+    "gpu_used": false,
+    "network_calls": 0,
+    "external_api_calls": 0
+  },
+  "config": {
+    "cases": 80,
+    "cases_per_category": 10,
+    "categories": [
+      "valid-positive",
+      "valid-negative",
+      "split-overlap",
+      "target-leakage",
+      "broken-baseline",
+      "p-hacking",
+      "unreproducible",
+      "confounded"
+    ]
+  },
+  "inputs": {
+    "design": "experiments/012-negative-control-agent-v0/design.md",
+    "source_sha256": {
+      "src/longrun/controls/research_agent.py": "a0c98e7bbe9c7e262e75a4d513b66df4ae81aeac2d38329cc03f9d37dc02d6c0",
+      "src/longrun/cli.py": "5ef2f6754daa6e43b00407977160bb063b30f034f2769155a5e9c1de08842a6e",
+      "tests/test_research_agent.py": "4888e1f733ab4c1795a3c3c79ed41bd7e34de2100eca28fb05714411d1bdca56",
+      "experiments/012-negative-control-agent-v0/design.md": "479d37a48404917fd697db157f9cb6242d57ed5b20dc57335a7eee23f2bb04a0"
+    }
+  },
+  "outputs": {
+    "results/research-agent.json": "e97852ed4bbb226e47d3970962528fcd41fdd160d785bbb2857aa0ef4960825a"
+  },
+  "canonical_output_sha256": "5ca82bbea3e8e8b15abec3bc0ebb40ffab71a2a69eaed9d1dcd09a5f08fb25c8",
+  "key_observations": {
+    "naive_claims": 70,
+    "naive_false_discoveries": 60,
+    "naive_false_discovery_rate": 0.8571428571428571,
+    "gated_claims": 20,
+    "gated_true_discoveries": 10,
+    "gated_false_discoveries": 10,
+    "gated_false_discovery_rate": 0.5,
+    "gated_valid_discovery_rate": 1.0,
+    "confounding_blind_spot_cases": 10,
+    "confounding_detected_by_gate": false
+  },
+  "notes": [
+    "The gate catches the implemented leakage, baseline, seed, and reproducibility controls.",
+    "Confounding is an explicit residual blind spot in v0.",
+    "This is a synthetic 80-case probe, not a live research agent."
+  ],
+  "not_completed": [
+    "No model/API research agent.",
+    "No live experiment execution.",
+    "No claim of general scientific-integrity coverage."
+  ]
+}
