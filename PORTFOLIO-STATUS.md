@@ -16,7 +16,7 @@ Current state:
 - Frozen CLEAR-300-v1 tasks: `300` (`180/60/60` train/dev/test).
 - Manifest experiments: `15`.
 - Registered artifacts after this audit: `18`.
-- Verification suite: `179` tests across `32` test files.
+- Verification suite: `190` tests across `33` test files.
 - Model evaluations completed: `0`.
 - GPU jobs, model downloads, paid API calls, submissions, and publications: `0`.
 

@@ -6,17 +6,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_evidence_site_exposes_sources_and_boundaries():
     page = (ROOT / "docs/index.html").read_text(encoding="utf-8")
-    assert '<main id="main-content">' in page
-    assert "Model gate: HOLD" in page
-    assert "179" in page
-    assert "83/83" in page
-    assert "38/38" in page
-    assert "scripted-policy" in page.lower()
-    assert "external benchmark" in page.lower()
-    assert "../artifacts/portfolio-v4/v1/artifact.json" in page
-    assert "../MODEL-GATE.md" in page
-    assert "data-package=\"P1\"" in page
-    assert "data-package=\"P8\"" in page
+    archive = (ROOT / "docs/archive/index.html").read_text(encoding="utf-8")
+    control = (ROOT / "docs/control/index.html").read_text(encoding="utf-8")
+    assert '<main id="main">' in page
+    assert "MODEL GATE · HOLD" in page
+    assert "190" in page
+    assert "83/83" in page and "38/38" in page
+    assert "Scripted-policy" in page
+    assert "external benchmark" in (ROOT / "docs/assets/evidence.js").read_text(encoding="utf-8")
+    assert "../artifacts/" in archive
+    assert "data-package=\"P1\"" in control
+    assert "data-package=\"P8\"" in control
 
 
 def test_site_is_dependency_free_and_accessible():
@@ -24,7 +24,7 @@ def test_site_is_dependency_free_and_accessible():
     css = (ROOT / "docs/assets/site.css").read_text(encoding="utf-8")
     script = (ROOT / "docs/assets/site.js").read_text(encoding="utf-8")
     assert "skip-link" in page
-    assert 'aria-label="Evidence filters"' in page
+    assert 'aria-label="证据筛选"' in (ROOT / "docs/archive/index.html").read_text(encoding="utf-8")
     assert "prefers-reduced-motion" in css
     assert "https://cdn" not in page
     assert "fetch(" not in script

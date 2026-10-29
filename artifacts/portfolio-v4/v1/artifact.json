@@ -27,7 +27,7 @@
   },
   "config": {
     "work_packages": 8,
-    "unit_tests_expected": 179,
+    "unit_tests_expected": 190,
     "portfolio_checks_expected": 77,
     "disk_used_percent_limit": 90,
     "disk_free_reserve_gib": 20,
@@ -36,10 +36,10 @@
   },
   "inputs": {
     "source_sha256": {
-      "README.md": "91dfd61d7b3ee3b491b36c65bf3e084c998d42b11adc27bd63178a5755631e7f",
+      "README.md": "7da42a582dfb85a61fabb0d9b72f8b3742a83fbb3b98fc4425b9e1f3a3588b47",
       "PROGRAM.md": "e168812503fb86cf2b0b697f1717102b89cb84151fed0f02d00e9ea6cfdc205b",
       "ORIGINAL-EIGHT.md": "fd69856af0bdf44cbd0e1894c5cce0ab8a5d7a2ccaaf31c6e11589f9ed501ac9",
-      "PORTFOLIO-STATUS.md": "e4b378ca46431ae63a898d133052afbb86eb27751cb6315ed3d3323835b840bf",
+      "PORTFOLIO-STATUS.md": "b85bb968f0b62df8469c672963e9eb83361a83158a770d05497d48ef6a2c3ce2",
       "MODEL-GATE.md": "18e3a2ed0e8d3684cd8a907e630e18b6505938129572efc8571a460631a4b239",
       "research-manifest.json": "d8d59a688dd176fecb6e7ff6c6a81e337997869059b336b5ad340f62421d3987",
       "scripts/audit_portfolio.py": "56db35a8d7dff96654462da2f5e1b026bcc32636306e28ec12a70417bfc23854",
@@ -53,7 +53,7 @@
     "results/environment-audit.json": "f1595d2c58fc4406db63b3d1f29b75ba1af45b0be0bc3e359147c6cc22b76bec"
   },
   "checks": {
-    "unit_tests": "179 passed",
+    "unit_tests": "190 passed",
     "compileall": "passed",
     "portfolio_integrity": "83/83 checks passed",
     "verified_outputs": 30,

@@ -2,8 +2,9 @@
 
 LongRun-AGI is a CPU-first research workspace for long-horizon agents that must
 reason, act, remember, recover from failures, and stay auditable. It is released
-under the MIT License. The public evidence dashboard is available at
-[aidless.github.io/longrun-agi](https://aidless.github.io/longrun-agi/).
+under the MIT License. The bilingual Research OS is available at
+[aidless.github.io/longrun-agi](https://aidless.github.io/longrun-agi/), with dedicated
+evidence archive, mission control, research map, and verifiable paper views.
 
 This repository starts with the no-GPU slice:
 
