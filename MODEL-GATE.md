@@ -131,4 +131,6 @@ Stop before or during a run if any of these occurs:
 - [ ] A reviewer confirms that no result will be labeled capability, novelty,
       or publication-ready without separate evidence.
 
+Use `MODEL-GATE-APPLICATION.md` to prepare the exact approval record. Filling it out does not authorize execution.
+
 Until every item is recorded, the decision remains **HOLD**.

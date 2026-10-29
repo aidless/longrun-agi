@@ -1,0 +1,24 @@
+name: Evidence proposal
+description: Propose an experiment or protocol without starting gated compute
+title: "[evidence] "
+labels: [evidence]
+body:
+  - type: textarea
+    id: question
+    attributes: {label: Scientific question, description: State the decision the evidence would change.}
+    validations: {required: true}
+  - type: textarea
+    id: protocol
+    attributes: {label: Protocol and falsification rule, description: Include controls, metric, stop rule, and negative-result handling.}
+    validations: {required: true}
+  - type: textarea
+    id: resources
+    attributes: {label: Resources and external actions, description: List model, data, GPU, network, API, account, or publication needs.}
+    validations: {required: true}
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary
+      options:
+        - label: This issue is a proposal and does not authorize gated execution.
+          required: true

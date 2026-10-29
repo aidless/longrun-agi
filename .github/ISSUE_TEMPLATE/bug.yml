@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible harness, verification, or documentation defect
+title: "[bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: revision
+    attributes: {label: Revision and environment, description: Include commit SHA, Python version, and OS.}
+    validations: {required: true}
+  - type: textarea
+    id: reproduce
+    attributes: {label: Minimal reproduction, description: Give the shortest safe command and observed output.}
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes: {label: Expected behavior}
+    validations: {required: true}
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private data, and account information.
+          required: true
+        - label: This report does not require opening the sealed test split.
+          required: true

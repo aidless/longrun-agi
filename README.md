@@ -2,7 +2,8 @@
 
 LongRun-AGI is a CPU-first research workspace for long-horizon agents that must
 reason, act, remember, recover from failures, and stay auditable. It is released
-under the MIT License.
+under the MIT License. The public evidence dashboard is available at
+[aidless.github.io/longrun-agi](https://aidless.github.io/longrun-agi/).
 
 This repository starts with the no-GPU slice:
 
@@ -149,4 +150,6 @@ artifacts/            versioned, reproducible results and provenance
 
 The canonical machine-readable research state is `research-manifest.json`.
 The user-supplied eight research points are mapped in `ORIGINAL-EIGHT.md`.
-Portfolio integrity is checked by `scripts/audit_portfolio.py`.
+Portfolio integrity is checked by `scripts/audit_portfolio.py`. See
+`CONTRIBUTING.md`, `ROADMAP.md`, and `MODEL-GATE-APPLICATION.md` before proposing
+new evidence or gated model work.
