@@ -73,7 +73,10 @@ POLICIES = (
         refresh_state=False,
         authoritative_spec=False,
         restore_on_retry=False,
-        timeout_seconds=0.05,
+        # 0.05s 曾导致 flaky：worker 子进程启动+运行在该共享机上 p50≈0.05s，
+        # 超时预算贴着启动抖动下限，transient-process 第 2 次（健康）尝试会随机超时。
+        # 0.25s 给启动抖动 ~5x 余量，仍低于 timeout cell 的 0.3s sleep，保留对比语义。
+        timeout_seconds=0.25,
     ),
     RecoveryPolicy(
         name="rollback",

@@ -105,6 +105,22 @@ integrity is not model authorization.
 
 MIT. See `LICENSE`.
 
+## 复算（Reproduction）
+
+README 中所有结果数字都来自本仓落盘证据，可重算：
+
+| 结果 | 命令 | 依据 |
+|---|---|---|
+| 190 个测试通过 | `python3 -m pytest -q`（或 `make test`） | `tests/` 下 36 个 `test_*.py` |
+| CPU 程序 8 个探针 | `python3 -m longrun.cli program --quick --output /tmp/program.json` | `src/longrun/program.py` 的 `run_cpu_program` |
+| 真实故障恢复矩阵 | `python3 -m longrun.cli real-faults --output experiments/021-real-faults-v0/results/real-faults.json` | `src/longrun/runtime/real_faults.py` |
+| 组合/三因子/估计量效度 | `make factorial` / `make three-factor` / `make estimator-validity` | `src/longrun/analysis/` |
+| 工件完整性 | `make verify`（`scripts/verify_artifact.py artifacts/<name>/<v>`） | `artifacts/` 下版本化工件 |
+
+**关键数值**：`retry-only` 恢复率 `< 1.0`（真实故障矩阵，`src/longrun/runtime/real_faults.py`）；`replan` / `state-check-replan` 恢复率 `== 1.0`；CPU 程序 `scientific_result == False`、`gpu_used == False`（`src/longrun/program.py`）。
+
+> **修复记录**：`real_faults.py` 的 `retry-only` 策略超时原为 `0.05s`，worker 子进程启动+运行在共享机上 p50≈0.05s，导致 `transient-process` 第 2 次（健康）尝试随机超时，矩阵出现 flaky（`test_real_fault_matrix_is_deterministic` 与 `test_cpu_program_is_deterministic` 偶发失败）。已提至 `0.25s`（启动抖动 ~5× 余量，仍低于 `timeout` cell 的 `0.3s` sleep，保留对比语义）。修复后 120/120 次运行全确定性，190 测试全绿。
+
 ## Research boundaries
 
 - The generated tasks are a development benchmark, not a validated
