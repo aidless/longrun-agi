@@ -104,6 +104,31 @@
       "id": "H15",
       "text": "A contextual bandit over retrieve/reflect/tool/write-memory/stop can produce a stable action mix on CLEAR-300 contexts, but the v0 controller does not beat fixed reflect and does not learn to write memory.",
       "status": "inconclusive"
+    },
+    {
+      "id": "H16",
+      "text": "In a serial-carryover CLEAR split, per-session pass rate declines monotonically in session index for at least one scripted policy, and the first-session-at-or-below-threshold onset occurs strictly before the mean decline exceeds the deterministic noise band.",
+      "status": "proposed"
+    },
+    {
+      "id": "H17",
+      "text": "In a serial-carryover CLEAR split, per-session variance amplification grows with session index faster than the mean declines, so variance is an earlier warning signal than the mean.",
+      "status": "proposed"
+    },
+    {
+      "id": "H18",
+      "text": "Accumulated reusable state produces measurable erosion on a previously-passing frozen task set, and the erosion is larger for procedural state than for episodic state.",
+      "status": "proposed"
+    },
+    {
+      "id": "H19",
+      "text": "Deleted memory leaves a behavioural residual detectable in tool-choice distributions even when the reported context no longer contains it.",
+      "status": "proposed"
+    },
+    {
+      "id": "H20",
+      "text": "At least one headline metric in the portfolio is blind to a failure class that another metric detects, so no single metric is sufficient to support the portfolio's claims.",
+      "status": "proposed"
     }
   ],
   "loop": {

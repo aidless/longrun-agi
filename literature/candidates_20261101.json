@@ -1,0 +1,795 @@
+{
+  "source": "paper_search (20 international + 3 Indonesian sources); see search_20261101.md for the query log and per-source status",
+  "retrieved_at": "2026-11-01T20:40:00-08:00",
+  "total": 59,
+  "limitations": [
+    "Metadata-only. No full text was read in this pass; every quantitative value in the search log is abstract-reported and must be re-audited before it enters a paper.",
+    "arXiv answered HTTP 429 or timed out on every query, so arXiv identifiers here were reached through OpenAlex/OpenReview mirrors and still need arxiv.org/abs verification.",
+    "author is null where the index did not report an author list; it was left null rather than guessed.",
+    "Anonymous OpenReview submissions are recorded with authors null by design, not by omission.",
+    "Entries whose title carries a '(title as indexed; verify on arXiv)' note were reconstructed from the index and are not yet confirmed on arXiv."
+  ],
+  "gaps": {
+    "G1": "series axis: nothing in the portfolio measures a sequence of dependent sessions",
+    "G2": "memory lifecycle: sleeper/delayed poison, consolidation laundering, deletion residuals",
+    "G3": "self-evolution erosion: accumulated reusable state may cost capability",
+    "G4": "verifier-gap x evidence-gate bridge; near-miss (right outcome, wrong path)",
+    "G5": "metric validity: perturbation batteries, evaluation blindness, benchmark-build trust",
+    "G6": "goal drift mechanisms for the inconclusive H12/H13",
+    "G7": "world-model compounding error for the weak P4",
+    "G8": "harness/context integrity, applicable to this repository's own persistence model"
+  },
+  "entries": [
+    {
+      "id": "ssrn-6368071",
+      "title": "Long-Horizon Reliability in Human-LLM Interaction",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.6368071",
+      "arxiv_id": null,
+      "source": "ssrn",
+      "gap": "G1",
+      "note": "qualitative taxonomy; introduces narrative arc confabulation"
+    },
+    {
+      "id": "ssrn-6491218",
+      "title": "Invisible AI Failure",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.6491218",
+      "arxiv_id": null,
+      "source": "ssrn",
+      "gap": "G1",
+      "note": "76514 messages / 226 sessions / 3226 hours of sustained interaction"
+    },
+    {
+      "id": "arxiv-2603.29231",
+      "title": "Beyond pass@1: A Reliability Science Framework for Long-Horizon LLM Agents",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2603.29231",
+      "source": "openalex",
+      "gap": "G1",
+      "note": "reliability decay curve, variance amplification, graceful degradation, meltdown onset; abstract reports 10 models / 396 tasks / 23392 episodes"
+    },
+    {
+      "id": "arxiv-2609.38712",
+      "title": "Staying on Task: Testing the Foundations of Long-Horizon Agent Reliability",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2609.38712",
+      "source": "openalex",
+      "gap": "G1",
+      "note": "long-transduction diagnostic"
+    },
+    {
+      "id": "openreview-ladder",
+      "title": "LADDER: A Long-horizon Robot Manipulation Benchmark",
+      "authors": null,
+      "year": 2026,
+      "venue": "OpenReview (ICLR 2027 submission)",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G1",
+      "note": "anonymous; 1->10 subgoals, 145 tasks, 2024 episodes per system; abstract reports 85.4% single-subgoal falling to near zero on extended tasks"
+    },
+    {
+      "id": "openreview-tapestry",
+      "title": "Tapestry: Enabling Continuous Collaboration Across Episodes in Embodied Multi-Agent Systems",
+      "authors": null,
+      "year": 2026,
+      "venue": "OpenReview (ICLR 2027 submission)",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G1",
+      "note": "anonymous; argues benchmarks isolate episodes; continuous task streams in evolving environments"
+    },
+    {
+      "id": "openreview-web2longtraj",
+      "title": "Web2LongTraj: Scaling Long-Horizon Agent Trajectories from Natural Web Corpora for Mid-Training",
+      "authors": null,
+      "year": 2026,
+      "venue": "OpenReview (ICLR 2027 submission)",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G1",
+      "note": "anonymous; AnchorStretch and ArtifactStitch operators grow short episodes into long-horizon ones"
+    },
+    {
+      "id": "openreview-maplebench",
+      "title": "MAPLEBench: A Benchmark for Multi-Agent Privacy in Long-horizon Executions",
+      "authors": null,
+      "year": 2026,
+      "venue": "OpenReview (ICLR 2027 submission)",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G1",
+      "note": "anonymous; leakage may emerge, propagate or resurface across extended interactions; 51 tasks"
+    },
+    {
+      "id": "emnlp-2026-2247",
+      "title": "CoEmbod: A Long-Horizon Benchmark for Multi-Agent Embodied Cooperation with Diverse Inter-Agent Dependencies",
+      "authors": null,
+      "year": 2026,
+      "venue": "EMNLP 2026",
+      "doi": "10.18653/2026.emnlp-main.2247",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G1",
+      "note": "explicit inter-agent dependency structure"
+    },
+    {
+      "id": "arxiv-2608.11216",
+      "title": "AutoWorldModel-Bench: A State-Centric Benchmark for Automated World-Model Research",
+      "authors": [
+        "Marjan Moodi",
+        "Xuankang Zhu",
+        "Fernando de Mesentier Silva"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2608.11216",
+      "source": "openalex",
+      "gap": "G1/G7",
+      "note": "closed-loop improvement under fixed compute budget; 64 sessions; 8 game environments"
+    },
+    {
+      "id": "ssrn-7118580",
+      "title": "What Reliability Metrics Miss: Evidence from NJ Transit",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.7118580",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G1",
+      "note": "on-time performance explains lateness but not breakdown; a second metric is required"
+    },
+    {
+      "id": "arxiv-2609.02459-civ",
+      "title": "CivBench",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2609.02459",
+      "source": "openalex",
+      "gap": "G1",
+      "note": "300+ turns, 76 MCP tools, PMR + RAG@10 (title as indexed; verify on arXiv)"
+    },
+    {
+      "id": "arxiv-2606.16613-coffee",
+      "title": "CoffeeBench",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2606.16613",
+      "source": "openalex",
+      "gap": "G1",
+      "note": "90-day multi-agent economic simulation (title as indexed; verify on arXiv)"
+    },
+    {
+      "id": "arxiv-2602.05843-odyssey",
+      "title": "OdysseyArena",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2602.05843",
+      "source": "openalex",
+      "gap": "G1",
+      "note": "inductive long-horizon arena (title as indexed; verify on arXiv)"
+    },
+    {
+      "id": "arxiv-2605.15338",
+      "title": "Hidden in Memory: Sleeper Memory Poisoning in LLM Agents",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2605.15338",
+      "source": "openalex",
+      "gap": "G2",
+      "note": "delayed trigger, dormant across sessions, re-emerges later"
+    },
+    {
+      "id": "arxiv-2607.29167",
+      "title": "Memory Provenance Laundering in LLM Agents",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2607.29167",
+      "source": "openalex",
+      "gap": "G2",
+      "note": "consolidation strips provenance; PPMF"
+    },
+    {
+      "id": "ssrn-7428966",
+      "title": "Deletion Is Not Forgetting: Behavioral Residuals of Deleted Memories",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.7428966",
+      "arxiv_id": null,
+      "source": "ssrn",
+      "gap": "G2",
+      "note": "challenges the active-forgetting assumption"
+    },
+    {
+      "id": "ssrn-7480138",
+      "title": "PACMI: Provenance-Aware Cascading Memory Invalidation",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.7480138",
+      "arxiv_id": null,
+      "source": "ssrn",
+      "gap": "G2",
+      "note": "dependency graph plus a four-state validity lattice"
+    },
+    {
+      "id": "arxiv-2605.26154",
+      "title": "MemMorph",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2605.26154",
+      "source": "openalex",
+      "gap": "G2",
+      "note": "memory poisoning that hijacks tool selection"
+    },
+    {
+      "id": "arxiv-2609.00523",
+      "title": "PipePoison",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2609.00523",
+      "source": "openalex",
+      "gap": "G2",
+      "note": "end-to-end indirect poisoning"
+    },
+    {
+      "id": "preprints-202608-1369",
+      "title": "Retrieval Beats Cheap Structured Memory",
+      "authors": null,
+      "year": 2026,
+      "venue": "Preprints.org",
+      "doi": "10.20944/preprints202608.1369.v1",
+      "arxiv_id": null,
+      "source": "preprints",
+      "gap": "G2",
+      "note": "LoCoMo/LongMemEval; abstract reports ~98% fewer tokens and ~4.8% cost for BM25-style retrieval"
+    },
+    {
+      "id": "arxiv-2610.25858",
+      "title": "Are Self-Evolving Agents Continual Learners?",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2610.25858",
+      "source": "openalex",
+      "gap": "G3",
+      "note": "ReasoningBank/GEPA/Meta-Harness on drifting streams; finds they are not effective continual learners"
+    },
+    {
+      "id": "arxiv-2605.09315",
+      "title": "Do Self-Evolving Agents Forget? Capability Degradation and Preservation",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2605.09315",
+      "source": "openalex",
+      "gap": "G3",
+      "note": "capability erosion across workflow/skill/model/memory channels"
+    },
+    {
+      "id": "arxiv-2610.11373",
+      "title": "From a Prompt to Repertoires",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2610.11373",
+      "source": "openalex",
+      "gap": "G3",
+      "note": "prompt optimization causes catastrophic forgetting; evolving functional repertoires"
+    },
+    {
+      "id": "arxiv-2606.25115",
+      "title": "Forget to Improve: On-Device LLM-Agent Continual Learning via Budget-Curated Memory",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2606.25115",
+      "source": "openalex",
+      "gap": "G3",
+      "note": "net-value-per-byte KEEP/evict under RAM and energy budgets"
+    },
+    {
+      "id": "rg-23319-74403",
+      "title": "Safety in Self-Evolving Agents: A Survey",
+      "authors": [
+        "Jiahao Chen",
+        "Zhou Feng",
+        "Oubo Ma"
+      ],
+      "year": 2026,
+      "venue": "ResearchGate preprint",
+      "doi": "10.13140/rg.2.2.23319.74403",
+      "arxiv_id": null,
+      "source": "openalex",
+      "gap": "G3",
+      "note": "SAVER; once experience becomes reusable state, past events become future causes"
+    },
+    {
+      "id": "tpami-forgetting",
+      "title": "A Comprehensive Survey of Forgetting in Deep Learning Beyond Continual Learning",
+      "authors": null,
+      "year": 2024,
+      "venue": "IEEE TPAMI",
+      "doi": "10.1109/tpami.2024.3498346",
+      "arxiv_id": null,
+      "source": "openalex",
+      "gap": "G3",
+      "note": "forgetting as a double-edged property"
+    },
+    {
+      "id": "emnlp-findings-1689",
+      "title": "PTCG-Bench: Can LLM Agents Master Pokemon Trading Card Game?",
+      "authors": [
+        "Dongdong Hua",
+        "Yifei Sun",
+        "R.L. Huang"
+      ],
+      "year": 2026,
+      "venue": "Findings of EMNLP 2026",
+      "doi": "10.18653/2026.findings-emnlp.1689",
+      "arxiv_id": null,
+      "source": "openalex",
+      "gap": "G3",
+      "note": "abstract reports sustained and stable self-evolution remains challenging"
+    },
+    {
+      "id": "openreview-verifier-rlvr",
+      "title": "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
+      "authors": null,
+      "year": 2026,
+      "venue": "OpenReview",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G4",
+      "note": "argues in-loop observations cannot identify accepted-but-wrong outputs; external audit required"
+    },
+    {
+      "id": "arxiv-2605.12474",
+      "title": "Reward Hacking in Rubric-Based RL",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2605.12474",
+      "source": "openalex",
+      "gap": "G4",
+      "note": "separates verifier failure from rubric-design limitation; three-judge cross-family panel"
+    },
+    {
+      "id": "arxiv-2510.00915",
+      "title": "RL with Verifiable yet Noisy Rewards under Imperfect Verifiers",
+      "authors": null,
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2510.00915",
+      "source": "openalex",
+      "gap": "G4",
+      "note": "asymmetric FP/FN rates with backward/forward correction"
+    },
+    {
+      "id": "arxiv-2602.18037",
+      "title": "Gradient Regularization Mitigates Reward Hacking",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2602.18037",
+      "source": "openalex",
+      "gap": "G4",
+      "note": ""
+    },
+    {
+      "id": "ssrn-7346356",
+      "title": "Why the Gain of RLVR Does Not Decompose",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.7346356",
+      "arxiv_id": null,
+      "source": "ssrn",
+      "gap": "G4",
+      "note": "pre-registered intervention; interaction term dominates"
+    },
+    {
+      "id": "arxiv-2603.29665",
+      "title": "Near-Miss: Latent Policy Failure Detection in Agentic Workflows",
+      "authors": null,
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2603.29665",
+      "source": "openalex",
+      "gap": "G4",
+      "note": "skips a required check but reaches the correct outcome by luck; also DOI 10.18653/v1/2026.gem-main.30"
+    },
+    {
+      "id": "emnlp-2026-industry-25",
+      "title": "WorkflowPerturb: Calibrated Stress Tests for Evaluating Multi-Agent Workflow Metrics",
+      "authors": [
+        "Madhav Kanda",
+        "Sharad Agarwal"
+      ],
+      "year": 2026,
+      "venue": "EMNLP 2026 (industry)",
+      "doi": "10.18653/2026.emnlp-industry.25",
+      "arxiv_id": null,
+      "source": "openalex",
+      "gap": "G5",
+      "note": "4973 golden workflows x 44757 graded perturbations; calibrates the metrics themselves"
+    },
+    {
+      "id": "arxiv-2608.06940",
+      "title": "Blind to the Pivotal Vote: Aggregate Independence Metrics Miss Where Verification Actually Helps",
+      "authors": [
+        "Yang Shu"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2608.06940",
+      "source": "openalex",
+      "gap": "G5",
+      "note": "nine judges ~ two independent; gain concentrates on one-vote-margin queries (+10.4 to +23.3 pp)"
+    },
+    {
+      "id": "rs-11407058",
+      "title": "Agents Can Build Benchmarks. Approvals Missed What Probing Found: 22 Cases",
+      "authors": [
+        "Pooria Arab"
+      ],
+      "year": 2026,
+      "venue": "Research Square",
+      "doi": "10.21203/rs.3.rs-11407058/v1",
+      "arxiv_id": null,
+      "source": "openalex",
+      "gap": "G5",
+      "note": "22 agent-built benchmarks; 123 PRs green, council approved 94, probing found defects in all 22"
+    },
+    {
+      "id": "arxiv-2603.12564",
+      "title": "Sell Me This Stock: Unsafe Recommendation Drift in LLM Agents",
+      "authors": [
+        "Zekun Wu",
+        "Sahan Bulathwela"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2603.12564",
+      "source": "openalex",
+      "gap": "G5",
+      "note": "names evaluation blindness; 65-99% risk-mismatched turns while NDCG is unchanged"
+    },
+    {
+      "id": "ieee-access-3696096",
+      "title": "Benchmarking Reference-Free LLM Agent Robustness Under Schema, Policy, and Toolset Drift",
+      "authors": [
+        "Mohammad Hasbi Assidiqi",
+        "Daniyal Alghazzawi",
+        "Suaad Alarifi"
+      ],
+      "year": 2026,
+      "venue": "IEEE Access",
+      "doi": "10.1109/access.2026.3696096",
+      "arxiv_id": null,
+      "source": "ieee",
+      "gap": "G5",
+      "note": ""
+    },
+    {
+      "id": "arxiv-2510.07777",
+      "title": "Drift No More? Context Equilibria in Multi-Turn LLM Interactions",
+      "authors": [
+        "Vardhan Dongre",
+        "Viet Dac Lai"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2510.07777",
+      "source": "semantic",
+      "gap": "G6",
+      "note": "turn-wise KL against a goal-consistent reference; bounded stochastic process with restoring force"
+    },
+    {
+      "id": "arxiv-2602.02455",
+      "title": "Drift-Bench: Diagnosing Cooperative Breakdowns in LLM Agents under Input Faults",
+      "authors": [
+        "Han Bao",
+        "Zeyuan Zhang",
+        "Pengcheng Jing"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv_id": "2602.02455",
+      "source": "openalex",
+      "gap": "G6",
+      "note": "multi-turn clarification under input faults"
+    },
+    {
+      "id": "ssrn-6420858",
+      "title": "Behavioral Drift in Multi-Agent LLM Systems: Emergent Failure Modes, Cascade Dynamics, and Measurement Challenges",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.6420858",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G6",
+      "note": "200-500 turns; agent collapse, cascade propagation, compensatory expansion"
+    },
+    {
+      "id": "nrfhh-3575",
+      "title": "Semantic Drift in Autonomous Agents: Detecting Runtime Goal Mutation in Multi-Agent LLM Systems",
+      "authors": [
+        "Shubhra Mukherjee Mathur"
+      ],
+      "year": 2026,
+      "venue": "Natural Resources for Human Health",
+      "doi": "10.53365/nrfhh.3575",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G6",
+      "note": "runtime intent continuity middleware"
+    },
+    {
+      "id": "openreview-asym-goal-drift",
+      "title": "Asymmetric Goal Drift in Coding Agents Under Value Conflict",
+      "authors": null,
+      "year": 2026,
+      "venue": "OpenReview (LLA 2026 poster)",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G6",
+      "note": "agents violate the system prompt asymmetrically depending on the competing value pressure"
+    },
+    {
+      "id": "eacl-2026-268",
+      "title": "Stay Focused: Problem Drift in Multi-Agent Debate",
+      "authors": null,
+      "year": 2026,
+      "venue": "EACL Findings 2026",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G6",
+      "note": "generative tasks drift 76-89%, high-complexity 7-21%"
+    },
+    {
+      "id": "satml-2025-11",
+      "title": "Get My Drift? Catching LLM Task Drift with Activation Deltas",
+      "authors": null,
+      "year": 2025,
+      "venue": "IEEE SaTML 2025",
+      "doi": "10.1109/satml64287.2025.00011",
+      "arxiv_id": null,
+      "source": "ieee",
+      "gap": "G6",
+      "note": "white-box activation-delta detection; contrast case for a black-box monitor"
+    },
+    {
+      "id": "ijcnn-2024-10650172",
+      "title": "CRDA: Content Risk Drift Assessment of Large Language Models through Adversarial Multi-Agent Interaction",
+      "authors": [
+        "Zongzhen Liu",
+        "Guoyi Li",
+        "Bingkang Shi"
+      ],
+      "year": 2024,
+      "venue": "IJCNN 2024",
+      "doi": "10.1109/ijcnn60899.2024.10650172",
+      "arxiv_id": null,
+      "source": "ieee",
+      "gap": "G6",
+      "note": "content risk drift across sustained adversarial interaction"
+    },
+    {
+      "id": "caibda-11621849",
+      "title": "DriftBench: Detecting LLM Coding Agent Cheating via Specification-Level Constraint Drift Mutation",
+      "authors": [
+        "Fang Hao"
+      ],
+      "year": 2026,
+      "venue": "CAIBDA 2026",
+      "doi": "10.1109/caibda70336.2026.11621849",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G6",
+      "note": "specification-level constraint drift mutation"
+    },
+    {
+      "id": "lsp-2026-3726840",
+      "title": "ReflectiChain: Grounding Long-Horizon LLM Planning against Semantic-Execution Drift",
+      "authors": [
+        "Jia Luo"
+      ],
+      "year": 2026,
+      "venue": "IEEE Signal Processing Letters",
+      "doi": "10.1109/lsp.2026.3726840",
+      "arxiv_id": null,
+      "source": "ieee",
+      "gap": "G6",
+      "note": ""
+    },
+    {
+      "id": "zenodo-20142976",
+      "title": "Recursive AI Drift: A 2025 Prediction Timeline External Validation Audit and Technical Note",
+      "authors": [
+        "Richard J. Reyes"
+      ],
+      "year": 2026,
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.20142976",
+      "arxiv_id": null,
+      "source": "zenodo",
+      "gap": "G6",
+      "note": "coherence mirage: fluent surface preserved while the semantic anchor decays"
+    },
+    {
+      "id": "ssrn-6480298",
+      "title": "Elaboration Drift: How Human-LLM Interaction Erodes Epistemic Traction",
+      "authors": null,
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.6480298",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G6",
+      "note": "human-facing epistemic erosion, distinct from sycophancy"
+    },
+    {
+      "id": "medrxiv-structural-drift",
+      "title": "Beyond AI Psychosis and Sycophancy: Structural Drift as a System-Level Safety Failure",
+      "authors": null,
+      "year": 2026,
+      "venue": "medRxiv",
+      "doi": "10.64898/2026.03.19.26346371",
+      "arxiv_id": null,
+      "source": "medrxiv",
+      "gap": "G6",
+      "note": "message-level monitoring misses interaction-level risk"
+    },
+    {
+      "id": "dai-s44163",
+      "title": "A survey of world models for physical AI with uncertainty representation and control",
+      "authors": [
+        "Sven Kirchner",
+        "Nils Purschke",
+        "Alois Knoll"
+      ],
+      "year": 2026,
+      "venue": "Discover Artificial Intelligence",
+      "doi": "10.1007/s44163-026-02122-1",
+      "arxiv_id": null,
+      "source": "openalex",
+      "gap": "G7",
+      "note": "six design dimensions; compounding error and planner exploitation of model error"
+    },
+    {
+      "id": "neurips-2024-wkm",
+      "title": "Agent Planning with World Knowledge Model",
+      "authors": [
+        "Shuofei Qiao",
+        "Runnan Fang",
+        "Ningyu Zhang"
+      ],
+      "year": 2024,
+      "venue": "NeurIPS 2024",
+      "doi": null,
+      "arxiv_id": null,
+      "source": "openreview",
+      "gap": "G7",
+      "note": "prior task knowledge plus dynamic state knowledge"
+    },
+    {
+      "id": "zenodo-20237490",
+      "title": "Agentic-JEPA: A Self-Supervised World Model for Planning in Text-Based Agent Environments",
+      "authors": [
+        "Francisco-Javier Rodrigo-Gines"
+      ],
+      "year": 2026,
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.20237490",
+      "arxiv_id": null,
+      "source": "zenodo",
+      "gap": "G7",
+      "note": "reward-free JEPA world model with k-step lookahead; 17 text environments"
+    },
+    {
+      "id": "ssrn-6933161",
+      "title": "Context Compaction Provenance (CCP) Lab: Measuring Trust-Boundary Drift in LLM Agent Context Compaction",
+      "authors": [
+        "Michel Hjazeen"
+      ],
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.6933161",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G8",
+      "note": "compaction as a trust-boundary rewrite; retained-anywhere versus promoted-into-trusted-state"
+    },
+    {
+      "id": "zenodo-20010220",
+      "title": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+      "authors": [
+        "Daniel Kirste"
+      ],
+      "year": 2026,
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.20010220",
+      "arxiv_id": null,
+      "source": "zenodo",
+      "gap": "G8",
+      "note": "critiques the file-based identity pattern"
+    },
+    {
+      "id": "rs-11000146",
+      "title": "Tessera: Lossless-First, Vendor-Free Session Compression for Long-Horizon Agent Harnesses",
+      "authors": [
+        "Mohammad Mosafer"
+      ],
+      "year": 2026,
+      "venue": "Research Square",
+      "doi": "10.21203/rs.3.rs-11000146/v1",
+      "arxiv_id": null,
+      "source": "crossref",
+      "gap": "G8",
+      "note": "lossless-first hot tier plus content-addressed cold tier of exact originals"
+    },
+    {
+      "id": "ssrn-7500098",
+      "title": "TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-validated Draft-alignment Track",
+      "authors": [
+        "Subrat Panda"
+      ],
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.7500098",
+      "arxiv_id": null,
+      "source": "ssrn",
+      "gap": "G8",
+      "note": ""
+    }
+  ]
+}
