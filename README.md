@@ -1,5 +1,7 @@
 # LongRun-AGI
 
+[![CI](https://github.com/aidless/longrun-agi/actions/workflows/ci.yml/badge.svg)](https://github.com/aidless/longrun-agi/actions/workflows/ci.yml)
+
 LongRun-AGI is a CPU-first research workspace for long-horizon agents that must
 reason, act, remember, recover from failures, and stay auditable. It is released
 under the MIT License. The bilingual Research OS is available at
