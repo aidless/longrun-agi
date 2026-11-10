@@ -103,6 +103,36 @@ The current evidence and model boundary are summarized in
 `PORTFOLIO-STATUS.md`. Model work is blocked by `MODEL-GATE.md`; portfolio
 integrity is not model authorization.
 
+## Results
+
+Measured on 2026-11-10, CPU-only, no model API:
+
+| Check | Number | Command |
+|---|---|---|
+| Tests collected | 190 (sum of per-file counts, `pytest --collect-only -q`) | `make test` |
+| Tests passing | 186 / 190 in the 2026-11-10 full run | `make test` |
+| Portfolio audit | `integrity_ok: false`, 82/83 checks passed, 22 artifacts, `model_gate: hold` | `python3 scripts/audit_portfolio.py --check` |
+
+Scripted-policy pipelines (`make clear faults memory controls ...`) are
+harness sanity checks, not model capability results (see Research
+boundaries).
+
+## Known issues
+
+Four of the 190 tests are known to fail; they are kept visible rather than
+skipped or deleted (observed statuses, 2026-11-10):
+
+1. `tests/test_portfolio.py::test_portfolio_audit_links_and_hashes_are_consistent`
+   — fails consistently. Root cause: `scripts/audit_portfolio.py --check`
+   returns `integrity_ok: false` (82/83 checks, `model_gate: hold`).
+2. `tests/test_portfolio.py::test_audit_check_mode_does_not_rewrite_sealed_outputs`
+   — fails consistently; same audit-gate root cause as (1).
+3. `tests/test_program.py::test_cpu_program_is_deterministic` — flaky:
+   failed in one full run with a float-difference assertion in the
+   `work_packages` JSON, passed on three immediate reruns.
+4. `tests/test_real_faults.py::test_real_fault_matrix_is_deterministic`
+   — flaky: failed in one full run, not reproduced in other observations.
+
 ## License
 
 MIT. See `LICENSE`.
