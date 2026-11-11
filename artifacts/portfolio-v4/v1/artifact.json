@@ -36,7 +36,7 @@
   },
   "inputs": {
     "source_sha256": {
-      "README.md": "7da42a582dfb85a61fabb0d9b72f8b3742a83fbb3b98fc4425b9e1f3a3588b47",
+      "README.md": "748c5f2d53bcb6328d8d91a81196ce122e8b261f1d00b9542cf32c68933a3dba",
       "PROGRAM.md": "e168812503fb86cf2b0b697f1717102b89cb84151fed0f02d00e9ea6cfdc205b",
       "ORIGINAL-EIGHT.md": "fd69856af0bdf44cbd0e1894c5cce0ab8a5d7a2ccaaf31c6e11589f9ed501ac9",
       "PORTFOLIO-STATUS.md": "b85bb968f0b62df8469c672963e9eb83361a83158a770d05497d48ef6a2c3ce2",
@@ -45,7 +45,7 @@
       "scripts/audit_portfolio.py": "56db35a8d7dff96654462da2f5e1b026bcc32636306e28ec12a70417bfc23854",
       "tests/test_portfolio.py": "00de87554165256cf9b7e1d102b840716a0411e0ae90779b6fa771f17f59bca0",
       "Makefile": "5e8a4c1381c1babe1f2a92187a9c1120246deef91125d347844217039b226121",
-      ".github/workflows/ci.yml": "5113d4962cb3eab5e96b0a28bc51c7256a4aa400e4fe493ee32eb21b10927b6d"
+      ".github/workflows/ci.yml": "c1497db8b876f2dde983347c980a9def1fc91f5371d53b176d1ad7ce300e9cf7"
     }
   },
   "outputs": {

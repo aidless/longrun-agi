@@ -6,6 +6,6 @@ This is a personal research project; only the latest commit on the default branc
 
 ## Reporting a Vulnerability
 
-If you discover a security issue, please **open a private GitHub security advisory** via this repository's **Security → Report a vulnerability** button (https://github.com/aidless/longrun-agi/security/advisories/new), or contact the maintainer through their GitHub profile. Please do not open a public issue for exploit details.
+Do not open a public GitHub security advisory for exploit details. If you discover a security issue, please **open a private GitHub security advisory** via this repository's **Security → Report a vulnerability** button (https://github.com/aidless/longrun-agi/security/advisories/new), or contact the maintainer through their GitHub profile. Please do not open a public issue for exploit details.
 
 You can expect an initial response within 7 days.
