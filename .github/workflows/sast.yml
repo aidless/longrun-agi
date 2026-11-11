@@ -5,7 +5,7 @@ on:
   pull_request:
 permissions:
   contents: read
-  security-events: write
+  security-events: read
 jobs:
   gitleaks:
     runs-on: ubuntu-latest
