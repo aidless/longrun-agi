@@ -49,8 +49,8 @@
     }
   },
   "outputs": {
-    "results/portfolio-audit.json": "7f42e38fdc9fdc7ec3854458e1a425bbac635b2dc70bd399181d2fe2c15d89ca",
-    "results/environment-audit.json": "f1595d2c58fc4406db63b3d1f29b75ba1af45b0be0bc3e359147c6cc22b76bec"
+    "results/portfolio-audit.json": "173fdff3cdfa33c744cca5ec6cf6075bab105098a4669bae337fb78ba9baae20",
+    "results/environment-audit.json": "4a3768bafb14089e4f7d81674baf6d1f27195e0517e82cfcb72daa37f35fdea4"
   },
   "checks": {
     "unit_tests": "190 passed",
