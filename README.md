@@ -248,4 +248,9 @@ the live audit returns 82/83 and
 `integrity_ok: false`. Fixing the tests or the audit is a separate workstream;
 this pass records the failure list only.
 
+**NOT YET MEASURED in this pass**: no experiment was re-run. Every row in the
+inventory above is a committed record read from `research-manifest.json:1`, and the
+two failures trace to `tests/test_portfolio.py:93` (`assert completed.returncode == 0`
+receiving 1 from `scripts/audit_portfolio.py --check`).
+
 <!-- figure: pending real measurement -->
