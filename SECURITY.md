@@ -1,11 +1,11 @@
 # Security Policy
 
-## Supported version
+## Supported Versions
 
-Security updates target the latest tagged release and `main`.
+This is a personal research project; only the latest commit on the default branch is supported.
 
-## Reporting
+## Reporting a Vulnerability
 
-Do not post credentials, private data, or an exploitable proof of concept in a public issue. Use a public GitHub security advisory through the repository's **Security → Advisories → Report a vulnerability** flow. If that flow is unavailable, open a minimal issue containing no sensitive details and ask the maintainer to enable a private channel.
+Do not open a public GitHub security advisory for exploit details. If you discover a security issue, please **open a private GitHub security advisory** via this repository's **Security → Report a vulnerability** button (https://github.com/aidless/longrun-agi/security/advisories/new), or contact the maintainer through their GitHub profile. Please do not open a public issue for exploit details.
 
-Include the affected revision, impact, reproduction conditions, and the smallest safe evidence needed to validate the report. No response-time or bounty commitment is implied.
+You can expect an initial response within 7 days.
