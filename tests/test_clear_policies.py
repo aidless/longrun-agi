@@ -1,4 +1,3 @@
-import pytest
 
 from longrun.clear.generators import (
     generate_factorial_tasks,

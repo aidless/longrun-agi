@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 import re
 from pathlib import PurePosixPath
-from typing import Any
 
 from .models import Action, Observation, Op
 

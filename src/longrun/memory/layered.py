@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from enum import Enum
-from statistics import fmean
 
 
 class MemoryLayer(str, Enum):

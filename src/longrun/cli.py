@@ -19,7 +19,6 @@ from .clear.failure_matrix import run_failure_matrix
 from .clear.recovery import run_recovery_matrix
 from .clear.second_generator import (
     generate_second_clear_tasks,
-    generate_second_factorial_tasks,
 )
 from .clear.policies import (
     ConfigurableSpecPolicy,

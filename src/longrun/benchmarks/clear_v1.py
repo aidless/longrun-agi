@@ -4,7 +4,6 @@ import hashlib
 import json
 from dataclasses import dataclass
 from pathlib import PurePosixPath
-from statistics import fmean
 from typing import Any
 
 

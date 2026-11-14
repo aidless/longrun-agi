@@ -6,7 +6,6 @@ from dataclasses import dataclass, replace
 
 from .confounding import (
     ConfoundingCheck,
-    ConfoundingCase,
     check_confounding,
     generate_confounding_control_cases,
 )

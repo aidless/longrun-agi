@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from longrun.analysis.factorial import DesignError, estimate_factorial
+from longrun.analysis.factorial import estimate_factorial
 
 
 def test_estimate_factorial_accepts_runner_output_shape():
