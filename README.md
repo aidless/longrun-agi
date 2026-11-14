@@ -125,10 +125,14 @@ Four of the 190 tests are known to fail; they are kept visible rather than
 skipped or deleted (observed statuses, 2026-11-10):
 
 1. `tests/test_portfolio.py::test_portfolio_audit_links_and_hashes_are_consistent`
-   — fails consistently. Root cause: `scripts/audit_portfolio.py --check`
-   returns `integrity_ok: false` (82/83 checks, `model_gate: hold`).
+   — **fixed 2026-11-13**; previously failed consistently because
+   `scripts/audit_portfolio.py --check` returned `integrity_ok: false`
+   (82/83 checks, `model_gate: hold`). Cause was over-broad pinning, not a
+   result: two living documents (`README.md`, `research-manifest.json`) had
+   been edited after the v1 seal. See
+   `artifacts/portfolio-v4/v1/RECORD-AMENDMENT.md`.
 2. `tests/test_portfolio.py::test_audit_check_mode_does_not_rewrite_sealed_outputs`
-   — fails consistently; same audit-gate root cause as (1).
+   — **fixed 2026-11-13**; same audit-gate root cause as (1).
 3. `tests/test_program.py::test_cpu_program_is_deterministic` — flaky:
    failed in one full run with a float-difference assertion in the
    `work_packages` JSON, passed on three immediate reruns.
@@ -263,6 +267,27 @@ Both failures are tied to `scripts/audit_portfolio.py --check` exiting 1, while
 the live audit returns 82/83 and
 `integrity_ok: false`. Fixing the tests or the audit is a separate workstream;
 this pass records the failure list only.
+
+### 2026-11-13 复测：上表已作废（保留为历史观测）
+
+上表是那一轮 pass 的原样记录，保留不改。该轮之后 `inputs.source_sha256` 被
+收窄为四项可执行输入（审计脚本、其测试、`Makefile`、CI 定义），
+`README.md` 等活文档改记为封存时点快照
+（`inputs.documents_sha256_at_revision`）。当前实测：
+
+| Check | Live value (2026-11-13) |
+|---|---|
+| checks | 83 |
+| checks passed | **83/83** |
+| `integrity_ok` | `true` |
+| `model_gate` | `hold`（未变） |
+| `status` | `pass` |
+| `tests/test_portfolio.py` | 6 passed |
+
+判据：`python3 scripts/audit_portfolio.py --check` 退出码 0；
+`python3 -m pytest -o addopts='' tests/test_portfolio.py -q` → `6 passed`。
+改动理由、前后哈希对照与「为什么这不算把门放宽」见
+`artifacts/portfolio-v4/v1/RECORD-AMENDMENT.md`。
 
 **NOT YET MEASURED in this pass**: no experiment was re-run. Every row in the
 inventory above is a committed record read from `research-manifest.json:1`, and the

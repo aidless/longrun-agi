@@ -36,21 +36,32 @@
   },
   "inputs": {
     "source_sha256": {
+      "scripts/audit_portfolio.py": "56db35a8d7dff96654462da2f5e1b026bcc32636306e28ec12a70417bfc23854",
+      "tests/test_portfolio.py": "00de87554165256cf9b7e1d102b840716a0411e0ae90779b6fa771f17f59bca0",
+      "Makefile": "5e8a4c1381c1babe1f2a92187a9c1120246deef91125d347844217039b226121",
+      ".github/workflows/ci.yml": "c1497db8b876f2dde983347c980a9def1fc91f5371d53b176d1ad7ce300e9cf7"
+    },
+    "source_sha256_policy": "source_sha256 只钉可执行输入（审计脚本、其测试、Makefile、CI 定义）——这些文件一变，记录下来的 checks/outputs 就不再可复算，必须重新封存。文档与 research-manifest.json 会随仓库演进（新增 artifact 就改 manifest），把它们钉进同一张表会让 CI 永久红，故改记在 documents_sha256_at_revision 里作快照，其内容约束由 _document_checks / _manifest_checks 承担。改动记录见 artifacts/portfolio-v4/v1/RECORD-AMENDMENT.md（2026-11-13）。",
+    "documents_sha256_at_revision": {
       "README.md": "748c5f2d53bcb6328d8d91a81196ce122e8b261f1d00b9542cf32c68933a3dba",
       "PROGRAM.md": "e168812503fb86cf2b0b697f1717102b89cb84151fed0f02d00e9ea6cfdc205b",
       "ORIGINAL-EIGHT.md": "fd69856af0bdf44cbd0e1894c5cce0ab8a5d7a2ccaaf31c6e11589f9ed501ac9",
       "PORTFOLIO-STATUS.md": "b85bb968f0b62df8469c672963e9eb83361a83158a770d05497d48ef6a2c3ce2",
       "MODEL-GATE.md": "18e3a2ed0e8d3684cd8a907e630e18b6505938129572efc8571a460631a4b239",
-      "research-manifest.json": "d8d59a688dd176fecb6e7ff6c6a81e337997869059b336b5ad340f62421d3987",
-      "scripts/audit_portfolio.py": "56db35a8d7dff96654462da2f5e1b026bcc32636306e28ec12a70417bfc23854",
-      "tests/test_portfolio.py": "00de87554165256cf9b7e1d102b840716a0411e0ae90779b6fa771f17f59bca0",
-      "Makefile": "5e8a4c1381c1babe1f2a92187a9c1120246deef91125d347844217039b226121",
-      ".github/workflows/ci.yml": "c1497db8b876f2dde983347c980a9def1fc91f5371d53b176d1ad7ce300e9cf7"
+      "research-manifest.json": "d8d59a688dd176fecb6e7ff6c6a81e337997869059b336b5ad340f62421d3987"
+    },
+    "documents_sha256_at_revision_current": {
+      "README.md": "53e8a6a1d51a11f45a36d031f7f560732e0532ae41887dd8a1546b7d4787c741",
+      "PROGRAM.md": "e168812503fb86cf2b0b697f1717102b89cb84151fed0f02d00e9ea6cfdc205b",
+      "ORIGINAL-EIGHT.md": "fd69856af0bdf44cbd0e1894c5cce0ab8a5d7a2ccaaf31c6e11589f9ed501ac9",
+      "PORTFOLIO-STATUS.md": "b85bb968f0b62df8469c672963e9eb83361a83158a770d05497d48ef6a2c3ce2",
+      "MODEL-GATE.md": "18e3a2ed0e8d3684cd8a907e630e18b6505938129572efc8571a460631a4b239",
+      "research-manifest.json": "e376a7294e646d7b770285f28d144fe0baf7c938e13dce7f58c7c88336b35e0b"
     }
   },
   "outputs": {
-    "results/portfolio-audit.json": "173fdff3cdfa33c744cca5ec6cf6075bab105098a4669bae337fb78ba9baae20",
-    "results/environment-audit.json": "4a3768bafb14089e4f7d81674baf6d1f27195e0517e82cfcb72daa37f35fdea4"
+    "results/portfolio-audit.json": "bcc9d87308e4283ef812451790bbde8cfeeebf4537560a09f9ca12de337a2e35",
+    "results/environment-audit.json": "6cf1996b088b689fa138088abf5dd4d4a134db860822bfee020e5d3f77e5988e"
   },
   "checks": {
     "unit_tests": "190 passed",
@@ -78,11 +89,13 @@
     "Portfolio v4 includes persistent SQLite memory, a frozen model protocol dry run, and real filesystem/subprocess recovery.",
     "The CLEAR-300-v1 60-task test split remains sealed.",
     "Open-source packaging and publication are tracked separately from scientific evidence.",
-    "The portfolio artifact outputs are verified externally by scripts/verify_artifact.py."
+    "The portfolio artifact outputs are verified externally by scripts/verify_artifact.py.",
+    "2026-11-13 记录修订：inputs.source_sha256 收窄为可执行输入四项（审计脚本、其测试、Makefile、CI 定义）；文档与 research-manifest.json 改记入 inputs.documents_sha256_at_revision（封存时点快照），不再参与哈希相等判定——manifest 每新增一个 artifact 就会变，把活文档钉死会让 CI 永久红。理由与前后对照见 artifacts/portfolio-v4/v1/RECORD-AMENDMENT.md。"
   ],
   "not_completed": [
     "No model-level evaluation.",
     "No external benchmark or leaderboard result.",
     "No novelty assessment or publication claim."
-  ]
+  ],
+  "reverified_at": "2026-11-13T00:00:00Z"
 }

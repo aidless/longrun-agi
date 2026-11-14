@@ -12,13 +12,13 @@
     "model": "AMD Ryzen 7 5800H with Radeon Graphics"
   },
   "disk": {
-    "free_bytes": 12567478272,
-    "path": "/tmp/fixci/longrun/tree",
+    "free_bytes": 69076410368,
+    "path": "/home/liuzewen/F:\\deepseek/longrun-agi",
     "total_bytes": 657190785024,
-    "used_bytes": 644623306752,
-    "used_percent": 98.09
+    "used_bytes": 588114374656,
+    "used_percent": 89.49
   },
-  "generated_at": "2026-11-11T14:06:59.460579+00:00",
+  "generated_at": "2026-11-14T02:51:09.269159+00:00",
   "gpu": {
     "count": 1,
     "devices": [
@@ -36,7 +36,7 @@
     "usable_accelerator_established": true
   },
   "memory": {
-    "available_bytes": 7714643968,
+    "available_bytes": 6710095872,
     "swap_total_bytes": 17179860992,
     "total_bytes": 16076922880
   },
@@ -57,6 +57,6 @@
     "implementation": "CPython",
     "version": "3.12.3"
   },
-  "root": "/tmp/fixci/longrun/tree",
+  "root": "/home/liuzewen/F:\\deepseek/longrun-agi",
   "schema_version": 1
 }

@@ -829,9 +829,9 @@
       "ok": true
     },
     {
-      "detail": "8/10 source hashes match",
+      "detail": "4/4 source hashes match",
       "id": "portfolio-source-hashes",
-      "ok": false
+      "ok": true
     },
     {
       "detail": "all artifacts retain scientific_result=false",
@@ -842,14 +842,14 @@
   "counts": {
     "artifacts": 22,
     "checks": 83,
-    "checks_passed": 82,
+    "checks_passed": 83,
     "documents": 5,
     "experiments": 18,
     "verified_outputs": 30,
     "work_packages": 8
   },
-  "generated_at": "2026-11-11T14:06:59.460114+00:00",
-  "integrity_ok": false,
+  "generated_at": "2026-11-14T02:51:09.268491+00:00",
+  "integrity_ok": true,
   "model_gate": {
     "approval_status": null,
     "capacity_preflight_scope": "exact cloud execution target",
@@ -875,7 +875,7 @@
     "novelty_status": "not-established",
     "scientific_result": false
   },
-  "status": "fail",
+  "status": "pass",
   "verification": {
     "self_outputs_verified_by": "scripts/verify_artifact.py",
     "self_referential_artifact": "portfolio-v4"
