@@ -1,7 +1,10 @@
 PYTHON ?= python3
 export PYTHONPATH := src
 
-.PHONY: test clear faults memory controls confounding-control claim-schema factorial three-factor estimator-validity clear-v1 clear-v1-verify layered-memory persistent-memory recovery-matrix real-faults research-agent goal-drift-monitor world-model-calibration model-protocol verifier-rewards adaptive-controller program-quick program portfolio-audit verify
+.PHONY: eval test clear faults memory controls confounding-control claim-schema factorial three-factor estimator-validity clear-v1 clear-v1-verify layered-memory persistent-memory recovery-matrix real-faults research-agent goal-drift-monitor world-model-calibration model-protocol verifier-rewards adaptive-controller program-quick program portfolio-audit verify
+
+eval:
+	$(PYTHON) eval/run_cases.py --save
 
 test:
 	$(PYTHON) -m pytest

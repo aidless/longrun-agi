@@ -295,3 +295,51 @@ two failures trace to `tests/test_portfolio.py:93` (`assert completed.returncode
 receiving 1 from `scripts/audit_portfolio.py --check`).
 
 <!-- figure: pending real measurement -->
+
+## 验收标准与复算
+
+**判定判据**：本仓判为合格的条件是 `python3 eval/run_cases.py` 通过率必须为 100%（20/20），且 `make eval` 退出码必须为 0；任何一条失败即判为不合格。反证判据：`python3 eval/run_cases.py --selftest` 必须只有 19/20（第 1 条期望值被篡改后必须变红，退出码仍为 0）；若篡改后仍全绿，说明这套题库不具备判错能力，按不合格处理。
+
+题库是 `eval/cases.jsonl`，20 行七键（`id/axis/question/expected/mode/verify/source`），形状一致。17 条 `expr` + 3 条 `raises`，全部**真调本仓 API 或真解析本仓数据文件**（`benchmarks/clear-300-v1/split-manifest.json`、`tasks.json`），期望值是现算出来的，不是从文档转抄；`source` 逐条指向被调用的真实文件。
+
+### axis 覆盖表
+
+| axis | 条数 | 覆盖对象 | 代表 case |
+|---|---|---|---|
+| benchmark | 3 | CLEAR-300-v1 任务生成、train 划分、冻结 manifest 的 sha256 是否与重算一致 | `b03-manifest-sha-match` |
+| data | 2 | `split-manifest.json` / `tasks.json` 的实际行数与环境族集合 | `d02-tasks-environments` |
+| env | 3 | `normalize_path` 归一与越界拒绝、`generate_tasks` 任务数 | `e02-normalize-escape` |
+| stats | 3 | `holm_bonferroni` / `benjamini_hochberg` 调整后 p 值、非法 p 值拒绝 | `s01-holm-adjusted` |
+| memory | 3 | `ProvenanceMemory` 与 `NaiveMemory` 在同一冲突场景下的选择差异、trust 越界 | `m01-provenance-best` |
+| store | 2 | `SQLiteMemoryStore` 导出/回灌条数与 `best()` 的取值 | `t02-store-best-by-trust` |
+| protocol | 2 | model protocol 的 test split 封存标记与 manifest 哈希绑定 | `p01-test-split-sealed` |
+| claims | 2 | 未声明子组的正提升 claim 与重复子组 claim 的判定状态 | `c01-undeclared-non-evaluable` |
+
+### 三条命令
+
+```bash
+python3 eval/run_cases.py            # 逐条打印 PASS/FAIL，末行 20/20；失败时按 axis 汇总
+python3 eval/run_cases.py --selftest # 必须 19/20（证明题库会红）
+make eval                            # 退出码必须为 0，并写 eval/run-report.json
+```
+
+`make eval` 走的是同一支 `eval/run_cases.py --save`，只是额外把结果落盘；本仓既有 pytest 套件存在已知确定性失败（`tests/test_portfolio.py` 两项），因此没有把它塞进 `eval:` 目标，`make eval` 只跑题库，避免用「已知红」冒充门槛。
+
+### 复算说明
+
+- **复算入口**：`eval/run_cases.py --save` 每次重写 `eval/run-report.json`，内含 `total/passed/failed/selftest/failed_by_axis` 与逐条 `detail`；读这个文件即可核对某个数字是哪次运行得出的。
+- **哈希复算**：`b03-manifest-sha-match` 用 `build_split_manifest(generate_clear_v1_tasks(), seed=20261028)` 现算 `canonical_sha256`，再与冻结文件 `benchmarks/clear-300-v1/split-manifest.json` 比对，不读 README 里的数字。
+- **期望值来源**：所有 `expected` 都由本机实际调用得出（例如 `holm_bonferroni({"a":0.01,"b":0.04,"c":0.03})["a"]["p_adjusted"] == 0.03`），改一行实现就可能变红——这正是这套题的意义。
+- **导入方式**：根目录 `longrun -> src/longrun` 符号链接让裸克隆下 `python3 eval/run_cases.py` 能直接 `import longrun`（`Makefile` 另外设置了 `PYTHONPATH := src`），不依赖 `pip install -e .`。
+
+### 失败归因
+
+`run_cases.py` 不报单一 pass_rate，失败按 axis 汇总，例如把第 1 条期望值篡改后：
+
+```
+20 条里 19/20 cases passed
+失败归因（按 axis）：
+  benchmark: 1 条 —— b01-task-count
+```
+
+真实运行时同样按 axis 归因，含义是：`benchmark` 红 → 任务生成/划分/哈希链路变了；`data` 红 → 冻结数据文件被改动；`env` 红 → 路径归一或任务生成行为变了；`stats` 红 → 多重比较校正实现变了；`memory`/`store` 红 → 记忆检索或持久化语义变了；`protocol` 红 → 评测协议与封存划分脱钩；`claims` 红 → claim 判定状态机变了。

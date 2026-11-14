@@ -1,0 +1,129 @@
+{
+ "total": 20,
+ "passed": 20,
+ "failed": 0,
+ "selftest": false,
+ "failed_by_axis": {},
+ "results": [
+  {
+   "id": "b01-task-count",
+   "axis": "benchmark",
+   "ok": true,
+   "detail": "300"
+  },
+  {
+   "id": "b02-train-split",
+   "axis": "benchmark",
+   "ok": true,
+   "detail": "180"
+  },
+  {
+   "id": "b03-manifest-sha-match",
+   "axis": "benchmark",
+   "ok": true,
+   "detail": "True"
+  },
+  {
+   "id": "d01-manifest-task-rows",
+   "axis": "data",
+   "ok": true,
+   "detail": "300"
+  },
+  {
+   "id": "d02-tasks-environments",
+   "axis": "data",
+   "ok": true,
+   "detail": "['browser', 'filesystem', 'gridworld']"
+  },
+  {
+   "id": "e01-normalize-path",
+   "axis": "env",
+   "ok": true,
+   "detail": "inbox/notes/a.txt"
+  },
+  {
+   "id": "e02-normalize-escape",
+   "axis": "env",
+   "ok": true,
+   "detail": "raised ValueError"
+  },
+  {
+   "id": "e03-generate-tasks",
+   "axis": "env",
+   "ok": true,
+   "detail": "36"
+  },
+  {
+   "id": "s01-holm-adjusted",
+   "axis": "stats",
+   "ok": true,
+   "detail": "0.03"
+  },
+  {
+   "id": "s02-bh-adjusted",
+   "axis": "stats",
+   "ok": true,
+   "detail": "0.04"
+  },
+  {
+   "id": "s03-invalid-pvalue",
+   "axis": "stats",
+   "ok": true,
+   "detail": "raised DesignError"
+  },
+  {
+   "id": "m01-provenance-best",
+   "axis": "memory",
+   "ok": true,
+   "detail": "safe-route"
+  },
+  {
+   "id": "m02-naive-best",
+   "axis": "memory",
+   "ok": true,
+   "detail": "unsafe-route"
+  },
+  {
+   "id": "m03-trust-range",
+   "axis": "memory",
+   "ok": true,
+   "detail": "raised ValueError"
+  },
+  {
+   "id": "t01-store-roundtrip-count",
+   "axis": "store",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "id": "t02-store-best-by-trust",
+   "axis": "store",
+   "ok": true,
+   "detail": "v1"
+  },
+  {
+   "id": "p01-test-split-sealed",
+   "axis": "protocol",
+   "ok": true,
+   "detail": "sealed-not-accessed"
+  },
+  {
+   "id": "p02-protocol-sha",
+   "axis": "protocol",
+   "ok": true,
+   "detail": "a8c1c421662f"
+  },
+  {
+   "id": "c01-undeclared-non-evaluable",
+   "axis": "claims",
+   "ok": true,
+   "detail": "non-evaluable"
+  },
+  {
+   "id": "c02-duplicate-subgroup-rejected",
+   "axis": "claims",
+   "ok": true,
+   "detail": "rejected"
+  }
+ ]
+}
