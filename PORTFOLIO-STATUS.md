@@ -126,6 +126,8 @@ preflight for the exact model artifact.
 
 ## Reproduction
 
+Author-machine path (snapshot of the 2026-10-28 authoring host, not a fresh-clone requirement): `/home/liuzewen/projects/longrun-agi-20261027`. The same class of host snapshot is stored in `artifacts/portfolio-v1/v1/results/environment-audit.json` and `artifacts/portfolio-v4/v1/results/environment-audit.json`. A fresh clone runs `make check` from the repository root.
+
 ```bash
 cd /home/liuzewen/projects/longrun-agi-20261027
 PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings

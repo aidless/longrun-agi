@@ -72,3 +72,20 @@ python3 scripts/audit_portfolio.py --check   # 期望 exit 0，83/83，integrity
 python3 -m pytest -o addopts='' tests/test_portfolio.py -q   # 期望全过
 PYTHONPATH=src python3 -m pytest -o addopts='' --disable-warnings  # 全量 190 项
 ```
+
+## 6. 2026-11-16：为 `make check` 重钉 Makefile 与 CI
+
+`Makefile` 与 `.github/workflows/ci.yml` 增加了离线 `make check`（重算 recovery-matrix v1）。
+按 `source_sha256_policy`，这两份可执行输入一变就必须更新 pin。本次只改了这两项的
+`source_sha256`，以及 `documents_sha256_at_revision_current` 里 `README.md` 与
+`PORTFOLIO-STATUS.md` 的快照。`scripts/audit_portfolio.py` 与 `tests/test_portfolio.py`
+未改，pin 仍是原来的哈希。
+
+`results/portfolio-audit.json` 与 `results/environment-audit.json` **没有**重新生成。
+`portfolio-source-hashes` 的记录只有 `4/4 source hashes match`，并不内嵌哈希字节；
+重新生成 `environment-audit.json` 会把作者机器路径换成这次重封存所在的机器。
+现场 `python3 scripts/audit_portfolio.py --check` 仍应退出码 0。
+
+`checks.unit_tests` 仍是先前记录的 `190 passed`，这次没有重数测试。
+`scientific_result` 仍为 `false`，`model_gate` 仍为 `hold`。
+`reverified_at` 改为 `2026-11-16T00:00:00Z`。这不是新的模型结果。

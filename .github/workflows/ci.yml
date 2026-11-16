@@ -17,6 +17,13 @@ jobs:
           python-version: "3.11"
       - name: Install test runner
         run: python -m pip install pytest==9.1.1
+      # make check recomputes the recovery-matrix headline offline.
+      # No test is expected to fail. Portfolio source hashes include this
+      # workflow; editing it requires the portfolio-v4 re-seal described in
+      # artifacts/portfolio-v4/v1/RECORD-AMENDMENT.md. That re-seal is
+      # integrity bookkeeping, not a model result.
+      - name: Recompute closed headline offline
+        run: make check
       - name: Run tests
         run: PYTHONPATH=src python -m pytest -o addopts='' --disable-warnings
       - name: Compile sources
