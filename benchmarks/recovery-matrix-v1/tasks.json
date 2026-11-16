@@ -1,0 +1,292 @@
+{
+  "name": "recovery-matrix-v1",
+  "frozen": true,
+  "instances_per_fault": 10,
+  "generator": "longrun.clear.recovery.generate_recovery_tasks",
+  "generator_args": {
+    "instances": 10
+  },
+  "note": "Serialized from the deterministic generator that the recovery-v0 v2 traces were run with. make check replays scripted controllers on this file and compares episode outcomes to artifacts/recovery-v0/v2/results/recovery-matrix.json rows.",
+  "tasks": [
+    {
+      "task_id": "recovery-stale_state-i00",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i01",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i02",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i03",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i04",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i05",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i06",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i07",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i08",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-stale_state-i09",
+      "fault_kind": "stale_state",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i00",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i01",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i02",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i03",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i04",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i05",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i06",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i07",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i08",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-tool_error-i09",
+      "fault_kind": "tool_error",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i00",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i01",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i02",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i03",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i04",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i05",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i06",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i07",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i08",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-misleading_doc-i09",
+      "fault_kind": "misleading_doc",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i00",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i01",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i02",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i03",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i04",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i05",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i06",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i07",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i08",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    },
+    {
+      "task_id": "recovery-rule_change-i09",
+      "fault_kind": "rule_change",
+      "initial_rule": "rule-v1",
+      "corrected_rule": "rule-v2",
+      "max_steps": 12
+    }
+  ]
+}
